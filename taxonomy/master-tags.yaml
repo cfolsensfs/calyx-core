@@ -1,0 +1,34 @@
+# Calyx master taxonomy (core). Projects extend in .calyx/taxonomy/local-tags.yaml
+# Convention: kebab-case keys; optional 'description' for Librarian/Broker prompts.
+
+version: 0.1
+
+domains:
+  - id: reliability
+    description: Availability, incidents, SLOs, resilience
+  - id: security
+    description: AuthN/Z, secrets, data protection, threat model
+  - id: data
+    description: Schemas, pipelines, quality, retention
+  - id: platform
+    description: Infra, CI/CD, observability, developer experience
+  - id: product
+    description: User-facing behavior, UX contracts
+  - id: org-process
+    description: How decisions are made, ownership, communication
+
+kinds:
+  - id: adr
+    description: Ratified architecture decision
+  - id: reasoning-log
+    description: Thought stream for a major task
+  - id: pre-mortem
+    description: 10th Man / failure-mode analysis
+  - id: post-incident
+    description: Learnings from failure or near-miss
+
+status:
+  - id: proposed
+  - id: ratified
+  - id: superseded
+  - id: abandoned

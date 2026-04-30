@@ -1,0 +1,35 @@
+# Calyx Framework — AI rules (calyx-core)
+
+## Scope
+
+This repository is **calyx-core** only: constitution, specialist prompts, master taxonomy, canonical templates, and shared tooling. Edits here affect **every consumer** repo that pins this bundle (typically as a submodule at `.calyx/core/`). Prefer small, coherent changes; tag releases so projects can bump deliberately.
+
+## North star
+
+**Calyx** is an **organizational intelligence** layer, not a solo productivity hack. Prefer outcomes that make the **team’s knowledge compound** (durable reasoning, visible debate, reusable failure modes) over one-off speed.
+
+## The shift: merging thinking, not only deliverables
+
+Staff working **with AIs** produce valuable **conversations and reasoning**, not only merged code. That stream must become **mergeable organizational knowledge**. Calyx externalizes and versions that cognition so later work starts from accumulated reasoning.
+
+## Explaining Calyx (docs, onboarding, comms)
+
+When authoring **explanatory materials**, anchor them in: org intelligence vs solo speed; dual-repo `.calyx/`; 10th Man / Librarian / Broker; preserving reasoning from AI-mediated work. Tone: precise, accessible, low hype.
+
+## Specialist prompts (this repo)
+
+- **`prompts/10th-man.txt`** — Adversarial review, pre-mortems, kill criteria.
+- **`prompts/librarian.txt`** — Distill messy input into tagged summaries (use with `taxonomy/master-tags.yaml`).
+- **`prompts/broker.txt`** — Cross-task overlap and silo warnings.
+
+When changing taxonomy or templates, update **`manifest.yaml`** if paths change.
+
+## Implementation discipline
+
+- **Collective brain over individual fix** — If you propose a core change, note what **consumer projects** should record when they adopt it (e.g. ADR in their repo).
+- Do not rewrite git history of released tags; **new version** for breaking changes.
+- Prefer **clear, durable wording** in constitution and templates.
+
+## Local LLMs (optional)
+
+`tooling/ollama-run.sh` runs prompts locally; principles above apply regardless of model.
