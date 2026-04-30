@@ -1,6 +1,6 @@
 # calyx-core
 
-**Company DNA** for the Calyx organizational intelligence layer: constitution, specialist prompts, master taxonomy, canonical templates, and minimal tooling. Implementation repos (e.g. `scalefree`) mirror or copy subsets into their `.calyx/` directory and add project-local reasoning, ADRs, and tags.
+**Company DNA** for the Calyx organizational intelligence layer: constitution, specialist prompts, master taxonomy, canonical templates, and minimal tooling. Each **project repo** mounts this bundle as **`.calyx/core/`** (Git submodule) and adds its own reasoning, ADRs, and local tags. Scalefree also uses a **second** submodule **`.calyx/org/`** for agency-wide, non-sensitive DNA (`calyx-scalefree-org`).
 
 ## Layout
 
@@ -16,14 +16,16 @@
 
 ## Consumption model
 
-1. **Human or script** copies or symlinks `templates/`, `prompts/`, `taxonomy/`, and `constitution/` into each repo’s `.calyx/core/` (or equivalent), per your org’s sync policy.
-2. **Project-local** content always lives beside that mirror: `.calyx/reasoning/`, `.calyx/decisions/`, `.calyx/taxonomy/local-tags.yaml`.
-3. Changes to global behavior start here; project overrides are documented in local ADRs when they diverge from core.
+1. **Submodule** this repo at **`.calyx/core/`** in each project (pin commits or tags deliberately).
+2. **Optional org layer** (e.g. Scalefree): second submodule at **`.calyx/org/`** for non-sensitive agency-wide defaults—see `templates/dot-calyx-README.md` for the layout.
+3. **Project-local** content always lives beside those mounts: `.calyx/reasoning/`, `.calyx/decisions/`, `.calyx/taxonomy/local-tags.yaml`.
+4. Changes to **generic** behavior start in **calyx-core**; agency-only changes live in **org**; engagement-specific work stays in the **project** repo.
 
 This repository includes **`.cursorrules`** so agents follow Calyx when working only in `calyx-core`.
 
 ## GitHub and consumers
 
-- Publish **`calyx-core`** as its own repository (company DNA only).
-- Implementation repos (e.g. **scalefree**) stay **separate**; they pull this content via a **Git submodule** at `.calyx/core/` (see the scalefree repo’s `.calyx/README.md`).
-- Tag releases here (e.g. `v0.2.0`) so projects can pin a known-good bundle from `manifest.yaml`.
+- **`calyx-core`** — generic product bundle; submodule at **`.calyx/core/`** in every project.
+- **Org repo** (e.g. **`calyx-scalefree-org`**) — optional second submodule at **`.calyx/org/`** for your studio’s shared, non-sensitive layer.
+- **Project repos** — one repo per product or client; each has its own **local** `.calyx/reasoning/` and `.calyx/decisions/`.
+- Tag releases on **calyx-core** (e.g. `v0.2.0`) so projects can pin a known-good bundle from `manifest.yaml`.
