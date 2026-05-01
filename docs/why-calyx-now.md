@@ -2,6 +2,8 @@
 
 **One page.** Calyx is an **organizational intelligence** layer for teams that already work **with AI**. It is not a replacement for your editor, your Git host, or a “second brain” app—it is a **small, strict convention** on top of **Git + Cursor (or similar) + capture hooks**, so the reasoning you already pay for **compounds** instead of disappearing when the chat tab closes.
 
+For the **cultural / epistemic** framing (stewardship vs extraction, the “great library” in the Calyx sense), see **[philosophy.md](philosophy.md)**.
+
 ---
 
 ## The shift
@@ -35,9 +37,9 @@ If you delete the hooks and hope discipline alone will save you, you still have 
 
 ## What you do differently day to day
 
-- **After clone:** run **`calyx-setup-capture.sh`**; **`calyx-verify-capture.sh`** until green; **restart** the editor so hooks apply.
-- **While working:** let machines capture **inbox stubs** and **local chat logs**; humans (or agents under supervision) **distill** what should survive into **`.calyx/reasoning/`** or **ADRs**.
-- **Hands off the layout:** **`.calyx/core`**, **`.calyx/org`**, and the standard **cpl** folders are **load-bearing paths**—not a refactor target for a tidy model session. Structural change requires a **ratified ADR** and human agreement.
+- **After clone:** run `**calyx-setup-capture.sh`**; `**calyx-verify-capture.sh**` until green; **restart** the editor so hooks apply.
+- **While working:** let machines capture **inbox stubs** and **local chat logs**; humans (or agents under supervision) **distill** what should survive into `**.calyx/reasoning/`** or **ADRs**.
+- **Hands off the layout:** `**.calyx/core`**, `**.calyx/org**`, and the standard **cpl** folders are **load-bearing paths**—not a refactor target for a tidy model session. Structural change requires a **ratified ADR** and human agreement.
 
 ---
 
@@ -49,7 +51,9 @@ Calyx does not promise magic. It promises **honesty**: if you won’t capture, y
 
 ## Related
 
+- [philosophy.md](philosophy.md) — stewardship, not extraction; epistemic framing; GitHub header copy
 - [README.md](../README.md) — bundle overview and consumption
 - [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 principles (capture + structure)
 - [first-run.md](first-run.md) — install and onboarding
 - [glossary.md](glossary.md) — **ccl** / **col** / **cpl**
+
