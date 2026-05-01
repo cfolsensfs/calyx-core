@@ -34,7 +34,7 @@ After **`core/`** is populated, **once per clone** (each machine), from the **pr
 bash .calyx/core/tooling/calyx-setup-capture.sh
 ```
 
-Installs **git** post-commit stubs → **`reasoning/inbox/`** and **Cursor** hooks → **`local/chat-log/`** (gitignored). Requires **`python3`** on your `PATH`. Details: `core/docs/automation.md`, `core/docs/cursor-local-chat-log.md`, `core/constitution/CONSTITUTION.md`.
+Installs **git** post-commit stubs → **`reasoning/inbox/`** and **Cursor** hooks → **`local/chat-log/`** (gitignored). Requires **`python3`** on your `PATH`. Then run **`bash .calyx/core/tooling/calyx-verify-capture.sh`** until all checks pass. Details: `core/docs/automation.md`, `core/docs/first-run.md`, `core/docs/cursor-local-chat-log.md`, `core/constitution/CONSTITUTION.md`.
 
 ## Bump inherited layers
 

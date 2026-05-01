@@ -128,6 +128,9 @@ replace_project_name "${TARGET}/SETUP_CALYX.md"
 mkdir -p "${TARGET}/docs"
 write_file "${TARGET}/docs/GIT.md" "${TEMPLATE_DIR}/docs-GIT.md"
 
+mkdir -p "${TARGET}/.github/workflows"
+write_file "${TARGET}/.github/workflows/calyx-verify.yml" "${TEMPLATE_DIR}/github-workflows-calyx-verify.yml"
+
 # --- .calyx local layer ---
 mkdir -p "${TARGET}/.calyx/reasoning" "${TARGET}/.calyx/decisions" "${TARGET}/.calyx/taxonomy"
 write_file "${TARGET}/.calyx/README.md" "${TEMPLATE_DIR}/dot-calyx-README.md"

@@ -44,12 +44,18 @@ From the **repository root** (the folder that should contain `.calyx/`):
 
 3. **Restart Cursor** (or reload hooks) so **`hooks.json`** is picked up.
 
-4. **Smoke test**
+4. **Verify (guardrails)** — from repo root:
+   ```bash
+   bash .calyx/core/tooling/calyx-verify-capture.sh
+   ```
+   Expect **`=== All checks passed ===`**. This checks **`.calyx/core`**, **`python3`**, **`.cursor/hooks`**, **`hooks.json`** shape, and (on your machine) the **git post-commit** hook. In **CI**, use **`--ci`** so the git-hook install step is skipped (fresh checkouts do not run `install-calyx-git-hooks` automatically). New scaffolds include **`.github/workflows/calyx-verify.yml`** ( **`continue-on-error: true`** ) so PRs get a **non-blocking** signal when capture layout drifts.
+
+5. **Smoke test**
    - Make a small real commit (or tune **`CALYX_DIARY_MIN_LINES`** if your test diff is tiny—see [automation.md](automation.md)).
    - Confirm a new file under **`.calyx/reasoning/inbox/`** (unless skipped by heuristics).
    - Send a short message in Cursor chat; confirm **`local/chat-log/<today>.md`** grows (folder is gitignored).
 
-5. **Habit** — skim [workflow.md](workflow.md) and run **distill** on stubs / chat-log on a steady beat; promote to **`.calyx/reasoning/`** or delete noise.
+6. **Habit** — skim [workflow.md](workflow.md) and run **distill** on stubs / chat-log on a steady beat; promote to **`.calyx/reasoning/`** or delete noise.
 
 ---
 
@@ -58,6 +64,7 @@ From the **repository root** (the folder that should contain `.calyx/`):
 1. Add **`.calyx/core`** as a submodule and create **`.calyx/reasoning`**, **`.calyx/decisions`**, **`.calyx/taxonomy`** as in [new-project.md](new-project.md) / [ux-flow.md](ux-flow.md).
 2. Run **`calyx-setup-capture.sh`** as above.
 3. If the team already uses **`.cursor/hooks.json`**, **merge** the `beforeSubmitPrompt` / `afterAgentResponse` / `stop` entries from **`templates/cursor-hooks/hooks.example.json`** instead of blind overwrite.
+4. Run **`calyx-verify-capture.sh`** until green; add **`.github/workflows/calyx-verify.yml`** by copying **`templates/app-scaffold/github-workflows-calyx-verify.yml`** from this bundle if you want the same CI guardrail as new scaffolds.
 
 ---
 
@@ -69,11 +76,16 @@ When the user says they are **setting up Calyx**, **onboarding**, or **first run
 2. **Execute the checklist in order** for their situation (scaffold vs brownfield). **Do not skip verify steps**—run the commands or have the user paste output.
 3. **Explain briefly** why each prerequisite exists when the user asks; point to the table above.
 4. After **`calyx-setup-capture.sh`**, **remind** them to **restart Cursor** before expecting chat-log files.
-5. **Optional:** propose one **test commit** and one **chat message** to validate inbox + `local/chat-log/`.
+5. Run **`calyx-verify-capture.sh`** and fix any **FAIL** lines before declaring onboarding done.
+6. **Optional:** propose one **test commit** and one **chat message** to validate inbox + `local/chat-log/`.
 
 Do **not** invent alternate install paths unless the user’s environment cannot satisfy the defaults; if so, suggest documenting an ADR for their replacement capture mechanism.
 
 ---
+
+## Community / brownfield
+
+Windows paths, exotic hook chains, and merged **`hooks.json`** are **documentation + judgment** — and fair game for **community recipes** (issues, PRs to this repo) that harden Calyx without turning it into a product installer.
 
 ## Related
 

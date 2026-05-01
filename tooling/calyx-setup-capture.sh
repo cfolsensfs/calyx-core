@@ -47,3 +47,4 @@ else
 fi
 
 echo "calyx-setup-capture: done."
+echo "calyx-setup-capture: run: bash .calyx/core/tooling/calyx-verify-capture.sh"

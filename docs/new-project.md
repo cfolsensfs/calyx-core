@@ -99,7 +99,7 @@ bash tooling/create-sfs-workspace.sh "Human Project Name" [repo-slug]
 
 ## What the scaffold creates (default, non-minimal)
 
-- **Root:** `.cursorrules`, `.gitignore`, `README.md`, `AGENTS.md`, **`SETUP_CALYX.md`** (onboarding door → **`docs/first-run.md`** in core), `VERSION` (`0.1`), `docs/GIT.md`
+- **Root:** `.cursorrules`, `.gitignore`, `README.md`, `AGENTS.md`, **`SETUP_CALYX.md`** (onboarding door → **`docs/first-run.md`** in core), `VERSION` (`0.1`), `docs/GIT.md`, **`.github/workflows/calyx-verify.yml`** (optional CI guardrail; `continue-on-error`)
 - **`.calyx/`:** `README.md`, `reasoning/_TEMPLATE.md`, `decisions/ADR-TEMPLATE.md`, `taxonomy/local-tags.yaml`
 - **`.calyx/core/`:** submodule checkout of calyx-core (unless `--no-submodule`)
 - **Layout:** `apps/web`, `apps/api`, `mcp/`, `packages/shared`, `infra/`, gitignored `local/`

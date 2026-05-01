@@ -1,0 +1,24 @@
+# Calyx — non-blocking capture sanity check on pull requests.
+# Installed by scaffold at .github/workflows/calyx-verify.yml
+#
+# CI cannot prove Cursor fired hooks; this only verifies repo layout + toolchain
+# after submodule checkout. Remove continue-on-error when you want a hard gate.
+
+name: Calyx verify
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+jobs:
+  calyx-verify:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Verify Calyx capture (CI mode)
+        run: bash .calyx/core/tooling/calyx-verify-capture.sh --ci

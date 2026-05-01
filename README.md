@@ -24,7 +24,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **New project creation (generic)** | **`tooling/scaffold-cursor-app.sh`** + **`templates/app-scaffold/`** |
 | **New project + GitHub push (optional SFS flow)** | **`tooling/create-sfs-workspace.sh`** (wraps the scaffold; needs `gh` for remote create) |
 | **Project-creation guide** | **`docs/new-project.md`** — prerequisites, flags, env vars, what gets created |
-| **First run / onboarding** | **`docs/first-run.md`** — prerequisites + **why**, checklist; scaffolds add root **`SETUP_CALYX.md`** for Cursor |
+| **First run / onboarding** | **`docs/first-run.md`** — prerequisites + **why**, checklist; **`tooling/calyx-verify-capture.sh`** — guardrail checks; scaffolds add **`SETUP_CALYX.md`** + **`.github/workflows/calyx-verify.yml`** (non-blocking) |
 | **UX flow (Mermaid)** | **`docs/ux-flow.md`** — from “incorporate Calyx” to day-to-day habits |
 | **Work rhythm (Mermaid)** | **`docs/workflow.md`** — reasoning, ADRs, specialists, checkpoint (**living doc**) |
 | **Glossary (ccl / col / cpl)** | **`docs/glossary.md`** |

@@ -10,6 +10,8 @@ bash .calyx/core/tooling/calyx-setup-capture.sh
 
 That installs the hook below **and** syncs Cursor hook scripts. Forks may strip automation; **what ships in calyx-core assumes you keep it** or document an equivalent in an ADR.
 
+**Verify:** `bash .calyx/core/tooling/calyx-verify-capture.sh` — local checks including git post-commit. In CI, `bash .calyx/core/tooling/calyx-verify-capture.sh --ci` (skips “hook installed on this runner”). See [first-run.md](first-run.md).
+
 ## What is automated vs manual
 
 | Piece | Automated? | Notes |
@@ -19,6 +21,7 @@ That installs the hook below **and** syncs Cursor hook scripts. Forks may strip 
 | **Proper reasoning log / ADR** | **Manual or agent** | Human edits, or run **`prompts/distill-inbox-stub-onepager.txt`** on the stub in Cursor. |
 | **Bulk Slack/email import** | **Agent** | `import-distill-onepager.txt` + `templates/distill-external-to-calyx.md`. |
 | **Checkpoint staging** | **Semi** | `calyx-closeout.sh` stages `.calyx/`; you still commit/push. |
+| **Layout / hook sanity** | **Script** | `calyx-verify-capture.sh` — onboarding and optional CI (`--ci`). |
 
 Nothing here **auto-merges** to `main` or **auto-deletes** stubs—you stay in control of what gets promoted.
 

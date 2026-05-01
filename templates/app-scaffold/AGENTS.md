@@ -4,7 +4,7 @@ __WORKSPACE_BADGE__
 
 ## Read first
 
-1. **`SETUP_CALYX.md`** — if the user is **new to this repo** or **onboarding Calyx**, walk **`.calyx/core/docs/first-run.md`** with them (verify steps, restart Cursor after hooks).
+1. **`SETUP_CALYX.md`** — if the user is **new to this repo** or **onboarding Calyx**, walk **`.calyx/core/docs/first-run.md`** with them (verify steps, restart Cursor after hooks). After setup, run **`bash .calyx/core/tooling/calyx-verify-capture.sh`** and fix failures.
 2. **`.cursorrules`** — Calyx norms for this implementation repo.
 3. **`docs/GIT.md`** — clone, submodules, pushing.
 4. **`.calyx/README.md`** — where reasoning, ADRs, and taxonomy live.
