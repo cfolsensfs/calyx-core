@@ -5,6 +5,10 @@
 # Usage:
 #   bash tooling/create-sfs-workspace.sh "Human Project Name" [repo-slug]
 #
+# The repo-slug is also the on-disk folder name under SFS_WORKSPACE_ROOT (default
+# ~/Documents/CURSOR/<slug>). Slug must be all lowercase [a-z0-9-]+ — same spelling
+# you want on GitHub (GitHub treats names case-insensitively; use lowercase everywhere).
+#
 # Options:
 #   --public           Create a public GitHub repo (default: private)
 #   --no-github        Do not run gh; only scaffold + local commit
