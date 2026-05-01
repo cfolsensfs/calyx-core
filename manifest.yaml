@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "0.15"
+version: "1.0"
 
 bundle:
   constitution:
@@ -25,6 +25,7 @@ bundle:
     - tooling/calyx-closeout.sh
     - tooling/calyx-post-commit.sh
     - tooling/install-calyx-git-hooks.sh
+    - tooling/calyx-setup-capture.sh
     - tooling/scaffold-cursor-app.sh
     - tooling/create-sfs-workspace.sh
 

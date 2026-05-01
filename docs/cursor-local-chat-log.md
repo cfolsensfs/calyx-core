@@ -1,12 +1,14 @@
 # Local Cursor chat log (workspace, retained)
 
-Cursor does **not** (today) dump full chat history into your repo by default. You **can** build a **local, gitignored** trail by combining:
+**Calyx v1** expects this path: human–agent turns are **not** preserved in Git history or in typical commit messages. Cursor does **not** (today) dump full chat into your repo by default, so we use hooks.
+
+**Baseline (install via `tooling/calyx-setup-capture.sh` or scaffold):**
 
 1. **Cursor Hooks** — `beforeSubmitPrompt` + `afterAgentResponse` (+ optional `stop`) fire once per turn with JSON on stdin.
 2. **A small script** — append to **`local/chat-log/YYYY-MM-DD.md`** under the **first** `workspace_roots` entry.
 3. **Retention** — delete `local/chat-log/*.md` older than **3 days** (override with `CALYX_CHAT_LOG_RETENTION_DAYS`).
 
-This is **not** a substitute for Calyx reasoning logs; it is **raw session material** for EOD distill or debugging. Keep **`local/`** gitignored (default in Calyx scaffolds).
+This is **not** a substitute for Calyx reasoning logs; it is **raw session material** for distill or debugging. Keep **`local/`** gitignored (default in Calyx scaffolds).
 
 ## Limitations (honest)
 
@@ -55,5 +57,6 @@ Point your **EOD / Librarian** prompt at **`local/chat-log/*.md`** (last day or 
 
 ## Related
 
-- [automation.md](automation.md) — post-commit inbox stubs
-- Cursor hooks skill / docs: project `.cursor/hooks.json`
+- [automation.md](automation.md) — post-commit inbox stubs + **`calyx-setup-capture.sh`**
+- [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 capture
+- Cursor hooks: project `.cursor/hooks.json`

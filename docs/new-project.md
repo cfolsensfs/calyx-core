@@ -60,6 +60,16 @@ git submodule update --init --recursive
 
 Open the **project root** in Cursor so `.cursorrules` applies repo-wide.
 
+### Calyx v1 — capture (every clone / machine)
+
+Brownfield or new laptop: with **`.calyx/core`** present,
+
+```bash
+bash .calyx/core/tooling/calyx-setup-capture.sh
+```
+
+Installs the **git post-commit** inbox stub hook and **Cursor** chat hooks (`local/chat-log/`). Requires **`python3`**. The generic scaffold runs this automatically when the submodule is added; **`--no-submodule`** means you run it yourself after adding **`.calyx/core`**.
+
 ---
 
 ## 2. SFS one-shot (folder + commit + GitHub)
@@ -103,10 +113,10 @@ Pin **calyx-core** in each project to a **commit or tag** you trust:
 ```bash
 cd .calyx/core
 git fetch origin
-git checkout v0.x.y   # or a commit SHA
+git checkout v1.0.0   # or a newer tag / commit SHA
 cd ../..
 git add .calyx/core
 git commit -m "Pin calyx-core"
 ```
 
-Tag releases on this repo so consumers can reference **`manifest.yaml`** and a known-good version.
+Tag releases on this repo so consumers can reference **`manifest.yaml`** and a known-good version. **Calyx v1** starts at **`v1.0.0`** (capture baseline in constitution).

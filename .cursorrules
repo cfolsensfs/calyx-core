@@ -4,6 +4,8 @@
 
 This repository is **calyx-core** only: constitution, specialist prompts, master taxonomy, canonical templates, and shared tooling. Edits here affect **every consumer** repo that pins this bundle (typically as a submodule at `.calyx/core/`). Prefer small, coherent changes; tag releases so projects can bump deliberately.
 
+**Calyx v1** constitution: **capture** (git post-commit + Cursor **`local/chat-log/`**) is **load-bearing**—see **`constitution/CONSTITUTION.md`** and **`tooling/calyx-setup-capture.sh`**.
+
 ## North star
 
 **Calyx** is an **organizational intelligence** layer, not a solo productivity hack. Prefer outcomes that make the **team’s knowledge compound** (durable reasoning, visible debate, reusable failure modes) over one-off speed.

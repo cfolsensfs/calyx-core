@@ -10,7 +10,7 @@ __WORKSPACE_BADGE__
 
 ## Calyx: add knowledge, not only code
 
-This project uses **Calyx** so reasoning survives the chat session.
+This project uses **Calyx v1** so reasoning survives the chat session. **Capture is mandatory for the model to work:** run **`bash .calyx/core/tooling/calyx-setup-capture.sh`** after clone (git inbox stubs + Cursor → **`local/chat-log/`**). Commit messages are not enough; distill stubs and chat-log into **`.calyx/reasoning/`** on a steady beat.
 
 | Situation | Where to write |
 |-----------|----------------|

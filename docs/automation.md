@@ -1,26 +1,36 @@
-# Calyx automation (opt-in)
+# Calyx automation — capture and distill
 
-Calyx defaults to **manual** judgment for reasoning logs and ADRs. For teams that will not self-enforce a “diary,” use **automation that captures raw signal** and **defers judgment** to a quick distill step.
+**Calyx v1** treats **capture as load-bearing**, not a nice-to-have. Commit messages are **too thin** to preserve human–agent reasoning. This page describes the **git post-commit** path that drops **inbox stubs** under **`.calyx/reasoning/inbox/`**; pair it with **[cursor-local-chat-log.md](cursor-local-chat-log.md)** (Cursor hooks → **`local/chat-log/`**).
+
+**One command after clone** (project root, submodule present):
+
+```bash
+bash .calyx/core/tooling/calyx-setup-capture.sh
+```
+
+That installs the hook below **and** syncs Cursor hook scripts. Forks may strip automation; **what ships in calyx-core assumes you keep it** or document an equivalent in an ADR.
 
 ## What is automated vs manual
 
 | Piece | Automated? | Notes |
-|-------|------------|--------|
+|-------|------------|-------|
 | **Inbox stub after commit** | **Yes** (with hook) | `tooling/calyx-post-commit.sh` writes `.calyx/reasoning/inbox/auto-*.md` with subject, body, stat, file list. |
 | **Noise control** | **Heuristic** | Skips merge commits (unless `CALYX_DIARY_ON_MERGE=1`), skips `[calyx skip]`, skips commits that only touch `inbox/`, skips tiny diffs (default ≥15 lines changed; override with `CALYX_DIARY_MIN_LINES`). |
 | **Proper reasoning log / ADR** | **Manual or agent** | Human edits, or run **`prompts/distill-inbox-stub-onepager.txt`** on the stub in Cursor. |
 | **Bulk Slack/email import** | **Agent** | `import-distill-onepager.txt` + `templates/distill-external-to-calyx.md`. |
 | **Checkpoint staging** | **Semi** | `calyx-closeout.sh` stages `.calyx/`; you still commit/push. |
 
-Nothing here **auto-merges** to `main` or **auto-deletes** stubs—you stay in control.
+Nothing here **auto-merges** to `main` or **auto-deletes** stubs—you stay in control of what gets promoted.
 
 ## Install (per project repo)
 
-From the **project root**, after `git submodule update --init --recursive`:
+Prefer **`calyx-setup-capture.sh`** (installs git hook **and** Cursor hooks). To install **only** the git hook:
 
 ```bash
 bash .calyx/core/tooling/install-calyx-git-hooks.sh
 ```
+
+Run from the **project root**, after `git submodule update --init --recursive`.
 
 This installs **`post-commit`** under `.git/hooks/`. If you already had a hook, it is backed up to **`hooks/post-commit.pre-calyx`**; chain it:
 
@@ -45,10 +55,10 @@ export CALYX_DIARY_MIN_LINES=0
 export CALYX_DIARY_ON_MERGE=1
 ```
 
-## Suggested team habit
+## v1 rhythm
 
-1. **Commit as usual** → stubs appear for non-trivial diffs.  
-2. **Weekly or end-of-task:** batch-delete noise stubs; run **distill** prompt on the rest; commit real logs under `.calyx/reasoning/`.  
+1. **Commit as usual** → stubs appear for non-trivial diffs; Cursor appends turns to **`local/chat-log/`** if hooks are enabled.
+2. **On a steady beat** (end of day or end of task): run **distill** on stubs that matter; skim **recent chat-log**; promote into **`.calyx/reasoning/`** or **delete** noise.
 3. **Delete** processed stubs so `inbox/` stays small (or keep for audit—team choice).
 
 ## CI (future)
@@ -57,6 +67,7 @@ You can add a **non-blocking** GitHub Action that comments “new inbox stubs”
 
 ## Related
 
-- [cursor-local-chat-log.md](cursor-local-chat-log.md) — optional **Cursor hooks** → `local/chat-log/` (retained a few days) for EOD distill
+- [cursor-local-chat-log.md](cursor-local-chat-log.md) — Cursor hooks → `local/chat-log/`
 - [workflow.md](workflow.md) — rhythm
 - [new-project.md](new-project.md) — scaffolding
+- [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 capture principle

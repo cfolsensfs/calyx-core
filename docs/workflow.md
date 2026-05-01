@@ -2,6 +2,8 @@
 
 **Living document.** This page describes the **ongoing work rhythm** after onboarding (contrast: [ux-flow.md](ux-flow.md)). When Calyx habits, templates, or tooling change materially, **update this file** and note it in `manifest.yaml` / release notes so downstream repos know to refresh expectations.
 
+**Calyx v1:** keep **capture** installed (**`calyx-setup-capture.sh`**). The rhythm below assumes **inbox stubs** and **`local/chat-log/`** exist as **inputs** to distill; without them you are back to memory and commit blurbs.
+
 ---
 
 ## Work rhythm (diagram)
@@ -107,4 +109,4 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [glossary.md](glossary.md) | **ccl** / **col** / **cpl** layer abbreviations |
 | [org-and-projects.md](org-and-projects.md) | Agency/org vs project repos |
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
-| [cursor-local-chat-log.md](cursor-local-chat-log.md) | Cursor hooks → `local/chat-log/` for optional EOD distill |
+| [cursor-local-chat-log.md](cursor-local-chat-log.md) | Cursor hooks → `local/chat-log/` (v1 baseline; feed distill) |

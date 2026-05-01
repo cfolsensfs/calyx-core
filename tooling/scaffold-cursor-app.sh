@@ -170,10 +170,23 @@ if [[ "${DO_SUBMODULE}" -eq 1 ]]; then
 else
   echo "skip submodule (--no-submodule). Add later:"
   echo "  cd \"${TARGET}\" && git submodule add ${CALYX_CORE_URL} .calyx/core"
+  echo "  then: bash .calyx/core/tooling/calyx-setup-capture.sh"
+fi
+
+if [[ "${DO_SUBMODULE}" -eq 1 ]] && [[ -d "${TARGET}/.git" ]]; then
+  if [[ -e "${TARGET}/.calyx/core/.git" ]] || [[ -f "${TARGET}/.calyx/core" ]]; then
+    (cd "${TARGET}" && git submodule update --init --recursive) || true
+    SETUP="${TARGET}/.calyx/core/tooling/calyx-setup-capture.sh"
+    if [[ -f "${SETUP}" ]]; then
+      bash "${SETUP}"
+    else
+      echo "Note: calyx-setup-capture.sh not found yet — run it after submodule points at calyx-core v1+"
+    fi
+  fi
 fi
 
 echo
 echo "Scaffold complete: ${TARGET}"
-echo "Next: cd \"${TARGET}\" && git submodule update --init --recursive  (if submodule was added)"
+echo "Next: cd \"${TARGET}\" && git submodule update --init --recursive  (if submodule was not fully init)"
 echo "Then open this folder as the workspace root in Cursor."
-echo "Chat turns append to local/chat-log/ (requires python3 on PATH; hooks in .cursor/hooks.json)."
+echo "Calyx v1 capture: git inbox stubs + local/chat-log (python3 on PATH; see .cursor/hooks.json)."
