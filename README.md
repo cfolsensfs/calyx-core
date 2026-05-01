@@ -1,6 +1,6 @@
 # calyx-core
 
-**Calyx v1.0** — constitution, prompts, templates, and **capture tooling** for projects that use **Git + Cursor + bash**. This repo is **not an installable product**; it is a **bundle and convention**. If you fork it and delete the hooks, that is on you—you no longer have the v1 baseline.
+**Calyx v1.0** — constitution, prompts, templates, and **capture tooling** for projects that use **Git + Cursor + bash**. This repo is **not an installable product**; it is a **bundle and convention**. If you fork it and delete the hooks, that is on you—you no longer have the v1 baseline. **Why this matters now:** [docs/why-calyx-now.md](docs/why-calyx-now.md).
 
 ## Why Calyx
 
@@ -32,6 +32,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Capture (v1 baseline)** | **`tooling/calyx-setup-capture.sh`** — git post-commit + Cursor hooks; **`docs/automation.md`**, **`docs/cursor-local-chat-log.md`** |
 | **Machine index** | `manifest.yaml` |
 | **Cutting releases** | **`docs/releasing.md`** — maintainers, **`v1.0.0`** tag, pre-flight checklist |
+| **Why Calyx now (one page)** | **`docs/why-calyx-now.md`** — org intelligence vs solo speed; capture; boundaries |
 
 **Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.
 
@@ -45,7 +46,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
 | `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout |
-| `docs/` | Guides: **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`** |
+| `docs/` | Guides: **`why-calyx-now.md`**, **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`** |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 

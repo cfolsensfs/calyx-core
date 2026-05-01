@@ -101,6 +101,7 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 
 | Doc | Focus |
 |-----|--------|
+| [why-calyx-now.md](why-calyx-now.md) | One-page case: org intelligence, capture, why now |
 | [ux-flow.md](ux-flow.md) | First-time incorporation (scaffold vs brownfield, Cursor, submodule). |
 | [new-project.md](new-project.md) | Scripts, flags, deliverables for new repos. |
 | [README](../README.md) | Repo overview and quick commands. |
