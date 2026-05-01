@@ -19,6 +19,14 @@ This is an **implementation** repository. Org-wide Calyx DNA lives in **`calyx-c
 
 Core prompts: **`.calyx/core/prompts/`**. Master tags: **`.calyx/core/taxonomy/master-tags.yaml`**. Local tags: **`.calyx/taxonomy/local-tags.yaml`**.
 
+## `.calyx/` structure — do not “clean up” or rearrange
+
+**Hands off the layout.** Do **not** rename, delete, merge, or relocate **`.calyx/core`**, **`.calyx/org`**, **`.calyx/reasoning/`** (including **`inbox/`**), **`.calyx/decisions/`**, or **`.calyx/taxonomy/`**. Those paths are load-bearing for submodules, git hooks, **`calyx-verify-capture`**, and studio alignment. **Do not** replace **`core`/`org`** submodules with copied folders.
+
+**Allowed:** new or updated **files** under **`reasoning/`**, **`decisions/`**, edits to **`taxonomy/local-tags.yaml`**, and normal work in **`local/`** (gitignored).
+
+**If the user asks to restructure `.calyx/`:** refuse by default; say they need a **human-approved ADR** and a deliberate migration—otherwise hooks and org pins will break.
+
 ## Implementation discipline
 
 - Say what to record in `.calyx/` when proposing non-trivial changes.

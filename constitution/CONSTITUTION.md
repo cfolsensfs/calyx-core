@@ -11,6 +11,7 @@ This document is the **Company DNA**: non-negotiable defaults for how reasoning 
 3. **Assume good faith; assume bad outcomes** — Use adversarial review (10th Man) before commitment, not after failure.
 4. **Tags are contracts** — Taxonomy terms link decisions, logs, and code; local tags extend but must not contradict core tags without an ADR.
 5. **Silos are failures** — Cross-project dependencies must be visible (Broker) and knowledge must be distilled (Librarian).
+6. **Preserve `.calyx/` structure (v1)** — **Humans and agents must not rename, remove, or “reorganize”** the standard Calyx layout unless a **ratified ADR** says otherwise. That includes: **`.calyx/core`** and **`.calyx/org`** as **submodule mount points** (not vendored copies), and **`.calyx/reasoning/`**, **`.calyx/reasoning/inbox/`**, **`.calyx/decisions/`**, **`.calyx/taxonomy/`** (and **`local-tags.yaml`** in that folder). **Adding or editing files inside `reasoning/` and `decisions/`** is normal **cpl** work; **moving mounts, collapsing layers, or replacing submodules with ad-hoc folders** breaks capture scripts, **`calyx-verify-capture`**, onboarding docs, and cross-repo alignment. If something truly must change, **draft an ADR first** and get **human** agreement—agents do not improvise structural edits here.
 
 ## Mandatory artifacts (per project)
 

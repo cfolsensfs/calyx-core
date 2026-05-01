@@ -9,6 +9,10 @@ __WORKSPACE_BADGE__
 3. **`docs/GIT.md`** — clone, submodules, pushing.
 4. **`.calyx/README.md`** — where reasoning, ADRs, and taxonomy live.
 
+## `.calyx/` layout is fixed
+
+**Never** rename, delete, or reorganize **`.calyx/core`**, **`.calyx/org`**, **`.calyx/reasoning/`** (including **`inbox/`**), **`.calyx/decisions/`**, or **`.calyx/taxonomy/`**. Never replace submodules with copied trees. **Do** add or edit **files** in **`reasoning/`** and **`decisions/`**. If the user wants a different layout, stop and require a **human-gated ADR**—otherwise capture and verify will fail.
+
 ## Calyx: add knowledge, not only code
 
 This project uses **Calyx v1** so reasoning survives the chat session. **Capture is mandatory for the model to work:** run **`bash .calyx/core/tooling/calyx-setup-capture.sh`** after clone (git inbox stubs + Cursor → **`local/chat-log/`**). Commit messages are not enough; distill stubs and chat-log into **`.calyx/reasoning/`** on a steady beat.

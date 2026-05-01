@@ -14,6 +14,10 @@ This project uses **ccl** + **col** (optional) + **cpl**:
 
 **Precedence:** **cpl** → **col** → **ccl** (unless an ADR says otherwise).
 
+## Do not change this folder layout
+
+**Humans and AI agents:** keep **`.calyx/core`** and **`.calyx/org`** as **submodules** at these paths; keep **`reasoning/`** (including **`inbox/`**), **`decisions/`**, and **`taxonomy/`** where they are. Renaming, moving, or “tidying” the tree **breaks** capture tooling, **`calyx-verify-capture`**, and studio conventions. Add **files** under **`reasoning/`** / **`decisions/`** freely; structural changes require a **ratified ADR** and **human** sign-off—not an agent refactor.
+
 ## First-time clone
 
 ```bash

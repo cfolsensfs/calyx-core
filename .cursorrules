@@ -26,6 +26,10 @@ When authoring **explanatory materials**, anchor them in: org intelligence vs so
 
 When changing taxonomy or templates, update **`manifest.yaml`** if paths change.
 
+## Consumer `.calyx/` layout (templates + constitution)
+
+Templates and **CONSTITUTION.md** require **fixed paths** for **`.calyx/core`**, **`.calyx/org`**, **`.calyx/reasoning/`**, **`.calyx/decisions/`**, **`.calyx/taxonomy/`**. Do not ship template or doc changes that invite “reorganizing” those mounts without an explicit ADR/migration story—**principle 6** in the constitution.
+
 ## Implementation discipline
 
 - **Collective brain over individual fix** — If you propose a core change, note what **consumer projects** should record when they adopt it (e.g. ADR in their repo).

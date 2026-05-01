@@ -97,6 +97,8 @@ When the user says they are **setting up Calyx**, **onboarding**, or **first run
 
 Do **not** invent alternate install paths unless the user’s environment cannot satisfy the defaults; if so, suggest documenting an ADR for their replacement capture mechanism.
 
+Do **not** rename or reorganize **`.calyx/`** (submodule mounts, **`reasoning/`**, **`decisions/`**, **`taxonomy/`**). Content edits inside **`reasoning/`** / **`decisions/`** are fine; structural changes require a **human-approved ADR** (see **constitution** principle 6).
+
 ---
 
 ## Community / brownfield
