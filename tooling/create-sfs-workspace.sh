@@ -84,7 +84,11 @@ if [[ "${DRY_RUN}" -eq 1 ]]; then
   echo "Project name: ${PROJECT_NAME}"
   echo "GitHub repo:  ${GITHUB_OWNER}/${SLUG} (${VISIBILITY#--})"
   run mkdir -p "${PARENT}"
-  run env SFS_SCAFFOLD=1 bash "${SCAFFOLD}" "${TARGET}" --name "${PROJECT_NAME}" "${DO_SUBMODULE[@]}"
+  if [[ ${#DO_SUBMODULE[@]} -gt 0 ]]; then
+    run env SFS_SCAFFOLD=1 bash "${SCAFFOLD}" "${TARGET}" --name "${PROJECT_NAME}" "${DO_SUBMODULE[@]}"
+  else
+    run env SFS_SCAFFOLD=1 bash "${SCAFFOLD}" "${TARGET}" --name "${PROJECT_NAME}"
+  fi
   run git -C "${TARGET}" add -A
   run git -C "${TARGET}" commit -m "chore: initial SFS workspace for ${PROJECT_NAME} (v0.1)"
   if [[ "${DO_GITHUB}" -eq 1 ]]; then
@@ -98,7 +102,11 @@ mkdir -p "${PARENT}"
 
 echo "Creating SFS workspace at ${TARGET}"
 
-SFS_SCAFFOLD=1 bash "${SCAFFOLD}" "${TARGET}" --name "${PROJECT_NAME}" "${DO_SUBMODULE[@]}"
+if [[ ${#DO_SUBMODULE[@]} -gt 0 ]]; then
+  SFS_SCAFFOLD=1 bash "${SCAFFOLD}" "${TARGET}" --name "${PROJECT_NAME}" "${DO_SUBMODULE[@]}"
+else
+  SFS_SCAFFOLD=1 bash "${SCAFFOLD}" "${TARGET}" --name "${PROJECT_NAME}"
+fi
 
 if [[ ! -d "${TARGET}/.git" ]]; then
   die "scaffold did not create a git repo (unexpected)"
