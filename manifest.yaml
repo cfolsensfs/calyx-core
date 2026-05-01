@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "0.5"
+version: "0.6"
 
 bundle:
   constitution:
@@ -42,5 +42,7 @@ app_scaffold_templates:
   - templates/app-scaffold/infra-README.md
 
 optional:
+  docs:
+    - docs/new-project.md
   examples:
     - examples/sample-reasoning-log.md

@@ -12,6 +12,18 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 
 **Calyx-core** is the **generic bundle** for that layer: constitution, specialist prompts, master taxonomy, canonical templates, and minimal tooling. Each **project repo** mounts this bundle as **`.calyx/core/`** (Git submodule) and adds its own reasoning, ADRs, and local tags. Some organizations also use a **second** submodule **`.calyx/org/`** for agency-wide, non-sensitive DNA (see `templates/dot-calyx-README.md`).
 
+## Deliverables (what ships in this repo)
+
+| Deliverable | Location |
+|-------------|----------|
+| **Brain bundle** (constitution, prompts, master taxonomy, ADR/reasoning templates) | `constitution/`, `prompts/`, `taxonomy/`, `templates/` |
+| **New project creation (generic)** | **`tooling/scaffold-cursor-app.sh`** + **`templates/app-scaffold/`** |
+| **New project + GitHub push (optional SFS flow)** | **`tooling/create-sfs-workspace.sh`** (wraps the scaffold; needs `gh` for remote create) |
+| **Project-creation guide** | **`docs/new-project.md`** — prerequisites, flags, env vars, what gets created |
+| **Machine index** | `manifest.yaml` |
+
+**Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.
+
 ## Layout
 
 | Path | Purpose |
@@ -21,7 +33,8 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `taxonomy/` | Master tag vocabulary (`master-tags.yaml`) |
 | `templates/` | **Canonical** reasoning log and ADR shapes—sync these into projects |
 | `examples/` | Illustrative artifacts (not production data) |
-| `tooling/` | Lean scripts (e.g. local Ollama runner, **new project scaffold**) |
+| `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout |
+| `docs/` | Guides (e.g. **`new-project.md`**) |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 
@@ -35,6 +48,8 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 This repository includes **`.cursorrules`** so agents follow Calyx when working only in `calyx-core`.
 
 ## New app repo (Cursor + Calyx + layout)
+
+Full detail: **[docs/new-project.md](docs/new-project.md)**.
 
 From a clone of **calyx-core**, or with this repo on your `PATH`:
 
