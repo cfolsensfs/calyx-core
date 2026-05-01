@@ -2,6 +2,20 @@
 
 **Project:** __PROJECT_NAME__
 
+## New on this project? (lead dev → team)
+
+**After `git pull`:** run **`git submodule update --init --recursive`** whenever the team bumps **`.calyx/core`** (or you see empty/missing submodule files).
+
+Then: open this **repo root** in Cursor → read this file → optionally paste the prompt below to your agent.
+
+**Copy-paste for Slack / email / ticket:**
+
+```text
+We use Calyx on this repo. After you pull: run `git submodule update --init --recursive`, open the repository root in Cursor (not a subfolder), open SETUP_CALYX.md, and either follow it or paste this to the agent:
+
+Read SETUP_CALYX.md in the repo root, then walk me through Calyx setup using .calyx/core/docs/first-run.md. Run each step including bash .calyx/core/tooling/calyx-setup-capture.sh and bash .calyx/core/tooling/calyx-verify-capture.sh. Remind me to restart Cursor after hooks are installed. Do not skip verify or smoke test.
+```
+
 ## If you are a human
 
 1. Open this **repository root** in **Cursor** (whole tree, not a subfolder).
