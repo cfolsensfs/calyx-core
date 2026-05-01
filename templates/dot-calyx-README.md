@@ -1,16 +1,18 @@
-# `.calyx/` — project Calyx layer
+# `.calyx/` — Calyx layers (**ccl**, **col**, **cpl**)
 
-This project uses **two** inherited layers plus **local** brain:
+Shorthand: **ccl** = core submodule, **col** = org submodule, **cpl** = project-local reasoning/ADRs/tags. See **calyx-core** `docs/glossary.md`.
+
+This project uses **ccl** + **col** (optional) + **cpl**:
 
 | Path | Submodule | Purpose |
 |------|-----------|---------|
-| `core/` | `https://github.com/cfolsensfs/calyx-core.git` | Generic Calyx product bundle (prompts, templates, master taxonomy) |
-| `org/` | `https://github.com/cfolsensfs/calyx-scalefree-org.git` | Scalefree org DNA (non-sensitive); **replace URL** if repo name differs |
-| `reasoning/` | — | This project’s thought streams (major work) |
-| `decisions/` | — | This project’s ADRs |
-| `taxonomy/local-tags.yaml` | — | Tags **only** for this project |
+| `core/` | `https://github.com/cfolsensfs/calyx-core.git` | **ccl** — generic bundle (prompts, templates, master taxonomy) |
+| `org/` | `https://github.com/cfolsensfs/calyx-scalefree-org.git` | **col** — org DNA (non-sensitive); **replace URL** if repo name differs |
+| `reasoning/` | — | **cpl** — thought streams (major work) |
+| `decisions/` | — | **cpl** — ADRs |
+| `taxonomy/local-tags.yaml` | — | **cpl** — tags for this project only |
 
-**Precedence:** project local → org → core (unless an ADR says otherwise).
+**Precedence:** **cpl** → **col** → **ccl** (unless an ADR says otherwise).
 
 ## First-time clone
 
