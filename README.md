@@ -23,6 +23,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **UX flow (Mermaid)** | **`docs/ux-flow.md`** — from “incorporate Calyx” to day-to-day habits |
 | **Work rhythm (Mermaid)** | **`docs/workflow.md`** — reasoning, ADRs, specialists, checkpoint (**living doc**) |
 | **Glossary (ccl / col / cpl)** | **`docs/glossary.md`** |
+| **Org vs projects** | **`docs/org-and-projects.md`** — studio/agency → many repos; Calyx shape independent of disk |
 | **Machine index** | `manifest.yaml` |
 
 **Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.
@@ -37,7 +38,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
 | `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout |
-| `docs/` | Guides: **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`** (ccl/col/cpl) |
+| `docs/` | Guides: **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`** |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 

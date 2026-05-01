@@ -16,6 +16,7 @@ Short names for the three **Calyx layers** in a project repo. Use full names in 
 
 ## Related
 
+- [org-and-projects.md](org-and-projects.md) — **agency (org) vs engagement repos (projects)**; disk layout vs Git roots
 - [README](../README.md) — consumption model
 - [new-project.md](new-project.md) — scaffolding
 - [workflow.md](workflow.md) — ongoing rhythm
