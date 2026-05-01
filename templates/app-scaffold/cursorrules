@@ -1,0 +1,30 @@
+# Calyx Framework — AI rules (implementation repo)
+
+## Scope
+
+This is an **implementation** repository. Org-wide Calyx DNA lives in **`calyx-core`**, pinned at **`.calyx/core/`** (Git submodule). **Project brain:** `.calyx/reasoning/`, `.calyx/decisions/`, `.calyx/taxonomy/local-tags.yaml`.
+
+**App layout (default scaffold):** `apps/web` (frontend), `apps/api` (HTTP API), `mcp/` (MCP servers/tools), `packages/shared` (shared types/utils), `infra/` (compose, migrations, IaC notes). Adjust names in an ADR if the stack diverges.
+
+## North star
+
+**Calyx** prioritizes **organizational intelligence**: compound knowledge (why, debate, failures) over disposable chat and one-off fixes. Major architectural or cross-cutting work needs a trail in **`.calyx/`**.
+
+## Mandatory artifacts (“major” work)
+
+1. **Reasoning log** — `.calyx/reasoning/` (see `_TEMPLATE.md`; canonical shape in `.calyx/core/templates/reasoning-log.md` once the submodule exists).
+2. **ADR** — `.calyx/decisions/` when a choice binds future work (template in `.calyx/core/templates/adr.md`).
+
+## Specialist agents (prompts in submodule)
+
+Core prompts: **`.calyx/core/prompts/`**. Master tags: **`.calyx/core/taxonomy/master-tags.yaml`**. Local tags: **`.calyx/taxonomy/local-tags.yaml`**.
+
+## Implementation discipline
+
+- Say what to record in `.calyx/` when proposing non-trivial changes.
+- Prefer small code diffs; **supersede** stale ADRs instead of rewriting history for tidiness.
+- **Secrets and local-only files** — keep out of git (see `.gitignore`, `local/`). Never commit credentials or production connection strings.
+
+## Local LLMs (optional)
+
+If the submodule is present: **`.calyx/core/tooling/ollama-run.sh`**.

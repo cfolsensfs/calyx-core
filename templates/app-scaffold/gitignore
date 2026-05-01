@@ -1,0 +1,33 @@
+# OS / editor
+.DS_Store
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+creds/
+
+# Local-only drops (sensitive drafts, dumps, machine-specific)
+local/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies & build (tune per stack)
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+out/
+coverage/
+
+# Python (if used)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.idea/

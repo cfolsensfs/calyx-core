@@ -1,0 +1,9 @@
+# Project-local tags — extends calyx-core/taxonomy/master-tags.yaml
+# Add ids here for this repo only; do not redefine core ids with different meanings.
+
+version: 0.1
+extends: calyx-core
+
+project_tags: []
+  # - id: example-area
+  #   description: ...
