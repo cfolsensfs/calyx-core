@@ -81,6 +81,10 @@ When **superseding**, keep the old ADR file and record **Supersedes** / **Supers
 
 ---
 
+## Commit-triggered inbox stubs (opt-in)
+
+Install **`tooling/install-calyx-git-hooks.sh`** so **post-commit** writes **`.calyx/reasoning/inbox/auto-*.md`** for substantive commits; distill with **`prompts/distill-inbox-stub-onepager.txt`**. Full detail: [automation.md](automation.md).
+
 ## Bootstrapping from Slack / email exports
 
 Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summarize, and structure**—not to archive full threads in Git.
@@ -102,3 +106,4 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [import-distill-onepager.txt](../prompts/import-distill-onepager.txt) | Paste-ready import distillation prompt |
 | [glossary.md](glossary.md) | **ccl** / **col** / **cpl** layer abbreviations |
 | [org-and-projects.md](org-and-projects.md) | Agency/org vs project repos |
+| [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |

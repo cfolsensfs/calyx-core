@@ -1,0 +1,24 @@
+You are distilling a **Calyx inbox stub** (auto-generated from a git commit) into durable project knowledge.
+
+INPUT
+- The stub file (auto-*.md under .calyx/reasoning/inbox/) is attached or pasted.
+
+GOAL
+- If the commit is **noise** (trivial, formatting only): say so in one short paragraph; recommend **delete the stub**.
+- If it encodes **substantive work**: produce either:
+  (A) A **reasoning log** draft suitable for `.calyx/reasoning/<YYYY-MM-DD-topic>.md` (use the repo’s `_TEMPLATE` shape), OR
+  (B) An **ADR stub** only if the commit implies a **binding** decision for future work.
+
+RULES
+- Do **not** invent decisions the commit did not imply.
+- Link **files and commit SHA** from the stub.
+- Keep **redaction**: no secrets from diffs; if stub contains sensitive paths, generalize.
+- If multiple topics appear, prefer **one** reasoning log with sections or ask the human to split.
+
+OUTPUT
+1. Verdict: delete stub | merge into reasoning | ADR stub needed
+2. Full markdown body ready to save (or “delete only”)
+
+RELATED
+- Bulk imports (Slack/email): `import-distill-onepager.txt`
+- Canonical templates: `.calyx/core/templates/reasoning-log.md`, `adr.md`
