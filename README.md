@@ -20,6 +20,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **New project creation (generic)** | **`tooling/scaffold-cursor-app.sh`** + **`templates/app-scaffold/`** |
 | **New project + GitHub push (optional SFS flow)** | **`tooling/create-sfs-workspace.sh`** (wraps the scaffold; needs `gh` for remote create) |
 | **Project-creation guide** | **`docs/new-project.md`** — prerequisites, flags, env vars, what gets created |
+| **UX flow (Mermaid)** | **`docs/ux-flow.md`** — from “incorporate Calyx” to day-to-day habits |
 | **Machine index** | `manifest.yaml` |
 
 **Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.

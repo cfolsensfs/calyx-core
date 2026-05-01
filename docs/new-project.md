@@ -1,5 +1,7 @@
 # New Calyx project — creation tooling (deliverable)
 
+**End-to-end UX (diagram):** [ux-flow.md](ux-flow.md)
+
 This repo ships **scripts and templates** so you can spin up a **new implementation repository** with Calyx already wired: `.calyx/` (local brain), `.cursorrules`, optional **calyx-core** submodule at `.calyx/core`, and a sensible default folder layout for web + API + MCP + infra.
 
 ## Deliverables (what you get from this repo)
