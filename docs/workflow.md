@@ -102,6 +102,7 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | Doc | Focus |
 |-----|--------|
 | [philosophy.md](philosophy.md) | Stewardship vs extraction; epistemic framing; GitHub “About” copy |
+| [github-repository-setup.md](github-repository-setup.md) | Public repo, description, topics, `gh` examples |
 | [why-calyx-now.md](why-calyx-now.md) | One-page case: org intelligence, capture, why now |
 | [ux-flow.md](ux-flow.md) | First-time incorporation (scaffold vs brownfield, Cursor, submodule). |
 | [new-project.md](new-project.md) | Scripts, flags, deliverables for new repos. |

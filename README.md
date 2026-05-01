@@ -2,6 +2,8 @@
 
 **Calyx v1.0** — constitution, prompts, templates, and **capture tooling** for projects that use **Git + Cursor + bash**. This repo is **not an installable product**; it is a **bundle and convention**. If you fork it and delete the hooks, that is on you—you no longer have the v1 baseline.
 
+**Public release:** **`v1.0.0`** · [CHANGELOG.md](CHANGELOG.md) · [MIT License](LICENSE) · **GitHub “About” copy:** [docs/philosophy.md](docs/philosophy.md#for-github-repository-header) · **Make the repo public + topics:** [docs/github-repository-setup.md](docs/github-repository-setup.md)
+
 **Read next:** [Philosophy — stewardship, not extraction](docs/philosophy.md) · [Why Calyx matters now](docs/why-calyx-now.md)
 
 ## Why Calyx
@@ -34,6 +36,9 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Capture (v1 baseline)** | **`tooling/calyx-setup-capture.sh`** — git post-commit + Cursor hooks; **`docs/automation.md`**, **`docs/cursor-local-chat-log.md`** |
 | **Machine index** | `manifest.yaml` |
 | **Cutting releases** | **`docs/releasing.md`** — maintainers, **`v1.0.0`** tag, pre-flight checklist |
+| **GitHub (public + About + topics)** | **`docs/github-repository-setup.md`** |
+| **Changelog** | **`CHANGELOG.md`** |
+| **License** | **`LICENSE`** (MIT) |
 | **Philosophy + GitHub header copy** | **`docs/philosophy.md`** — epistemic framing; stewardship vs extraction; suggested “About” text |
 | **Why Calyx now (one page)** | **`docs/why-calyx-now.md`** — org intelligence vs solo speed; capture; boundaries |
 

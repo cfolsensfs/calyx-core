@@ -22,6 +22,8 @@ Document both in the GitHub **Release notes** when you publish.
 3. **Smoke path** — from a **throwaway** scaffold or test repo: `git submodule update --init --recursive` → `calyx-setup-capture.sh` → restart Cursor → `calyx-verify-capture.sh` (no `FAIL`) → trivial commit → inbox or tune `CALYX_DIARY_MIN_LINES`; chat → `local/chat-log/` grows.
 4. **CI template** — `templates/app-scaffold/github-workflows-calyx-verify.yml` references **`bash .calyx/core/tooling/calyx-verify-capture.sh --ci`** and **`submodules: recursive`**.
 5. **Constitution** — [CONSTITUTION.md](../constitution/CONSTITUTION.md) still states **v1.0** and capture as load-bearing.
+6. **License** — root **`LICENSE`** (MIT) is present; **README** links it.
+7. **Public launch** — follow [github-repository-setup.md](github-repository-setup.md) for visibility, **About** text (or use copy in [philosophy.md](philosophy.md#for-github-repository-header)), topics, and GitHub Release from **`CHANGELOG.md`**.
 
 ## Tag and push
 
@@ -29,7 +31,7 @@ Document both in the GitHub **Release notes** when you publish.
 git checkout main   # or your release branch
 git pull
 # optional: bump manifest.yaml version and commit if the bundle index changed
-git tag -a v1.0.0 -m "Calyx v1.0.0: capture baseline (setup, verify, CI template, onboarding)"
+git tag -a v1.0.0 -m "Calyx v1.0.0: first public release (capture baseline, philosophy, MIT license)"
 git push origin main
 git push origin v1.0.0
 ```
@@ -37,7 +39,7 @@ git push origin v1.0.0
 ## After release
 
 - **Consumer repos:** `cd .calyx/core && git fetch && git checkout v1.0.0` (or newer **v1.x.y**), then `calyx-setup-capture.sh` on each machine as needed.
-- **Release notes:** mention **`calyx-setup-capture.sh`**, **`calyx-verify-capture.sh`**, **`SETUP_CALYX.md`**, **`docs/first-run.md`**, and optional **`.github/workflows/calyx-verify.yml`**.
+- **Release notes:** mention **`calyx-setup-capture.sh`**, **`calyx-verify-capture.sh`**, **`SETUP_CALYX.md`**, **`docs/first-run.md`**, **`docs/philosophy.md`**, **`LICENSE`**, and optional **`.github/workflows/calyx-verify.yml`**.
 
 ## Related
 
