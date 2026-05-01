@@ -81,6 +81,14 @@ When **superseding**, keep the old ADR file and record **Supersedes** / **Supers
 
 ---
 
+## Bootstrapping from Slack / email exports
+
+Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summarize, and structure**—not to archive full threads in Git.
+
+**Runbook (for agents):** [`templates/distill-external-to-calyx.md`](../templates/distill-external-to-calyx.md) — produces a **reasoning log draft** and an **ADR stub** only when a binding decision exists; includes redaction and handoff steps.
+
+---
+
 ## Related
 
 | Doc | Focus |
@@ -88,3 +96,4 @@ When **superseding**, keep the old ADR file and record **Supersedes** / **Supers
 | [ux-flow.md](ux-flow.md) | First-time incorporation (scaffold vs brownfield, Cursor, submodule). |
 | [new-project.md](new-project.md) | Scripts, flags, deliverables for new repos. |
 | [README](../README.md) | Repo overview and quick commands. |
+| [distill-external-to-calyx.md](../templates/distill-external-to-calyx.md) | Import / distillation runbook for noisy exports |

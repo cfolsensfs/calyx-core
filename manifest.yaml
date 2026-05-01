@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "0.8"
+version: "0.9"
 
 bundle:
   constitution:
@@ -17,6 +17,7 @@ bundle:
     - templates/adr.md
     - templates/dot-calyx-README.md
     - templates/calyx-closeout.md
+    - templates/distill-external-to-calyx.md
   tooling:
     - tooling/ollama-run.sh
     - tooling/calyx-closeout.sh

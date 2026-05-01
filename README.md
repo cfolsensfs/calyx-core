@@ -33,7 +33,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `constitution/` | Non-negotiable principles and mandatory artifacts |
 | `prompts/` | Specialist agent system prompts (10th Man, Librarian, Broker) |
 | `taxonomy/` | Master tag vocabulary (`master-tags.yaml`) |
-| `templates/` | **Canonical** reasoning log and ADR shapes—sync these into projects |
+| `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
 | `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout |
 | `docs/` | Guides: **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`** (living) |
