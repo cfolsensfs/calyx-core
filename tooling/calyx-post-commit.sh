@@ -45,6 +45,7 @@ INBOX=".calyx/reasoning/inbox"
 mkdir -p "$INBOX"
 
 # Avoid infinite stubs when the only thing committed is inbox files.
+# Use `git show` (not `git diff-tree` alone) so root commits and normal commits both list paths.
 _any_changed=0
 _all_inbox=1
 while IFS= read -r f; do
@@ -54,7 +55,7 @@ while IFS= read -r f; do
     .calyx/reasoning/inbox/*) ;;
     *) _all_inbox=0 ;;
   esac
-done < <(git diff-tree --no-commit-id --name-only -r HEAD)
+done < <(git show --name-only --format="" HEAD)
 
 [[ "$_any_changed" -eq 0 ]] && exit 0
 [[ "$_all_inbox" -eq 1 ]] && exit 0
@@ -65,8 +66,9 @@ if [[ "$MIN_LINES" =~ ^[0-9]+$ ]] && [[ "$MIN_LINES" -gt 0 ]]; then
   while read -r add del _; do
     [[ "$add" == "-" ]] && continue
     [[ "$del" == "-" ]] && continue
+    [[ -z "$add" ]] && continue
     total=$((total + add + del))
-  done < <(git diff-tree --no-commit-id --numstat -r HEAD)
+  done < <(git show --numstat --format="" HEAD)
   if [[ "$total" -lt "$MIN_LINES" ]]; then
     exit 0
   fi
@@ -107,7 +109,7 @@ $(git show --stat --format="" HEAD)
 
 ## File list
 
-$(git diff-tree --no-commit-id --name-only -r HEAD | sed 's/^/- /')
+$(git show --name-only --format="" HEAD | sed 's/^/- /')
 
 ## Next step (human or agent)
 
