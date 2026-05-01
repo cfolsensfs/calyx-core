@@ -62,6 +62,8 @@ Open the **project root** in Cursor so `.cursorrules` applies repo-wide.
 
 ### Calyx v1 — capture (every clone / machine)
 
+**Lead dev / first open:** use **`SETUP_CALYX.md`** at the repo root (or read **`docs/first-run.md`** in this bundle) for prerequisites, reasoning, and ordered checks. In Cursor, you can ask the agent to follow **`first-run.md`** step by step.
+
 Brownfield or new laptop: with **`.calyx/core`** present,
 
 ```bash
@@ -97,7 +99,7 @@ bash tooling/create-sfs-workspace.sh "Human Project Name" [repo-slug]
 
 ## What the scaffold creates (default, non-minimal)
 
-- **Root:** `.cursorrules`, `.gitignore`, `README.md`, `AGENTS.md`, `VERSION` (`0.1`), `docs/GIT.md`
+- **Root:** `.cursorrules`, `.gitignore`, `README.md`, `AGENTS.md`, **`SETUP_CALYX.md`** (onboarding door → **`docs/first-run.md`** in core), `VERSION` (`0.1`), `docs/GIT.md`
 - **`.calyx/`:** `README.md`, `reasoning/_TEMPLATE.md`, `decisions/ADR-TEMPLATE.md`, `taxonomy/local-tags.yaml`
 - **`.calyx/core/`:** submodule checkout of calyx-core (unless `--no-submodule`)
 - **Layout:** `apps/web`, `apps/api`, `mcp/`, `packages/shared`, `infra/`, gitignored `local/`

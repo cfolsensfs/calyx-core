@@ -66,6 +66,7 @@ flowchart TB
 
 ## Related
 
+- [first-run.md](first-run.md) — prerequisites, **why**, checklist; agent playbook for onboarding
 - [new-project.md](new-project.md) — scripts, flags, deliverables
 - [cursor-local-chat-log.md](cursor-local-chat-log.md) — install, limits, retention env var
 - [automation.md](automation.md) — post-commit inbox stubs

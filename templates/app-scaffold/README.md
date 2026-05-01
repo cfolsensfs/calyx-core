@@ -4,7 +4,7 @@ __WORKSPACE_BADGE__
 
 **Version:** see the `VERSION` file in the repo root (starts at **0.1** for new workspaces).
 
-**AI assistants:** start with **`AGENTS.md`** — Calyx reasoning, ADRs, and session wrap-up norms.
+**First-time Calyx setup:** open **`SETUP_CALYX.md`** (or **`.calyx/core/docs/first-run.md`** for the full prerequisite + checklist). **AI assistants:** start with **`AGENTS.md`**; use **`SETUP_CALYX.md`** when the user is onboarding.
 
 Web frontend + API + AI/MCP + data layer. Default layout from **calyx-core** `scaffold-cursor-app.sh`.
 
@@ -32,6 +32,9 @@ Rename folders if you prefer; if layout changes materially, add a short ADR in `
 
 ```bash
 git submodule update --init --recursive
+bash .calyx/core/tooling/calyx-setup-capture.sh
 ```
+
+Then **restart Cursor** (hooks). Full steps and **why** each prerequisite exists: **`SETUP_CALYX.md`** → **`.calyx/core/docs/first-run.md`**.
 
 Then implement `apps/web`, `apps/api`, and wire `mcp/` and `infra/` to your chosen frameworks.

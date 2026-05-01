@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "1.0"
+version: "1.1"
 
 bundle:
   constitution:
@@ -31,6 +31,7 @@ bundle:
 
 # App scaffold (optional): copy bundle for new repos — see tooling/scaffold-cursor-app.sh
 app_scaffold_templates:
+  - templates/app-scaffold/SETUP_CALYX.md
   - templates/app-scaffold/AGENTS.md
   - templates/app-scaffold/VERSION
   - templates/app-scaffold/cursorrules
@@ -61,5 +62,6 @@ optional:
     - docs/org-and-projects.md
     - docs/automation.md
     - docs/cursor-local-chat-log.md
+    - docs/first-run.md
   examples:
     - examples/sample-reasoning-log.md

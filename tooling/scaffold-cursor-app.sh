@@ -122,6 +122,9 @@ replace_workspace_badge "${TARGET}/AGENTS.md"
 
 write_file "${TARGET}/VERSION" "${TEMPLATE_DIR}/VERSION"
 
+write_file "${TARGET}/SETUP_CALYX.md" "${TEMPLATE_DIR}/SETUP_CALYX.md"
+replace_project_name "${TARGET}/SETUP_CALYX.md"
+
 mkdir -p "${TARGET}/docs"
 write_file "${TARGET}/docs/GIT.md" "${TEMPLATE_DIR}/docs-GIT.md"
 

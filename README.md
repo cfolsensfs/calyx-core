@@ -24,6 +24,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **New project creation (generic)** | **`tooling/scaffold-cursor-app.sh`** + **`templates/app-scaffold/`** |
 | **New project + GitHub push (optional SFS flow)** | **`tooling/create-sfs-workspace.sh`** (wraps the scaffold; needs `gh` for remote create) |
 | **Project-creation guide** | **`docs/new-project.md`** — prerequisites, flags, env vars, what gets created |
+| **First run / onboarding** | **`docs/first-run.md`** — prerequisites + **why**, checklist; scaffolds add root **`SETUP_CALYX.md`** for Cursor |
 | **UX flow (Mermaid)** | **`docs/ux-flow.md`** — from “incorporate Calyx” to day-to-day habits |
 | **Work rhythm (Mermaid)** | **`docs/workflow.md`** — reasoning, ADRs, specialists, checkpoint (**living doc**) |
 | **Glossary (ccl / col / cpl)** | **`docs/glossary.md`** |
@@ -43,7 +44,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
 | `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout |
-| `docs/` | Guides: **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`** |
+| `docs/` | Guides: **`first-run.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`** |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 
