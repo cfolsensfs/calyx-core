@@ -21,9 +21,12 @@ bundle:
     - tooling/ollama-run.sh
     - tooling/calyx-closeout.sh
     - tooling/scaffold-cursor-app.sh
+    - tooling/create-sfs-workspace.sh
 
 # App scaffold (optional): copy bundle for new repos — see tooling/scaffold-cursor-app.sh
 app_scaffold_templates:
+  - templates/app-scaffold/AGENTS.md
+  - templates/app-scaffold/VERSION
   - templates/app-scaffold/cursorrules
   - templates/app-scaffold/dot-calyx-README.md
   - templates/app-scaffold/reasoning-TEMPLATE.md

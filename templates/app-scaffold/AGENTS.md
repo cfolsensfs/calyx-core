@@ -1,0 +1,31 @@
+# Guidance for AI assistants — __PROJECT_NAME__
+
+__WORKSPACE_BADGE__
+
+## Read first
+
+1. **`.cursorrules`** — Calyx norms for this implementation repo.
+2. **`docs/GIT.md`** — clone, submodules, pushing.
+3. **`.calyx/README.md`** — where reasoning, ADRs, and taxonomy live.
+
+## Calyx: add knowledge, not only code
+
+This project uses **Calyx** so reasoning survives the chat session.
+
+| Situation | Where to write |
+|-----------|----------------|
+| Multi-step, architectural, security, data model, infra, or anything that affects others | **`.calyx/reasoning/`** — new dated file from `_TEMPLATE.md` (or copy from `.calyx/core/templates/reasoning-log.md`). |
+| A decision that should bind future work | **`.calyx/decisions/`** — new ADR from `ADR-TEMPLATE.md` (canonical shape in `.calyx/core/templates/adr.md`). |
+| Project-specific tags | **`.calyx/taxonomy/local-tags.yaml`** — align with `.calyx/core/taxonomy/master-tags.yaml`. |
+
+After a substantive session, **summarize**: context, options, what you chose, risks, and open questions. Link any new ADR. Prefer **superseding** old ADRs over silent rewrites.
+
+Specialist framing (prompts under `.calyx/core/prompts/`): **10th Man** (challenge assumptions), **Librarian** (distill and tag), **Broker** (dependencies and silos).
+
+## Version
+
+Release / scaffold version for this repo is in **`VERSION`** (semantic-ish `0.1` at creation). Bump when you ship meaningful milestones; record notable bumps in a reasoning log or ADR if the change is architectural.
+
+## Secrets and client material
+
+Do not commit secrets, credentials, or material that belongs in **`local/`** (gitignored). If something sensitive was ever committed, say so and stop — remediation is a separate step.

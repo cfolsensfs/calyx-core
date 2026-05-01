@@ -1,5 +1,11 @@
 # __PROJECT_NAME__
 
+__WORKSPACE_BADGE__
+
+**Version:** see the `VERSION` file in the repo root (starts at **0.1** for new workspaces).
+
+**AI assistants:** start with **`AGENTS.md`** — Calyx reasoning, ADRs, and session wrap-up norms.
+
 Web frontend + API + AI/MCP + data layer. Default layout from **calyx-core** `scaffold-cursor-app.sh`.
 
 ## Layout

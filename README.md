@@ -32,7 +32,17 @@ From a clone of **calyx-core**, or with this repo on your `PATH`:
 bash tooling/scaffold-cursor-app.sh /path/to/new-project --name "My App"
 ```
 
-This creates **`.cursorrules`**, **`.calyx/`** (reasoning, decisions, taxonomy), **`docs/GIT.md`**, a starter **`.gitignore`**, **`git init`** on `main`, and **`git submodule add`** for `.calyx/core` (override URL with `CALYX_CORE_URL=...`). By default it also adds **`apps/web`**, **`apps/api`**, **`mcp/`**, **`packages/shared`**, **`infra/`**, and **`local/`** (gitignored) so web + API + MCP + DB/infra work has a home from day one. Use `--minimal` for Calyx-only, or `--no-submodule` / `--no-git` when bootstrapping offline.
+This creates **`.cursorrules`**, **`.calyx/`** (reasoning, decisions, taxonomy), **`AGENTS.md`** (norms for AI assistants + Calyx logging), **`VERSION`** (starts at `0.1`), **`docs/GIT.md`**, a starter **`.gitignore`**, **`git init`** on `main`, and **`git submodule add`** for `.calyx/core` (override URL with `CALYX_CORE_URL=...`). By default it also adds **`apps/web`**, **`apps/api`**, **`mcp/`**, **`packages/shared`**, **`infra/`**, and **`local/`** (gitignored) so web + API + MCP + DB/infra work has a home from day one. Use `--minimal` for Calyx-only, or `--no-submodule` / `--no-git` when bootstrapping offline.
+
+### Scale Free Strategy (SFS) — folder + GitHub in one shot
+
+For **Scale Free Strategy** workspaces under **`~/Documents/CURSOR`** (override with `SFS_WORKSPACE_ROOT`), with an **SFS badge** in `README.md` / `AGENTS.md`, **initial commit**, and **private** GitHub repo + push via **`gh`**:
+
+```bash
+bash tooling/create-sfs-workspace.sh "Human Project Name" [repo-slug]
+```
+
+Requires **`gh auth login`** for automatic `gh repo create`. Use `--no-github` if you only want a local repo; `--public` for a public remote.
 
 ## GitHub and consumers
 

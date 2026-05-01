@@ -14,7 +14,8 @@
 #   --force           Overwrite existing scaffold files if present
 #
 # Env:
-#   CALYX_CORE_URL    Git URL for calyx-core (default: https://github.com/cfolsensfs/calyx-core.git)
+#   CALYX_CORE_URL     Git URL for calyx-core (default: https://github.com/cfolsensfs/calyx-core.git)
+#   SFS_SCAFFOLD=1     Set by create-sfs-workspace.sh; adds SFS badge lines in README / AGENTS.md
 
 set -euo pipefail
 
@@ -84,12 +85,33 @@ replace_project_name() {
   fi
 }
 
+# Optional one-line badge under the title (e.g. Scale Free Strategy). Empty = remove placeholder line content.
+replace_workspace_badge() {
+  local file="$1"
+  local badge=""
+  if [[ "${SFS_SCAFFOLD:-}" == "1" ]]; then
+    badge='> **SFS — Scale Free Strategy:** see `AGENTS.md` for how to record reasoning and ADRs in Calyx.'
+  fi
+  if [[ "$(uname)" == "Darwin" ]]; then
+    sed -i '' "s#__WORKSPACE_BADGE__#${badge}#g" "${file}"
+  else
+    sed -i "s#__WORKSPACE_BADGE__#${badge}#g" "${file}"
+  fi
+}
+
 # --- Root files ---
 write_file "${TARGET}/.cursorrules" "${TEMPLATE_DIR}/cursorrules"
 write_file "${TARGET}/.gitignore" "${TEMPLATE_DIR}/gitignore"
 
 write_file "${TARGET}/README.md" "${TEMPLATE_DIR}/README.md"
 replace_project_name "${TARGET}/README.md"
+replace_workspace_badge "${TARGET}/README.md"
+
+write_file "${TARGET}/AGENTS.md" "${TEMPLATE_DIR}/AGENTS.md"
+replace_project_name "${TARGET}/AGENTS.md"
+replace_workspace_badge "${TARGET}/AGENTS.md"
+
+write_file "${TARGET}/VERSION" "${TEMPLATE_DIR}/VERSION"
 
 mkdir -p "${TARGET}/docs"
 write_file "${TARGET}/docs/GIT.md" "${TEMPLATE_DIR}/docs-GIT.md"
