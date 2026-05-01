@@ -184,7 +184,7 @@ if [[ "${DO_SUBMODULE}" -eq 1 ]] && [[ -d "${TARGET}/.git" ]]; then
     (cd "${TARGET}" && git submodule update --init --recursive) || true
     SETUP="${TARGET}/.calyx/core/tooling/calyx-setup-capture.sh"
     if [[ -f "${SETUP}" ]]; then
-      bash "${SETUP}"
+      (cd "${TARGET}" && bash "${SETUP}")
     else
       echo "Note: calyx-setup-capture.sh not found yet — run it after submodule points at calyx-core v1+"
     fi
