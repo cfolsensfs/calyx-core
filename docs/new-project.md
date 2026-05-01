@@ -121,4 +121,4 @@ git add .calyx/core
 git commit -m "Pin calyx-core"
 ```
 
-Tag releases on this repo so consumers can reference **`manifest.yaml`** and a known-good version. **Calyx v1** starts at **`v1.0.0`** (capture baseline in constitution).
+Tag releases on this repo so consumers can reference **`manifest.yaml`** and a known-good version. **Calyx v1** starts at **`v1.0.0`** (capture baseline in constitution). Maintainers: [releasing.md](releasing.md).

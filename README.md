@@ -31,6 +31,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Org vs projects** | **`docs/org-and-projects.md`** — studio/agency → many repos; Calyx shape independent of disk |
 | **Capture (v1 baseline)** | **`tooling/calyx-setup-capture.sh`** — git post-commit + Cursor hooks; **`docs/automation.md`**, **`docs/cursor-local-chat-log.md`** |
 | **Machine index** | `manifest.yaml` |
+| **Cutting releases** | **`docs/releasing.md`** — maintainers, **`v1.0.0`** tag, pre-flight checklist |
 
 **Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.
 
@@ -44,7 +45,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
 | `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout |
-| `docs/` | Guides: **`first-run.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`** |
+| `docs/` | Guides: **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`** |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 
@@ -85,4 +86,4 @@ Requires **`gh auth login`** for automatic `gh repo create`. Use `--no-github` i
 - **`calyx-core`** — generic Calyx bundle; submodule at **`.calyx/core/`** in every project.
 - **Org repo** (e.g. **`calyx-scalefree-org`**) — optional second submodule at **`.calyx/org/`** for your studio’s shared, non-sensitive layer.
 - **Project repos** — one repo per product or client; each has its own **local** `.calyx/reasoning/` and `.calyx/decisions/`.
-- Tag releases on **calyx-core** (e.g. **`v1.0.0`**) so projects can pin a known-good bundle from `manifest.yaml`.
+- Tag releases on **calyx-core** (e.g. **`v1.0.0`**) so projects can pin a known-good bundle. Maintainer checklist: **[docs/releasing.md](docs/releasing.md)**.

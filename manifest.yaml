@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "1.2.1"
+version: "1.3.0"
 
 bundle:
   constitution:
@@ -65,5 +65,6 @@ optional:
     - docs/automation.md
     - docs/cursor-local-chat-log.md
     - docs/first-run.md
+    - docs/releasing.md
   examples:
     - examples/sample-reasoning-log.md
