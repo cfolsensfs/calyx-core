@@ -107,3 +107,4 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [glossary.md](glossary.md) | **ccl** / **col** / **cpl** layer abbreviations |
 | [org-and-projects.md](org-and-projects.md) | Agency/org vs project repos |
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
+| [cursor-local-chat-log.md](cursor-local-chat-log.md) | Cursor hooks → `local/chat-log/` for optional EOD distill |

@@ -10,13 +10,14 @@ flowchart TB
 
   start --> fork{New project or existing repo?}
 
-  fork -->|New| scaffold["Run tooling/scaffold-cursor-app.sh<br/>Optional: create-sfs-workspace.sh for folder + commit + GitHub"]
-  fork -->|Existing| brown["Add git submodule → .calyx/core<br/>Create .calyx/reasoning, decisions, taxonomy<br/>Add or merge .cursorrules and AGENTS.md"]
+  fork -->|New| scaffold["Run tooling/scaffold-cursor-app.sh<br/>→ .cursor/hooks + hooks.json<br/>→ turns append to local/chat-log/"]
+  fork -->|Existing| brown["Add git submodule → .calyx/core<br/>Create .calyx/reasoning, decisions, taxonomy<br/>Add or merge .cursorrules and AGENTS.md<br/>Optional: copy templates/cursor-hooks → .cursor/hooks<br/>and merge hooks.example.json"]
 
   scaffold --> cursor[Open repository root in Cursor]
   brown --> cursor
 
-  cursor --> sub["git submodule update --init --recursive"]
+  cursor --> chatTrail["Session trail: hook events → local/chat-log/<br/>gitignored; default retention ~3 days"]
+  chatTrail --> sub["git submodule update --init --recursive"]
 
   sub --> daily[Day-to-day: ship work with people and AI]
 
@@ -33,9 +34,12 @@ flowchart TB
   adr --> tags[Extend local-tags.yaml when vocabulary shifts]
   tags --> daily
 
-  daily --> optional[Optional paths]
-  optional --> org[Second submodule: .calyx/org<br/>studio-wide non-secret DNA]
-  optional --> commons[Opt-in: promote sanitized patterns<br/>no raw transcripts]
+  daily --> optionalStudio[Optional studio paths]
+  optionalStudio --> org[Second submodule: .calyx/org<br/>studio-wide non-secret DNA]
+  optionalStudio --> commons[Opt-in: promote sanitized patterns<br/>no raw transcripts]
+
+  daily -.-> eod["Optional EOD / heavy session:<br/>distill local/chat-log + inbox stubs + diff<br/>→ reasoning or delete noise"]
+  eod -.-> daily
 ```
 
 ## Reading the diagram
@@ -44,14 +48,26 @@ flowchart TB
 |-------|---------------------------|
 | **New vs existing** | Green field gets a one-command scaffold; brown field gets a short Git + folder merge—no rewrites. |
 | **Cursor** | Workspace root = whole repo so `.cursorrules` applies everywhere. |
+| **Session trail** | **Cursor hooks** (if installed) append each turn under **`local/chat-log/`**—raw material for distill, not a substitute for reasoning logs. New scaffolds install hooks by default; brownfield copies from **`templates/cursor-hooks/`**. See [cursor-local-chat-log.md](cursor-local-chat-log.md). |
 | **Submodule** | `.calyx/core` is the pinned calyx-core bundle; init once per clone. |
+| **Optional EOD** | Use recent **`local/chat-log/*.md`** together with **post-commit inbox stubs** ([automation.md](automation.md)) and **git diff** so “why” in chat can land in **`.calyx/reasoning/`** without retyping. |
 | **Major work gate** | Not every edit gets a log—only work where “why” should survive. |
 | **ADR** | For choices that constrain tomorrow’s work; supersede, don’t silently rewrite. |
-| **Optional** | Org layer for agency defaults; “commons” only when explicitly sanitized and shared. |
+| **Optional studio** | Org layer for agency defaults; “commons” only when explicitly sanitized and shared. |
+
+## Automation in the loop (quick reference)
+
+| Mechanism | Output | Doc |
+|-----------|--------|-----|
+| **Cursor hooks** + script | `local/chat-log/YYYY-MM-DD.md` (rolling retention) | [cursor-local-chat-log.md](cursor-local-chat-log.md) |
+| **Post-commit hook** (optional) | `.calyx/reasoning/inbox/*.md` stubs | [automation.md](automation.md) |
+| **Human / Librarian distill** | `.calyx/reasoning/` entries, ADRs when ratified | [workflow.md](workflow.md) |
 
 ## Related
 
 - [new-project.md](new-project.md) — scripts, flags, deliverables
+- [cursor-local-chat-log.md](cursor-local-chat-log.md) — install, limits, retention env var
+- [automation.md](automation.md) — post-commit inbox stubs
 - [workflow.md](workflow.md) — ongoing Calyx **work** rhythm (reasoning, ADRs, checkpoint)
 - [glossary.md](glossary.md) — **ccl** / **col** / **cpl**
 - [README](../README.md) — repo overview and quick commands
