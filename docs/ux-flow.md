@@ -53,4 +53,5 @@ flowchart TB
 
 - [new-project.md](new-project.md) — scripts, flags, deliverables
 - [workflow.md](workflow.md) — ongoing Calyx **work** rhythm (reasoning, ADRs, checkpoint)
+- [glossary.md](glossary.md) — **ccl** / **col** / **cpl**
 - [README](../README.md) — repo overview and quick commands

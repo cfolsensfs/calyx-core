@@ -100,3 +100,4 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [README](../README.md) | Repo overview and quick commands. |
 | [distill-external-to-calyx.md](../templates/distill-external-to-calyx.md) | Import / distillation runbook for noisy exports |
 | [import-distill-onepager.txt](../prompts/import-distill-onepager.txt) | Paste-ready import distillation prompt |
+| [glossary.md](glossary.md) | **ccl** / **col** / **cpl** layer abbreviations |

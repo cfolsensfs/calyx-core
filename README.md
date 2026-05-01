@@ -10,7 +10,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 
 ---
 
-**Calyx-core** is the **generic bundle** for that layer: constitution, specialist prompts, master taxonomy, canonical templates, and minimal tooling. Each **project repo** mounts this bundle as **`.calyx/core/`** (Git submodule) and adds its own reasoning, ADRs, and local tags. Some organizations also use a **second** submodule **`.calyx/org/`** for agency-wide, non-sensitive DNA (see `templates/dot-calyx-README.md`).
+**Calyx core layer (ccl):** this repo is the **generic bundle**—constitution, specialist prompts, master taxonomy, canonical templates, and minimal tooling. Each **project repo** mounts it as **`.calyx/core/`** (Git submodule). **Calyx org layer (col):** optional second submodule **`.calyx/org/`** for agency-wide, non-sensitive DNA. **Calyx project layer (cpl):** project-local reasoning, ADRs, and `local-tags.yaml`. Abbreviations: **ccl**, **col**, **cpl** — see [docs/glossary.md](docs/glossary.md).
 
 ## Deliverables (what ships in this repo)
 
@@ -22,6 +22,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Project-creation guide** | **`docs/new-project.md`** — prerequisites, flags, env vars, what gets created |
 | **UX flow (Mermaid)** | **`docs/ux-flow.md`** — from “incorporate Calyx” to day-to-day habits |
 | **Work rhythm (Mermaid)** | **`docs/workflow.md`** — reasoning, ADRs, specialists, checkpoint (**living doc**) |
+| **Glossary (ccl / col / cpl)** | **`docs/glossary.md`** |
 | **Machine index** | `manifest.yaml` |
 
 **Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.
@@ -36,7 +37,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
 | `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout |
-| `docs/` | Guides: **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`** (living) |
+| `docs/` | Guides: **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`** (ccl/col/cpl) |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 
