@@ -1,6 +1,16 @@
 # calyx-core
 
-**Company DNA** for the Calyx organizational intelligence layer: constitution, specialist prompts, master taxonomy, canonical templates, and minimal tooling. Each **project repo** mounts this bundle as **`.calyx/core/`** (Git submodule) and adds its own reasoning, ADRs, and local tags. Scalefree also uses a **second** submodule **`.calyx/org/`** for agency-wide, non-sensitive DNA (`calyx-scalefree-org`).
+## Why Calyx
+
+For most of history, a huge share of careful thinking never became durable—debates, synthesis, and “why we didn’t do X” lived in conversations that left little trace. AI-assisted work increases how much of that thinking happens, which makes the **loss** worse if nothing is captured—and makes **faithful capture** more feasible when teams choose to externalize it.
+
+**Calyx is not about vacuuming chats or harvesting private sessions.** It is **stewardship of reasoning**: lightweight, versioned artifacts (reasoning logs, ADRs, shared vocabulary) so the thinking your organization already pays for **compounds inside the project and org**—where confidentiality and obligation belong. Wider contribution to shared knowledge, when it happens at all, is **opt-in and sanitized**—patterns and arguments, not raw transcripts.
+
+The lasting power is local first: teams keep their “why,” reuse it, and improve it. Any benefit to the broader commons is **spillover**, not extraction.
+
+---
+
+**Calyx-core** is the **generic bundle** for that layer: constitution, specialist prompts, master taxonomy, canonical templates, and minimal tooling. Each **project repo** mounts this bundle as **`.calyx/core/`** (Git submodule) and adds its own reasoning, ADRs, and local tags. Some organizations also use a **second** submodule **`.calyx/org/`** for agency-wide, non-sensitive DNA (see `templates/dot-calyx-README.md`).
 
 ## Layout
 
