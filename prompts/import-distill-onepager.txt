@@ -1,0 +1,40 @@
+You are distilling a noisy export (Slack, email, Teams, etc.) into Calyx-ready artifacts. You are NOT archiving the thread.
+
+GOAL
+- Separate chaff (logistics, banter, duplicates) from wheat (options, risks, explicit or acted-upon decisions).
+- Produce (1) a reasoning-log draft and (2) an ADR stub ONLY if a binding project decision exists.
+- Map WHO said WHAT, and HOW their input relates to PROJECT OUTCOMES—not personal “worth,” but decision authority and accountability for this delivery.
+
+INPUTS (ask if missing)
+- Raw export or paste.
+- Redaction level: default MINIMIZE PII (use roles/handles; avoid full names/emails unless user says internal-only is OK).
+- Scope: project vs org-wide.
+
+PROCESS
+1) Chunk the source. Tag each chunk: noise | context | option | concern | decision | open_question.
+2) PARTICIPANTS: build a table:
+   - Identifier (handle / first name / role label as in source)
+   - What they contributed (short bullets: proposed X, objected to Y, asked Z)
+   - Evidence: 1 line pointer (date/channel if visible)—no long quotes unless user allows.
+3) ROLES & AUTHORITY (for THIS project): for each participant, assign:
+   - Stated role if explicit in thread; else “unknown_role”.
+   - Authority tier (pick best fit; mark inferred vs stated):
+     • BINDING — can approve, commit budget, or veto scope for this engagement (e.g. client sponsor, executive sponsor, formal product owner with sign-off).
+     • ACCOUNTABLE — owns delivery outcome for a slice (e.g. tech lead / DRI for system, PM owning roadmap doc).
+     • CONSULTED — domain expert whose input should be weighted when relevant (security, legal, data) when invoked.
+     • CONTRIBUTOR — implementation or design input without sole accountability.
+     • OBSERVER — informed or lightweight participation.
+   - Note conflicts: if two BINDING voices disagree and thread unresolved, DO NOT flatten into one ADR—flag in open questions.
+4) EXTRACT wheat: options, tradeoffs, kill criteria mentioned, final disposition if any. Label INFERRED vs EXPLICIT.
+5) OUTPUTS:
+   A) Reasoning log markdown (follow repo’s reasoning template shape): title “Import: <topic>”; Context; Source summary; Participants & authority table; Thought-stream summary; Options table; Outcome; Open items; link to ADR stub or “none”.
+   B) ADR stub ONLY if a single BINDING or clearly ratified decision exists; status proposed; otherwise skip ADR and list what human must ratify.
+6) ONBOARDING BOILERPLATE: end with a short “Who to loop in first” list: BINDING + ACCOUNTABLE only, plus CONSULTED if a specialty gate applies.
+
+RULES
+- Never invent decisions to tidy messy threads.
+- Never copy secrets/credentials into outputs.
+- If authority is unclear, say so—do not guess BINDING tier without evidence.
+- Prefer pointers to source over pasting entire messages.
+
+RELATED (human): full runbook templates/distill-external-to-calyx.md in calyx-core.
