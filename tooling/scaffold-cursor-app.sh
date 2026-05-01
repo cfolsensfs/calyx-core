@@ -21,6 +21,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TEMPLATE_DIR="$(cd "${SCRIPT_DIR}/../templates/app-scaffold" && pwd)"
+CURSOR_HOOKS_DIR="$(cd "${SCRIPT_DIR}/../templates/cursor-hooks" && pwd)"
 CALYX_CORE_URL="${CALYX_CORE_URL:-https://github.com/cfolsensfs/calyx-core.git}"
 
 TARGET=""
@@ -103,6 +104,14 @@ replace_workspace_badge() {
 write_file "${TARGET}/.cursorrules" "${TEMPLATE_DIR}/cursorrules"
 write_file "${TARGET}/.gitignore" "${TEMPLATE_DIR}/gitignore"
 
+# --- Cursor hooks: local chat log (gitignored under local/chat-log/) ---
+[[ -d "${CURSOR_HOOKS_DIR}" ]] || die "missing cursor-hooks templates: ${CURSOR_HOOKS_DIR}"
+mkdir -p "${TARGET}/.cursor/hooks"
+write_file "${TARGET}/.cursor/hooks/log_chat_turn.py" "${CURSOR_HOOKS_DIR}/log_chat_turn.py"
+write_file "${TARGET}/.cursor/hooks/log-chat-turn.sh" "${CURSOR_HOOKS_DIR}/log-chat-turn.sh"
+chmod +x "${TARGET}/.cursor/hooks/log-chat-turn.sh" "${TARGET}/.cursor/hooks/log_chat_turn.py"
+write_file "${TARGET}/.cursor/hooks.json" "${CURSOR_HOOKS_DIR}/hooks.example.json"
+
 write_file "${TARGET}/README.md" "${TEMPLATE_DIR}/README.md"
 replace_project_name "${TARGET}/README.md"
 replace_workspace_badge "${TARGET}/README.md"
@@ -167,3 +176,4 @@ echo
 echo "Scaffold complete: ${TARGET}"
 echo "Next: cd \"${TARGET}\" && git submodule update --init --recursive  (if submodule was added)"
 echo "Then open this folder as the workspace root in Cursor."
+echo "Chat turns append to local/chat-log/ (requires python3 on PATH; hooks in .cursor/hooks.json)."

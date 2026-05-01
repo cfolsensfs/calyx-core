@@ -57,5 +57,6 @@ You can add a **non-blocking** GitHub Action that comments “new inbox stubs”
 
 ## Related
 
+- [cursor-local-chat-log.md](cursor-local-chat-log.md) — optional **Cursor hooks** → `local/chat-log/` (retained a few days) for EOD distill
 - [workflow.md](workflow.md) — rhythm
 - [new-project.md](new-project.md) — scaffolding

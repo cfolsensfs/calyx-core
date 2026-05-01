@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": ".cursor/hooks/log-chat-turn.sh"
+      }
+    ],
+    "afterAgentResponse": [
+      {
+        "command": ".cursor/hooks/log-chat-turn.sh"
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/log-chat-turn.sh"
+      }
+    ]
+  }
+}

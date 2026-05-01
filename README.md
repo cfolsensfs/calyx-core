@@ -25,6 +25,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Glossary (ccl / col / cpl)** | **`docs/glossary.md`** |
 | **Org vs projects** | **`docs/org-and-projects.md`** — studio/agency → many repos; Calyx shape independent of disk |
 | **Automation (hooks)** | **`docs/automation.md`** — post-commit inbox stubs + distill prompt |
+| **Cursor local chat log** | **`docs/cursor-local-chat-log.md`** + **`templates/cursor-hooks/`** (gitignored `local/chat-log/`) |
 | **Machine index** | `manifest.yaml` |
 
 **Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.
