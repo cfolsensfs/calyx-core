@@ -126,10 +126,10 @@ Pin **calyx-core** in each project to a **commit or tag** you trust:
 ```bash
 cd .calyx/core
 git fetch origin
-git checkout v1.0.0   # or a newer tag / commit SHA
+git checkout v1.1.0   # or a newer tag / commit SHA
 cd ../..
 git add .calyx/core
 git commit -m "Pin calyx-core"
 ```
 
-Tag releases on this repo so consumers can reference `**manifest.yaml**` and a known-good version. **Calyx v1** starts at `**v1.0.0`** (capture baseline in constitution). Maintainers: [releasing.md](releasing.md).
+Tag releases on this repo so consumers can reference `**manifest.yaml**` and a known-good version. **New projects:** pin **`v1.1.0`** or newer. **v1.0.0** remains the first public capture baseline. Maintainers: [releasing.md](releasing.md).

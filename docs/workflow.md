@@ -125,4 +125,4 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
 | [cursor-local-chat-log.md](cursor-local-chat-log.md) | Cursor hooks → `local/chat-log/` (v1 baseline; feed distill) |
 | [../prompts/README.md](../prompts/README.md) | Specialist + promotion + taxonomy prompts |
-| [releasing.md](releasing.md) | Maintainers: **`v1.0.0`** tag and pre-flight checklist |
+| [releasing.md](releasing.md) | Maintainers: **`v1.x.y`** tags and pre-flight checklist |

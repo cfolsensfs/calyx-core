@@ -31,7 +31,7 @@ To move **calyx-core** to a newer commit on `main` (or a tag):
 ```bash
 cd .calyx/core
 git fetch origin
-git checkout main && git pull   # or: git checkout v1.0.0
+git checkout main && git pull   # or: git checkout v1.1.0
 cd ../..
 git add .calyx/core
 git commit -m "Bump calyx-core pin"

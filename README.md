@@ -2,7 +2,7 @@
 
 **Calyx v1.0** — constitution, prompts, templates, and **capture tooling** for projects that use **Git + Cursor + bash**. This repo is **not an installable product**; it is a **bundle and convention**. If you fork it and delete the hooks, that is on you—you no longer have the v1 baseline.
 
-**Public release:** **`v1.0.0`** · [CHANGELOG.md](CHANGELOG.md) · [MIT License](LICENSE) · **GitHub “About” copy:** [docs/philosophy.md](docs/philosophy.md#for-github-repository-header) · **Make the repo public + topics:** [docs/github-repository-setup.md](docs/github-repository-setup.md)
+**Latest tag:** **`v1.1.0`** (pin this in `.calyx/core`) · [CHANGELOG.md](CHANGELOG.md) · [Releases](https://github.com/cfolsensfs/calyx-core/releases) · [MIT License](LICENSE) · **GitHub “About” copy:** [docs/philosophy.md](docs/philosophy.md#for-github-repository-header) · **Repo setup:** [docs/github-repository-setup.md](docs/github-repository-setup.md)
 
 **Read next:** [Philosophy — stewardship, not extraction](docs/philosophy.md) · [Why Calyx matters now](docs/why-calyx-now.md)
 
@@ -36,7 +36,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Capture (v1 baseline)** | **`tooling/calyx-setup-capture.sh`** — git post-commit + Cursor hooks; **`docs/automation.md`**, **`docs/cursor-local-chat-log.md`** |
 | **Agent roles / cpl → col / taxonomy prompts** | **`tooling/calyx-install-agent-roles.sh`** → **`.calyx/AGENT_ROLES.md`**; **`prompts/promote-cpl-to-col.txt`**, **`prompts/librarian-taxonomy-sync.txt`**; **`prompts/README.md`** |
 | **Machine index** | `manifest.yaml` |
-| **Cutting releases** | **`docs/releasing.md`** — maintainers, **`v1.0.0`** tag, pre-flight checklist |
+| **Cutting releases** | **`docs/releasing.md`** — maintainers, tags (**`v1.1.0`** current), pre-flight checklist |
 | **GitHub (public + About + topics)** | **`docs/github-repository-setup.md`** |
 | **Changelog** | **`CHANGELOG.md`** |
 | **License** | **`LICENSE`** (MIT) |
@@ -61,7 +61,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 
 ## Consumption model
 
-1. **Submodule** this repo at **`.calyx/core/`** in each project (pin **`v1.0.0`** or newer **deliberately** once you adopt capture).
+1. **Submodule** this repo at **`.calyx/core/`** in each project (pin **`v1.1.0`** or a **newer tag** deliberately once you adopt capture).
 2. **After every clone** (each machine): **`bash .calyx/core/tooling/calyx-setup-capture.sh`** from the project root—installs **git** + **Cursor** capture. Requires **`python3`** on `PATH` for chat logging.
 3. **Optional org layer** (e.g. Scalefree): second submodule at **`.calyx/org/`** for non-sensitive agency-wide defaults—see `templates/dot-calyx-README.md` for the layout.
 4. **Project-local** content always lives beside those mounts: `.calyx/reasoning/`, `.calyx/decisions/`, `.calyx/taxonomy/local-tags.yaml`.
@@ -96,4 +96,4 @@ Requires **`gh auth login`** for automatic `gh repo create`. Use `--no-github` i
 - **`calyx-core`** — generic Calyx bundle; submodule at **`.calyx/core/`** in every project.
 - **Org repo** (e.g. **`calyx-scalefree-org`**) — optional second submodule at **`.calyx/org/`** for your studio’s shared, non-sensitive layer.
 - **Project repos** — one repo per product or client; each has its own **local** `.calyx/reasoning/` and `.calyx/decisions/`.
-- Tag releases on **calyx-core** (e.g. **`v1.0.0`**) so projects can pin a known-good bundle. Maintainer checklist: **[docs/releasing.md](docs/releasing.md)**.
+- Tag releases on **calyx-core** (e.g. **`v1.1.0`**) so projects can pin a known-good bundle. Maintainer checklist: **[docs/releasing.md](docs/releasing.md)**.

@@ -111,4 +111,4 @@ Windows paths, exotic hook chains, and merged **`hooks.json`** are **documentati
 - [cursor-local-chat-log.md](cursor-local-chat-log.md) — Cursor hooks, retention, limitations
 - [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 capture principle
 - [new-project.md](new-project.md) — scaffolding and flags
-- [releasing.md](releasing.md) — maintainers: cutting **v1.0.0** and bundle version
+- [releasing.md](releasing.md) — maintainers: cutting **v1.x.y** tags and bundle version
