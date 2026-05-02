@@ -9,7 +9,7 @@ Layer shorthand: **ccl** = core submodule (`.calyx/core/`), **col** = optional o
 | `reasoning/` | **cpl** — thought-stream logs for major work (`_TEMPLATE.md`) |
 | `decisions/` | **cpl** — architecture decision records (`ADR-TEMPLATE.md`) |
 | `taxonomy/` | **cpl** — `local-tags.yaml` (extends core master tags) |
-| `AGENT_ROLES.md` | **cpl** — index of agent prompts (capture → distill, taxonomy sync, **cpl → col** promotion); refresh via **`calyx-install-agent-roles.sh`** |
+| `AGENT_ROLES.md` | **cpl** — index of agent prompts (capture → distill, taxonomy sync, **org lift**); refresh via **`calyx-install-agent-roles.sh`** |
 
 ## Clone with submodules
 

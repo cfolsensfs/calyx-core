@@ -56,7 +56,7 @@ From the **repository root** (the folder that should contain `.calyx/`):
    ```bash
    bash .calyx/core/tooling/calyx-setup-capture.sh
    ```
-   Installs **git post-commit** + **Cursor** hook files and seeds **`.calyx/AGENT_ROLES.md`** (prompt index for distill, **cpl → col**, taxonomy sync). If `.cursor/hooks.json` already existed, the script does **not** overwrite it—merge hook commands manually if needed.
+   Installs **git post-commit** + **Cursor** hook files and seeds **`.calyx/AGENT_ROLES.md`** (prompt index for distill, **org lift**, taxonomy sync). If `.cursor/hooks.json` already existed, the script does **not** overwrite it—merge hook commands manually if needed.
 
 3. **Restart Cursor** (or reload hooks) so `.cursor/hooks.json` is picked up.
 

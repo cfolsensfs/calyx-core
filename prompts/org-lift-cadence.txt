@@ -1,0 +1,37 @@
+Org lift — cadence & assistant nudges (cpl → col)
+
+**Org lift** is the Calyx name for the **AI-guided** pass that moves **sanitized, reusable** knowledge from the **project layer (cpl)** into the **organization layer (col)**. It is **not** automatic. The execution prompt is **`promote-cpl-to-col.txt`**; a **human** with org-repo rights **merges** the resulting PR.
+
+## Suggested cadence (for humans)
+
+| When | Action |
+|------|--------|
+| **Often** | At **Calyx checkpoint** (see **`templates/calyx-closeout.md`**): ask “Anything worth **org lift** this week?” — even 30 seconds. |
+| **Milestones** | **End of sprint / phase**, **release**, or **client handoff**: schedule a **full** org lift if **`.calyx/org/`** exists and work was substantive. |
+| **Calendar** | **Monthly** (studios with **col**): block 30–60 minutes — agent + accountable human — to harvest patterns. |
+| **Event-driven** | After a **ratified ADR** that is clearly **studio-generic**; when the **same lesson** appears in a **second** engagement; when **onboarding** keeps repeating the same gap. |
+
+**Skip** when: nothing reusable yet, **col** is not set up, or **legal / NDA** makes sharing unsafe until reviewed.
+
+## For assistants — when to nudge (checkpoint / wrap-up)
+
+Use this section when the user is doing **EOD checkpoint**, **Calyx closeout**, **wrap the week**, or **commit/push the brain**.
+
+1. If **`.calyx/org/`** is **absent**, do **not** push org lift unless the user is explicitly **adding** an org submodule.
+2. If **`.calyx/org/`** **exists**:
+   - Give a **single short reminder** (one paragraph) if **any** applies: user mentions **milestone**, **sprint**, **handoff**, **shipped**, **done with client**, **many new** reasoning logs/ADRs, or it has likely been **~2+ weeks** of project work without an org lift (estimate from context; do not invent dates).
+   - Point to **`.calyx/AGENT_ROLES.md`** and **`promote-cpl-to-col.txt`**.
+   - State clearly: **human authorization** and **redaction** come first; you can **draft**, not **merge**.
+3. **Do not** block commit, push, or checkpoint on org lift — **nudge only**.
+
+## Running the lift (after the nudge)
+
+1. Confirm **human authorization** and redaction rules.
+2. Run **`promote-cpl-to-col.txt`** with **cpl** sources attached (reasoning, ADRs, `local-tags.yaml` as needed).
+3. Human opens / merges the PR on the **col** repo.
+
+## Related
+
+- **`promote-cpl-to-col.txt`** — full org lift instruction block
+- **`templates/calyx-closeout.md`** — checkpoint checklist
+- **`librarian-taxonomy-sync.txt`** — often pair **before** or **after** lift if tags moved

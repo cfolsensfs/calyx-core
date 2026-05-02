@@ -19,11 +19,14 @@
 | Tag drift, new themes, ADR vocabulary | **`librarian-taxonomy-sync.txt`** | `master-tags.yaml`, `local-tags.yaml`, optional org tags |
 | Structured human checklist | **`templates/librarian-taxonomy-review.md`** (this bundle) | Same YAMLs |
 
-## **cpl** → **col** (org layer) promotion
+## Org lift (**cpl** → **col**)
+
+**Org lift** = AI-guided harvest of reusable, **sanitized** patterns from this repo into the **org** submodule (**col**). Same workflow as the older “promotion” wording.
 
 | When | Prompt | Preconditions |
 |------|--------|----------------|
-| Pattern is reusable, non-sensitive, studio-wide | **`promote-cpl-to-col.txt`** | **`.calyx/org/`** submodule (or col repo); human authorization; redaction |
+| Milestone, sprint end, handoff, monthly hygiene, or checkpoint nudge | **`promote-cpl-to-col.txt`** | **`.calyx/org/`** (or col repo path); **human** authorization; redaction |
+| Cadence + how assistants should **remind** you | **`org-lift-cadence.txt`** | Read at checkpoint / paste monthly |
 
 You **propose** org-repo patches and a PR description; a **human** merges into **col**.
 

@@ -23,9 +23,9 @@ That installs the hook below **and** syncs Cursor hook scripts. Forks may strip 
 | **Checkpoint staging** | **Semi** | `calyx-closeout.sh` stages `.calyx/`; you still commit/push. |
 | **Layout / hook sanity** | **Script** | `calyx-verify-capture.sh` — onboarding and optional CI (`--ci`). |
 | **Agent role index (cpl)** | **Script** | `calyx-install-agent-roles.sh` — writes **`.calyx/AGENT_ROLES.md`** from core; invoked by **`calyx-setup-capture.sh`**; **`--force`** overwrites. |
-| **cpl → col / taxonomy** | **Agent + prompts** | `promote-cpl-to-col.txt`, `librarian-taxonomy-sync.txt` — human merges; see [workflow.md](workflow.md). |
+| **Org lift (cpl → col) / taxonomy** | **Agent + prompts** | `org-lift-cadence.txt` (cadence + nudges), `promote-cpl-to-col.txt`, `librarian-taxonomy-sync.txt` — human merges; see [workflow.md](workflow.md). |
 
-Nothing here **auto-merges** to `main` or **auto-deletes** stubs—you stay in control of what gets promoted. **Org-layer** promotion is **not** automated beyond agent instructions.
+Nothing here **auto-merges** to `main` or **auto-deletes** stubs—you stay in control of what gets lifted into durable **cpl** or **col**. **Org lift** is **not** automated beyond AI-guided drafts + human PR.
 
 ## Install (per project repo)
 

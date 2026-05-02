@@ -2,6 +2,11 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` → `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.5.1 (manifest) — org lift cadence
+
+- **`prompts/org-lift-cadence.txt`** — preferred name **org lift** for cpl → col; suggested cadence; assistant **nudge** rules at checkpoint (non-blocking)
+- **`templates/calyx-closeout.md`** — org lift reminder step; **`AGENTS.md`**, **`workflow.md`**, **`automation.md`**, role index aligned
+
 ## v1.1.0 — 2026-05-02
 
 **Recommended pin for new projects.** Includes everything from **v1.0.0**, plus **agent-assisted cpl → col** and **taxonomy sync** prompts, **`templates/librarian-taxonomy-review.md`**, **`.calyx/AGENT_ROLES.md`** via **`calyx-install-agent-roles.sh`** (hooked from **`calyx-setup-capture.sh`**), scaffold + verify updates. Bundle index **1.5.0** in `manifest.yaml`.

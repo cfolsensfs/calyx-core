@@ -34,7 +34,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Glossary (ccl / col / cpl)** | **`docs/glossary.md`** |
 | **Org vs projects** | **`docs/org-and-projects.md`** — studio/agency → many repos; Calyx shape independent of disk |
 | **Capture (v1 baseline)** | **`tooling/calyx-setup-capture.sh`** — git post-commit + Cursor hooks; **`docs/automation.md`**, **`docs/cursor-local-chat-log.md`** |
-| **Agent roles / cpl → col / taxonomy prompts** | **`tooling/calyx-install-agent-roles.sh`** → **`.calyx/AGENT_ROLES.md`**; **`prompts/promote-cpl-to-col.txt`**, **`prompts/librarian-taxonomy-sync.txt`**; **`prompts/README.md`** |
+| **Agent roles / org lift / taxonomy prompts** | **`tooling/calyx-install-agent-roles.sh`** → **`.calyx/AGENT_ROLES.md`**; **`prompts/org-lift-cadence.txt`**, **`prompts/promote-cpl-to-col.txt`**, **`prompts/librarian-taxonomy-sync.txt`**; **`prompts/README.md`** |
 | **Machine index** | `manifest.yaml` |
 | **Cutting releases** | **`docs/releasing.md`** — maintainers, tags (**`v1.1.0`** current), pre-flight checklist |
 | **GitHub (public + About + topics)** | **`docs/github-repository-setup.md`** |

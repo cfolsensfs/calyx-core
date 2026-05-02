@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "1.5.0"
+version: "1.5.1"
 
 bundle:
   constitution:
@@ -14,6 +14,7 @@ bundle:
     - prompts/distill-inbox-stub-onepager.txt
     - prompts/promote-cpl-to-col.txt
     - prompts/librarian-taxonomy-sync.txt
+    - prompts/org-lift-cadence.txt
   taxonomy:
     - taxonomy/master-tags.yaml
   templates:

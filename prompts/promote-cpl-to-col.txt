@@ -1,6 +1,6 @@
-You are helping **promote** knowledge from a project’s **Calyx project layer (cpl)** into its **organization layer (col)** — the optional Git submodule at **`.calyx/org/`** (studio-wide, non-sensitive defaults).
+**Org lift (cpl → col)** — You are helping **lift** knowledge from a project’s **Calyx project layer (cpl)** into its **organization layer (col)** — the optional Git submodule at **`.calyx/org/`** (studio-wide, non-sensitive defaults). “Promotion” and **org lift** mean the same workflow; **org lift** is the preferred name in docs and checkpoints.
 
-This is **agent-assisted**, not automatic. You **propose** sanitized artifacts and a PR checklist; a **human** with rights on the org repo commits and merges.
+This is **AI-guided**, not automatic. You **propose** sanitized artifacts and a PR checklist; a **human** with rights on the org repo commits and merges.
 
 ## Preconditions (verify with the user)
 
@@ -19,8 +19,8 @@ This is **agent-assisted**, not automatic. You **propose** sanitized artifacts a
 3. **Map** each proposed col change to a **concrete file path** in the **org repo** (e.g. `playbooks/`, `taxonomy/org-tags.yaml`, `norms.md` — use the org repo’s **actual** layout; if unknown, say so and suggest a minimal path).
 
 4. **Output** (Markdown):
-   - **Summary** — 3–7 bullets: what you recommend promoting and why it compounds.
-   - **Do not promote** — bullets: what must remain cpl-only (with one-line reason each).
+   - **Summary** — 3–7 bullets: what you recommend **lifting** to **col** and why it compounds.
+   - **Do not lift** — bullets: what must remain cpl-only (with one-line reason each).
    - **Proposed org-repo edits** — for each item: **path**, **action** (add | replace section | new file), and **full draft body** (or diff-style before/after for small edits).
    - **PR title + description** — include “Source: (project repo) reasoning/ADR refs (redacted)” and a **human checklist**: legal/NDA OK, no secrets, tags aligned with **`.calyx/core/taxonomy/master-tags.yaml`**.
    - **Follow-ups** — optional **ccl** (core) changes: only if master taxonomy or constitution-level vocabulary should change; those need a **separate** PR to **calyx-core**, not col.
@@ -33,6 +33,7 @@ This is **agent-assisted**, not automatic. You **propose** sanitized artifacts a
 
 ## Related
 
+- Cadence & nudges: **`prompts/org-lift-cadence.txt`**
 - Project role index: **`.calyx/AGENT_ROLES.md`**
 - Taxonomy alignment: **`prompts/librarian-taxonomy-sync.txt`**
 - Core glossary: **`.calyx/core/docs/glossary.md`**

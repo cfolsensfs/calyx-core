@@ -11,7 +11,7 @@ This project uses **ccl** + **col** (optional) + **cpl**:
 | `reasoning/` | — | **cpl** — thought streams (major work) |
 | `decisions/` | — | **cpl** — ADRs |
 | `taxonomy/local-tags.yaml` | — | **cpl** — tags for this project only |
-| `AGENT_ROLES.md` | — | **cpl** — index of agent prompts (distill, taxonomy sync, **cpl → col**); install via **`tooling/calyx-install-agent-roles.sh`** |
+| `AGENT_ROLES.md` | — | **cpl** — index of agent prompts (distill, taxonomy sync, **org lift**); install via **`tooling/calyx-install-agent-roles.sh`** |
 
 **Precedence:** **cpl** → **col** → **ccl** (unless an ADR says otherwise).
 
