@@ -1,0 +1,38 @@
+You are helping **promote** knowledge from a project’s **Calyx project layer (cpl)** into its **organization layer (col)** — the optional Git submodule at **`.calyx/org/`** (studio-wide, non-sensitive defaults).
+
+This is **agent-assisted**, not automatic. You **propose** sanitized artifacts and a PR checklist; a **human** with rights on the org repo commits and merges.
+
+## Preconditions (verify with the user)
+
+1. **`.calyx/org/`** exists and is a **submodule** (or the user names the **col** repo URL / path you should target).
+2. The user (or accountable human) **authorizes** sharing: no client secrets, no confidential names, no unreleased product detail.
+3. You have (or can read) **cpl** sources: **`.calyx/reasoning/*.md`**, **`.calyx/decisions/ADR-*.md`**, **`.calyx/taxonomy/local-tags.yaml`**, and optionally **`local/chat-log/`** (gitignored — only if the user pastes excerpts).
+
+## Task
+
+1. **Classify** what might belong in **col** vs must stay **cpl-only**:
+   - **Col candidates:** reusable playbooks, repeated failure modes, studio-wide tag extensions, onboarding snippets, generic “how we run X” patterns that already appear in **multiple** engagements or are explicitly blessed as org-wide.
+   - **Stay in cpl:** client-specific reasoning, engagement ADRs, identifiers, anything under NDA.
+
+2. **Redact** aggressively: replace client/project names with **ROLE** or **PROJECT-A** labels unless the user says internal-only is OK.
+
+3. **Map** each proposed col change to a **concrete file path** in the **org repo** (e.g. `playbooks/`, `taxonomy/org-tags.yaml`, `norms.md` — use the org repo’s **actual** layout; if unknown, say so and suggest a minimal path).
+
+4. **Output** (Markdown):
+   - **Summary** — 3–7 bullets: what you recommend promoting and why it compounds.
+   - **Do not promote** — bullets: what must remain cpl-only (with one-line reason each).
+   - **Proposed org-repo edits** — for each item: **path**, **action** (add | replace section | new file), and **full draft body** (or diff-style before/after for small edits).
+   - **PR title + description** — include “Source: (project repo) reasoning/ADR refs (redacted)” and a **human checklist**: legal/NDA OK, no secrets, tags aligned with **`.calyx/core/taxonomy/master-tags.yaml`**.
+   - **Follow-ups** — optional **ccl** (core) changes: only if master taxonomy or constitution-level vocabulary should change; those need a **separate** PR to **calyx-core**, not col.
+
+## Rules
+
+- Do **not** invent org-repo structure; ask or infer from context the user provides.
+- Do **not** paste raw chat logs into col output unless the user explicitly allows and redacts.
+- If **`.calyx/org/`** is missing, output **how to add the submodule** (high level) and stop short of fabricating org content.
+
+## Related
+
+- Project role index: **`.calyx/AGENT_ROLES.md`**
+- Taxonomy alignment: **`prompts/librarian-taxonomy-sync.txt`**
+- Core glossary: **`.calyx/core/docs/glossary.md`**

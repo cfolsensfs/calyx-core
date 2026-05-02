@@ -137,6 +137,7 @@ write_file "${TARGET}/.calyx/README.md" "${TEMPLATE_DIR}/dot-calyx-README.md"
 write_file "${TARGET}/.calyx/reasoning/_TEMPLATE.md" "${TEMPLATE_DIR}/reasoning-TEMPLATE.md"
 write_file "${TARGET}/.calyx/decisions/ADR-TEMPLATE.md" "${TEMPLATE_DIR}/ADR-TEMPLATE.md"
 write_file "${TARGET}/.calyx/taxonomy/local-tags.yaml" "${TEMPLATE_DIR}/local-tags.yaml"
+write_file "${TARGET}/.calyx/AGENT_ROLES.md" "${SCRIPT_DIR}/../templates/project-agent-roles.md"
 
 # --- Default app layout ---
 if [[ "${MINIMAL}" -eq 0 ]]; then

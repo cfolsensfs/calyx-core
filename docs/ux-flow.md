@@ -50,7 +50,7 @@ flowchart TB
 | **Cursor** | Workspace root = whole repo so `.cursorrules` applies everywhere. |
 | **Session trail** | **Calyx v1** expects **Cursor hooks** so each turn appends under **`local/chat-log/`**—raw material for distill. Install with **`calyx-setup-capture.sh`** or scaffold. See [cursor-local-chat-log.md](cursor-local-chat-log.md). |
 | **Submodule** | `.calyx/core` is the pinned calyx-core bundle; init once per clone. |
-| **Distill rhythm** | Use recent **`local/chat-log/*.md`** with **inbox stubs** ([automation.md](automation.md)) and **git diff** so “why” in chat can land in **`.calyx/reasoning/`** without retyping. |
+| **Distill rhythm** | Use recent **`local/chat-log/*.md`** with **inbox stubs** ([automation.md](automation.md)) and **git diff** so “why” in chat can land in **`.calyx/reasoning/`** without retyping. For **cpl → col** and taxonomy, follow **`.calyx/AGENT_ROLES.md`** after **`calyx-install-agent-roles.sh`**. |
 | **Major work gate** | Not every edit gets a log—only work where “why” should survive. |
 | **ADR** | For choices that constrain tomorrow’s work; supersede, don’t silently rewrite. |
 | **Optional studio** | Org layer for agency defaults; “commons” only when explicitly sanitized and shared. |

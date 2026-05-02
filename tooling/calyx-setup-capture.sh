@@ -46,5 +46,12 @@ else
   echo "calyx-setup-capture: .cursor/hooks.json already exists — ensure it runs .cursor/hooks/log-chat-turn.sh"
 fi
 
+ROLES="${SCRIPT_DIR}/calyx-install-agent-roles.sh"
+if [[ -f "${ROLES}" ]]; then
+  bash "${ROLES}"
+else
+  echo "calyx-setup-capture: note — ${ROLES} missing (skip agent roles seed)"
+fi
+
 echo "calyx-setup-capture: done."
 echo "calyx-setup-capture: run: bash .calyx/core/tooling/calyx-verify-capture.sh"

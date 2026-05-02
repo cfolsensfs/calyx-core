@@ -118,6 +118,13 @@ else
   warn ".calyx/reasoning/inbox/ not yet created - normal until first qualifying commit"
 fi
 
+# --- Agent role index (cpl → col, taxonomy sync) ---
+if [[ -f "$ROOT/.calyx/AGENT_ROLES.md" ]]; then
+  ok ".calyx/AGENT_ROLES.md present"
+else
+  warn ".calyx/AGENT_ROLES.md missing — run: bash .calyx/core/tooling/calyx-install-agent-roles.sh"
+fi
+
 echo
 if [[ "${FAILS}" -eq 0 ]]; then
   echo "=== All checks passed ==="

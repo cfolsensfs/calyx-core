@@ -30,6 +30,6 @@ The user (or lead dev) chose **Calyx**. Help them complete setup **from the repo
 1. Open and follow **`.calyx/core/docs/first-run.md`** step by step—**including verify commands** and the **restart Cursor** step after hooks are installed.
 2. If **`.calyx/core`** is missing, do not improvise: use **`docs/new-project.md`** / **`docs/GIT.md`** in this repo to get the submodule in place first.
 3. After **`calyx-setup-capture.sh`**, run **`calyx-verify-capture.sh`** with the user and resolve every **FAIL** before moving on.
-4. After verify passes, suggest a **smoke test** (small commit + short chat) and point them to **`AGENTS.md`** for ongoing norms.
+4. After verify passes, confirm **`.calyx/AGENT_ROLES.md`** exists (if missing, run **`bash .calyx/core/tooling/calyx-install-agent-roles.sh`**). Suggest a **smoke test** (small commit + short chat) and point them to **`AGENTS.md`** for ongoing norms.
 
 Reasoning for this two-layer flow: **one canonical doc** (`first-run.md`) avoids drift; **this file** is the obvious door in the repo and gives you clear instructions to read that doc.

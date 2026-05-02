@@ -25,7 +25,7 @@ This project uses **Calyx v1** so reasoning survives the chat session. **Capture
 
 After a substantive session, **summarize**: context, options, what you chose, risks, and open questions. Link any new ADR. Prefer **superseding** old ADRs over silent rewrites.
 
-Specialist framing (prompts under `.calyx/core/prompts/`): **10th Man** (challenge assumptions), **Librarian** (distill and tag), **Broker** (dependencies and silos).
+**Agent role index:** read **`.calyx/AGENT_ROLES.md`** for when to use each prompt (inbox distill, **Librarian**, **cpl → col** promotion, **taxonomy sync**). Specialist prompts live under **`.calyx/core/prompts/`**: **10th Man**, **Librarian**, **Broker**, plus **`promote-cpl-to-col.txt`**, **`librarian-taxonomy-sync.txt`**, **`distill-inbox-stub-onepager.txt`**, **`import-distill-onepager.txt`**.
 
 ## Version
 

@@ -56,7 +56,7 @@ From the **repository root** (the folder that should contain `.calyx/`):
    ```bash
    bash .calyx/core/tooling/calyx-setup-capture.sh
    ```
-   Installs **git post-commit** + **Cursor** hook files. If `.cursor/hooks.json` already existed, the script does **not** overwrite it—merge hook commands manually if needed.
+   Installs **git post-commit** + **Cursor** hook files and seeds **`.calyx/AGENT_ROLES.md`** (prompt index for distill, **cpl → col**, taxonomy sync). If `.cursor/hooks.json` already existed, the script does **not** overwrite it—merge hook commands manually if needed.
 
 3. **Restart Cursor** (or reload hooks) so `.cursor/hooks.json` is picked up.
 
@@ -78,7 +78,7 @@ From the **repository root** (the folder that should contain `.calyx/`):
 ## Checklist — brownfield repo (Calyx added later)
 
 1. Add **`.calyx/core`** as a submodule and create **`.calyx/reasoning`**, **`.calyx/decisions`**, **`.calyx/taxonomy`** as in [new-project.md](new-project.md) / [ux-flow.md](ux-flow.md).
-2. Run **`calyx-setup-capture.sh`** as above.
+2. Run **`calyx-setup-capture.sh`** as above (also creates **`.calyx/AGENT_ROLES.md`** when missing). If you already ran capture before upgrading **calyx-core**, run **`bash .calyx/core/tooling/calyx-install-agent-roles.sh`** once to backfill the agent index.
 3. If the team already uses **`.cursor/hooks.json`**, **merge** the `beforeSubmitPrompt` / `afterAgentResponse` / `stop` entries from **`templates/cursor-hooks/hooks.example.json`** instead of blind overwrite.
 4. Run **`calyx-verify-capture.sh`** until green; add **`.github/workflows/calyx-verify.yml`** by copying **`templates/app-scaffold/github-workflows-calyx-verify.yml`** from this bundle if you want the same CI guardrail as new scaffolds.
 

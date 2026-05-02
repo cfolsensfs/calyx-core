@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "1.4.0"
+version: "1.5.0"
 
 bundle:
   constitution:
@@ -12,6 +12,8 @@ bundle:
     - prompts/broker.txt
     - prompts/import-distill-onepager.txt
     - prompts/distill-inbox-stub-onepager.txt
+    - prompts/promote-cpl-to-col.txt
+    - prompts/librarian-taxonomy-sync.txt
   taxonomy:
     - taxonomy/master-tags.yaml
   templates:
@@ -20,12 +22,15 @@ bundle:
     - templates/dot-calyx-README.md
     - templates/calyx-closeout.md
     - templates/distill-external-to-calyx.md
+    - templates/librarian-taxonomy-review.md
+    - templates/project-agent-roles.md
   tooling:
     - tooling/ollama-run.sh
     - tooling/calyx-closeout.sh
     - tooling/calyx-post-commit.sh
     - tooling/install-calyx-git-hooks.sh
     - tooling/calyx-setup-capture.sh
+    - tooling/calyx-install-agent-roles.sh
     - tooling/calyx-verify-capture.sh
     - tooling/scaffold-cursor-app.sh
     - tooling/create-sfs-workspace.sh

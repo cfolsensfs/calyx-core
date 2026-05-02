@@ -87,6 +87,17 @@ When **superseding**, keep the old ADR file and record **Supersedes** / **Supers
 
 Install **`tooling/install-calyx-git-hooks.sh`** so **post-commit** writes **`.calyx/reasoning/inbox/auto-*.md`** for substantive commits; distill with **`prompts/distill-inbox-stub-onepager.txt`**. Full detail: [automation.md](automation.md).
 
+## Agent-assisted **cpl → col** and taxonomy
+
+Promotion to the **org layer** is **not** auto-merged by Git hooks. Use an agent with clear instructions:
+
+| Goal | Prompt | Template / index |
+|------|--------|------------------|
+| Studio-wide, sanitized patterns from this repo → **col** submodule | **`prompts/promote-cpl-to-col.txt`** | **`.calyx/AGENT_ROLES.md`** |
+| Keep **`local-tags.yaml`** aligned with **`master-tags.yaml`** | **`prompts/librarian-taxonomy-sync.txt`** | **`templates/librarian-taxonomy-review.md`** |
+
+**Install / backfill** the project index: **`bash .calyx/core/tooling/calyx-install-agent-roles.sh`** (runs automatically at the end of **`calyx-setup-capture.sh`**; use **`--force`** to reset **`.calyx/AGENT_ROLES.md`** from core).
+
 ## Bootstrapping from Slack / email exports
 
 Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summarize, and structure**—not to archive full threads in Git.
@@ -113,4 +124,5 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [org-and-projects.md](org-and-projects.md) | Agency/org vs project repos |
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
 | [cursor-local-chat-log.md](cursor-local-chat-log.md) | Cursor hooks → `local/chat-log/` (v1 baseline; feed distill) |
+| [../prompts/README.md](../prompts/README.md) | Specialist + promotion + taxonomy prompts |
 | [releasing.md](releasing.md) | Maintainers: **`v1.0.0`** tag and pre-flight checklist |
