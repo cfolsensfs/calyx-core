@@ -8,6 +8,7 @@ __WORKSPACE_BADGE__
 2. **`.cursorrules`** — Calyx norms for this implementation repo.
 3. **`docs/GIT.md`** — clone, submodules, pushing.
 4. **`.calyx/README.md`** — where reasoning, ADRs, and taxonomy live.
+5. **`.calyx/feedback-config.json`** + **`.calyx/core/docs/feedback-loop.md`** — class policy and enforcement mode (`learn`/`guided`/`guardrail`).
 
 ## `.calyx/` layout is fixed
 
@@ -26,6 +27,8 @@ This project uses **Calyx v1** so reasoning survives the chat session. **Capture
 After a substantive session, **summarize**: context, options, what you chose, risks, and open questions. Link any new ADR. Prefer **superseding** old ADRs over silent rewrites.
 
 **Agent role index:** read **`.calyx/AGENT_ROLES.md`** for when to use each prompt (inbox distill, **Librarian**, **org lift** to **col**, **taxonomy sync**). Specialist prompts live under **`.calyx/core/prompts/`**: **10th Man**, **Librarian**, **Broker**, plus **`org-lift-cadence.txt`** (when to lift + checkpoint nudges), **`promote-cpl-to-col.txt`** (run the lift), **`librarian-taxonomy-sync.txt`**, **`distill-inbox-stub-onepager.txt`**, **`import-distill-onepager.txt`**. At **Calyx checkpoint**, skim **`org-lift-cadence.txt`** if **`.calyx/org/`** exists.
+
+**Apply/enforce loop:** use **`bash .calyx/core/tooling/calyx-feedback-loop.sh --mode guided`** before merge (or in CI). Start with `learn`, tune thresholds, then move to `guardrail`.
 
 ## Version
 

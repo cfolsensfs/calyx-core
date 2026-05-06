@@ -35,6 +35,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Org vs projects** | **`docs/org-and-projects.md`** — studio/agency → many repos; Calyx shape independent of disk |
 | **Capture (v1 baseline)** | **`tooling/calyx-setup-capture.sh`** — git post-commit + Cursor hooks; **`docs/automation.md`**, **`docs/cursor-local-chat-log.md`** |
 | **Thin EOW governance** | **`tooling/calyx-eow-governance.sh`** (single weekly command), **`templates/eow-config.json`**, **`templates/eow-weekly-report.md`**, **`docs/eow-governance.md`** |
+| **Knowledge feedback loop** | **`tooling/calyx-feedback-loop.sh`** (classify -> policy -> remediation), **`templates/feedback-config.json`**, **`docs/feedback-loop.md`** |
 | **Agent roles / org lift / taxonomy prompts** | **`tooling/calyx-install-agent-roles.sh`** → **`.calyx/AGENT_ROLES.md`**; **`prompts/org-lift-cadence.txt`**, **`prompts/promote-cpl-to-col.txt`**, **`prompts/librarian-taxonomy-sync.txt`**; **`prompts/README.md`** |
 | **Machine index** | `manifest.yaml` |
 | **Cutting releases** | **`docs/releasing.md`** — maintainers, tags (**`v1.1.0`** current), pre-flight checklist |
@@ -55,8 +56,8 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `taxonomy/` | Master tag vocabulary (`master-tags.yaml`) |
 | `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
-| `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout, **EOW governance** (`calyx-eow-governance.sh`) |
-| `docs/` | **`philosophy.md`**, **`why-calyx-now.md`**, **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`**, **`eow-governance.md`** |
+| `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout, **EOW governance** (`calyx-eow-governance.sh`), **feedback loop** (`calyx-feedback-loop.sh`) |
+| `docs/` | **`philosophy.md`**, **`why-calyx-now.md`**, **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`**, **`eow-governance.md`**, **`feedback-loop.md`** |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 

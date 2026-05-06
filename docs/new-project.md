@@ -86,6 +86,14 @@ bash .calyx/core/tooling/calyx-eow-governance.sh
 
 This emits intake/distill/conflict/trigger outputs under `.calyx/reasoning/reports/eow/` (see `docs/eow-governance.md` in core).
 
+Optional pre-merge/CI feedback loop command:
+
+```bash
+bash .calyx/core/tooling/calyx-feedback-loop.sh --mode guided
+```
+
+This emits class/policy/remediation output under `.calyx/reasoning/reports/feedback/` (see `docs/feedback-loop.md` in core).
+
 ---
 
 ## 2. SFS one-shot (folder + commit + GitHub)
@@ -118,8 +126,9 @@ bash tooling/create-sfs-workspace.sh "Human Project Name" [repo-slug]
 
 ## What the scaffold creates (default, non-minimal)
 
-- **Root:** `.cursorrules`, `.gitignore`, `.editorconfig`, `.prettierrc.json`, `.prettierignore`, `README.md`, `AGENTS.md`, `**SETUP_CALYX.md`** (onboarding door → `**docs/first-run.md**` in core), `VERSION` (`0.1`), `docs/GIT.md`, `**.github/workflows/calyx-verify.yml**` (optional CI guardrail; `continue-on-error`)
-- `**.calyx/`:** `README.md`, `AGENT_ROLES.md` (prompt index; backfill via **`calyx-install-agent-roles.sh`**), `reasoning/_TEMPLATE.md`, `decisions/ADR-TEMPLATE.md`, `taxonomy/local-tags.yaml` (plus optional weekly reports under `reasoning/reports/eow/`)
+- **Root:** `.cursorrules`, `.gitignore`, `.editorconfig`, `.prettierrc.json`, `.prettierignore`, `README.md`, `AGENTS.md`, `**SETUP_CALYX.md`** (onboarding door → `**docs/first-run.md**` in core), `VERSION` (`0.1`), `docs/GIT.md`, `**.github/workflows/calyx-verify.yml**` (optional CI guardrail), `.github/workflows/calyx-feedback.yml` (optional mode-aware loop)
+- **GitHub templates:** `.github/PULL_REQUEST_TEMPLATE/calyx-compliance.md`, `.github/ISSUE_TEMPLATE/calyx-context.md`
+- `**.calyx/`:** `README.md`, `AGENT_ROLES.md` (prompt index; backfill via **`calyx-install-agent-roles.sh`**), `feedback-config.json`, `reasoning/_TEMPLATE.md`, `decisions/ADR-TEMPLATE.md`, `taxonomy/local-tags.yaml` (plus optional reports under `reasoning/reports/`)
 - `**.calyx/core/`:** submodule checkout of calyx-core (unless `--no-submodule`)
 - **Layout:** `apps/web`, `apps/api`, `mcp/`, `packages/shared`, `infra/`, gitignored `local/`
 

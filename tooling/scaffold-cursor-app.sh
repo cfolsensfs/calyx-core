@@ -133,6 +133,10 @@ write_file "${TARGET}/docs/GIT.md" "${TEMPLATE_DIR}/docs-GIT.md"
 
 mkdir -p "${TARGET}/.github/workflows"
 write_file "${TARGET}/.github/workflows/calyx-verify.yml" "${TEMPLATE_DIR}/github-workflows-calyx-verify.yml"
+write_file "${TARGET}/.github/workflows/calyx-feedback.yml" "${TEMPLATE_DIR}/github-workflows-calyx-feedback.yml"
+mkdir -p "${TARGET}/.github/PULL_REQUEST_TEMPLATE" "${TARGET}/.github/ISSUE_TEMPLATE"
+write_file "${TARGET}/.github/PULL_REQUEST_TEMPLATE/calyx-compliance.md" "${TEMPLATE_DIR}/pr-template-calyx-compliance.md"
+write_file "${TARGET}/.github/ISSUE_TEMPLATE/calyx-context.md" "${TEMPLATE_DIR}/issue-template-calyx-context.md"
 
 # --- .calyx local layer ---
 mkdir -p "${TARGET}/.calyx/reasoning" "${TARGET}/.calyx/decisions" "${TARGET}/.calyx/taxonomy"
@@ -141,6 +145,7 @@ write_file "${TARGET}/.calyx/reasoning/_TEMPLATE.md" "${TEMPLATE_DIR}/reasoning-
 write_file "${TARGET}/.calyx/decisions/ADR-TEMPLATE.md" "${TEMPLATE_DIR}/ADR-TEMPLATE.md"
 write_file "${TARGET}/.calyx/taxonomy/local-tags.yaml" "${TEMPLATE_DIR}/local-tags.yaml"
 write_file "${TARGET}/.calyx/AGENT_ROLES.md" "${SCRIPT_DIR}/../templates/project-agent-roles.md"
+write_file "${TARGET}/.calyx/feedback-config.json" "${SCRIPT_DIR}/../templates/feedback-config.json"
 
 # --- Default app layout ---
 if [[ "${MINIMAL}" -eq 0 ]]; then

@@ -25,6 +25,7 @@ That installs the hook below **and** syncs Cursor hook scripts. Forks may strip 
 | **Agent role index (cpl)** | **Script** | `calyx-install-agent-roles.sh` — writes **`.calyx/AGENT_ROLES.md`** from core; invoked by **`calyx-setup-capture.sh`**; **`--force`** overwrites. |
 | **Org lift (cpl → col) / taxonomy** | **Agent + prompts** | `org-lift-cadence.txt` (cadence + nudges), `promote-cpl-to-col.txt`, `librarian-taxonomy-sync.txt` — human merges; see [workflow.md](workflow.md). |
 | **Thin EOW governance** | **Script + JSON reports** | `calyx-eow-governance.sh` runs weekly intake/distill/hygiene/conflicts/trigger report; see [eow-governance.md](eow-governance.md). |
+| **Knowledge feedback loop** | **Script + policy modes** | `calyx-feedback-loop.sh` classifies changes and enforces evidence by mode (`learn/guided/guardrail`); see [feedback-loop.md](feedback-loop.md). |
 
 Nothing here **auto-merges** to `main` or **auto-deletes** stubs—you stay in control of what gets lifted into durable **cpl** or **col**. **Org lift** is **not** automated beyond AI-guided drafts + human PR.
 
@@ -67,6 +68,7 @@ export CALYX_DIARY_ON_MERGE=1
 2. **On a steady beat** (end of day or end of task): run **distill** on stubs that matter; skim **recent chat-log**; promote into **`.calyx/reasoning/`** or **delete** noise.
 3. **Delete** processed stubs so `inbox/` stays small (or keep for audit—team choice).
 4. **Weekly (or chosen cadence):** run **`calyx-eow-governance.sh`** for thin governance, conflict scoring, and 10th Man trigger/no-trigger rationale.
+5. **Before merge / in CI:** run **`calyx-feedback-loop.sh`** (start in `learn`, then `guided`, then `guardrail` once tuned).
 
 ## CI (future)
 
@@ -77,5 +79,6 @@ You can add a **non-blocking** GitHub Action that comments “new inbox stubs”
 - [cursor-local-chat-log.md](cursor-local-chat-log.md) — Cursor hooks → `local/chat-log/`
 - [workflow.md](workflow.md) — rhythm
 - [eow-governance.md](eow-governance.md) — weekly governance command and outputs
+- [feedback-loop.md](feedback-loop.md) — mode-aware apply/enforce loop
 - [new-project.md](new-project.md) — scaffolding
 - [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 capture principle

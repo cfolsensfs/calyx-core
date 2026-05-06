@@ -35,6 +35,7 @@ Core prompts: **`.calyx/core/prompts/`**. Master tags: **`.calyx/core/taxonomy/m
 - **Working software first** — prefer changes that can be run/verified, not speculative refactors without validation.
 - **Clear notes in code** — add brief comments where logic or tradeoffs are not obvious; prefer intent over narration.
 - **Formatting compliance** — run formatter/lint before commit. If Prettier is present, use it as baseline (`.prettierrc.json` + `.prettierignore`).
+- **Feedback loop before merge** — run `bash .calyx/core/tooling/calyx-feedback-loop.sh --mode guided` (or repo mode in `.calyx/feedback-config.json`).
 
 ## Local LLMs (optional)
 

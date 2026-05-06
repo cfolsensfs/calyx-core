@@ -21,6 +21,8 @@ git checkout -b <branch-name>   # optional feature branch
 # format/lint before commit (examples):
 # npm run format && npm run lint
 # or: npx prettier . --check
+# Calyx feedback loop (start guided):
+# bash .calyx/core/tooling/calyx-feedback-loop.sh --mode guided
 git status
 git add -A
 git commit -m "Clear, complete sentence describing the change."

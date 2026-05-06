@@ -1,0 +1,22 @@
+name: Calyx Feedback Loop
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  calyx-feedback:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run feedback loop (guided)
+        run: |
+          bash .calyx/core/tooling/calyx-feedback-loop.sh --mode guided

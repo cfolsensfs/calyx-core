@@ -46,7 +46,7 @@ git push origin v1.1.0
 
 - **Consumer repos:** `cd .calyx/core && git fetch && git checkout v1.1.0` (or newer **v1.x.y**), then `calyx-setup-capture.sh` on each machine as needed.
 - **GitHub:** create a **Release** from the tag; paste from [CHANGELOG.md](../CHANGELOG.md).
-- **Release notes:** mention **`calyx-setup-capture.sh`**, **`calyx-verify-capture.sh`**, **`calyx-install-agent-roles.sh`**, **`calyx-eow-governance.sh`**, **`SETUP_CALYX.md`**, **`docs/first-run.md`**, **`docs/eow-governance.md`**, **`docs/philosophy.md`**, **`LICENSE`**, and optional **`.github/workflows/calyx-verify.yml`**.
+- **Release notes:** mention **`calyx-setup-capture.sh`**, **`calyx-verify-capture.sh`**, **`calyx-install-agent-roles.sh`**, **`calyx-eow-governance.sh`**, **`calyx-feedback-loop.sh`**, **`SETUP_CALYX.md`**, **`docs/first-run.md`**, **`docs/eow-governance.md`**, **`docs/feedback-loop.md`**, **`docs/philosophy.md`**, **`LICENSE`**, and optional **`.github/workflows/calyx-verify.yml`** / **`calyx-feedback.yml`**.
 
 ## Related
 

@@ -1,0 +1,31 @@
+{
+  "mode": "learn",
+  "thresholds": {
+    "files_changed_cross_cutting": 4,
+    "lines_changed_cross_cutting": 120,
+    "confidence_uncertain_below": 0.6
+  },
+  "requirements": {
+    "trivial": {},
+    "feature_local": {
+      "reasoning_recommended": true
+    },
+    "cross_cutting": {
+      "reasoning_required": true
+    },
+    "architecture_binding": {
+      "reasoning_required": true,
+      "adr_required": true
+    },
+    "uncertain": {}
+  },
+  "override": {
+    "enabled": true,
+    "require_owner": true,
+    "require_expiry": true
+  },
+  "output": {
+    "json_path": ".calyx/reasoning/reports/feedback/latest-feedback.json",
+    "markdown_path": ".calyx/reasoning/reports/feedback/latest-feedback.md"
+  }
+}

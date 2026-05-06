@@ -2,6 +2,17 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` → `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.7.0 (manifest) — knowledge feedback loop (capture -> distill -> apply -> enforce)
+
+- New runner: **`tooling/calyx-feedback-loop.sh`** + **`tooling/calyx-feedback-loop.py`**
+- New engine modules: `tooling/lib/feedback_classify.py`, `feedback_policy.py`, `feedback_override.py`, `feedback_render.py`
+- New policy/config/docs: **`templates/feedback-config.json`**, **`docs/feedback-loop.md`**
+- New scaffold integrations:
+  - `.calyx/feedback-config.json`
+  - `.github/workflows/calyx-feedback.yml`
+  - PR/issue Calyx compliance templates
+- New tests: classifier, policy, override, integration under `tooling/tests/`
+
 ## 1.6.1 (manifest) — code quality + formatting baseline in scaffolds
 
 - Scaffold now includes **`.editorconfig`**, **`.prettierrc.json`**, and **`.prettierignore`**

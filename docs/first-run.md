@@ -112,4 +112,5 @@ Windows paths, exotic hook chains, and merged **`hooks.json`** are **documentati
 - [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 capture principle
 - [new-project.md](new-project.md) — scaffolding and flags
 - [eow-governance.md](eow-governance.md) — thin weekly governance runner
+- [feedback-loop.md](feedback-loop.md) — classify/apply/enforce loop (learn -> guided -> guardrail)
 - [releasing.md](releasing.md) — maintainers: cutting **v1.x.y** tags and bundle version

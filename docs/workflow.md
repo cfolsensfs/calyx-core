@@ -99,6 +99,17 @@ Use **`bash .calyx/core/tooling/calyx-eow-governance.sh`** from the project root
 
 Docs and config template: [eow-governance.md](eow-governance.md).
 
+## Knowledge feedback loop (apply + enforce)
+
+Use **`bash .calyx/core/tooling/calyx-feedback-loop.sh`** for mode-aware compliance checks:
+
+- classify changes (`trivial`, `feature_local`, `cross_cutting`, `architecture_binding`, `uncertain`),
+- evaluate required evidence by class,
+- emit deterministic remediation output (JSON + markdown),
+- support `learn` -> `guided` -> `guardrail` rollout.
+
+Docs and policy template: [feedback-loop.md](feedback-loop.md).
+
 ## Org lift (**cpl** → **col**) and taxonomy
 
 **Org lift** is the preferred name for moving **sanitized, reusable** **cpl** knowledge into **col** (AI-guided; human merges). It is **not** auto-merged by Git hooks.
@@ -137,6 +148,7 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [org-and-projects.md](org-and-projects.md) | Agency/org vs project repos |
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
 | [eow-governance.md](eow-governance.md) | Thin weekly governance runner (manifest + conflicts + trigger + report) |
+| [feedback-loop.md](feedback-loop.md) | Capture -> distill -> apply -> enforce loop (mode-aware) |
 | [cursor-local-chat-log.md](cursor-local-chat-log.md) | Cursor hooks → `local/chat-log/` (v1 baseline; feed distill) |
 | [../prompts/README.md](../prompts/README.md) | Specialist + org lift + taxonomy prompts |
 | [releasing.md](releasing.md) | Maintainers: **`v1.x.y`** tags and pre-flight checklist |
