@@ -1,18 +1,11 @@
-# Calyx — philosophy (one page)
 
 This is the **cultural and epistemic** story behind the repo. For **what to install and why today**, see [why-calyx-now.md](why-calyx-now.md). For **mechanics**, see [README.md](../README.md) and [first-run.md](first-run.md).
 
 ---
 
-## For GitHub (repository header)
-
-**Short description** (fits GitHub “About”; ~350 characters max):
-
 > Calyx core — Git-native bundle for **organizational reasoning**: constitution, prompts, taxonomy, and **capture hooks** (Git + Cursor). **Stewardship of thinking**, not transcript mining or data extraction. A **convention + bundle** for teams who work **with AI** and want reasoning to **compound** inside the repo.
 
 **Suggested topics:** `knowledge-management` `documentation` `developer-tools` `ai` `cursor` `git` `adr` `reasoning` `organizational-learning`
-
-**Website (optional):** your studio or docs site, if you publish one.
 
 ---
 
@@ -44,8 +37,6 @@ Concretely, this repo ships **templates, prompts, taxonomy, and small scripts** 
 The goal is to **reduce how much good thinking dissipates**, not to maximize how much text you store.
 
 ---
-
-## A legible story for studios (e.g. Scale Free Strategy)
 
 **We help organizations keep the thinking they’re already paying for**—instead of treating every model reply as disposable UI noise. Calyx makes that **explicit, versioned, and reviewable** in Git, without pretending that a chat tab is a knowledge base.
 
