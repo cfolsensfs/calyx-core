@@ -1,20 +1,18 @@
-# GitHub repository setup (visibility, About, releases)
+# Hosting calyx-core on GitHub
 
-Use this when publishing or refreshing **calyx-core** on GitHub. **Description and topics** can be set in the GitHub UI (**Settings** or the gear on the repo **About** sidebar) or with **`gh`** (see below).
+Visibility, description, topics, releases, and traffic for this repository.
 
 ## Visibility
 
-- **UI:** Repository **Settings** → **General** → **Danger Zone** → **Change repository visibility** → **Public** (read the warnings).
+- **UI:** Repository **Settings** → **General** → **Danger Zone** → **Change repository visibility** → **Public**
 - **CLI:** `gh auth login` then:
   ```bash
   gh repo edit cfolsensfs/calyx-core --visibility public --accept-visibility-change-consequences
   ```
 
-## About (description + topics + homepage)
+## Description, topics, homepage
 
-The canonical copy lives under **[philosophy.md — For GitHub repository header](philosophy.md#for-github-repository-header)**.
-
-**CLI example** (after `gh auth login`):
+Short summary: [philosophy.md § In one sentence](philosophy.md#in-one-sentence). Example `gh repo edit` (after `gh auth login`):
 
 ```bash
 gh repo edit cfolsensfs/calyx-core \
@@ -25,17 +23,15 @@ gh repo edit cfolsensfs/calyx-core \
   --add-topic reasoning --add-topic organizational-learning
 ```
 
-Adjust **`--homepage`** if you prefer a docs URL or omit the flag.
-
 ## License
 
-The repo root **`LICENSE`** is **MIT**. In **Settings** → **General**, set **License** to **MIT** if GitHub does not detect it automatically after push.
+Root **`LICENSE`**: **MIT**. If the UI does not pick it up after push: **Settings** → **General** → **License** → **MIT**.
 
 ## Release
 
-Create a **GitHub Release** from the latest tag (e.g. **`v1.1.0`**); paste or adapt the matching section from [CHANGELOG.md](../CHANGELOG.md). **New adopters** should pin **`v1.1.0`** or newer in `.calyx/core` (see [new-project.md](new-project.md)).
+**GitHub Release** from the current tag (e.g. **`v1.1.0`**); notes from [CHANGELOG.md](../CHANGELOG.md). New projects: pin **`v1.1.0`** or newer in `.calyx/core` ([new-project.md](new-project.md)).
 
-## Traffic and stats (what GitHub shows)
+## Traffic and stats
 
 | Signal | Where | Notes |
 |--------|--------|--------|
@@ -47,9 +43,9 @@ Create a **GitHub Release** from the latest tag (e.g. **`v1.1.0`**); paste or ad
 
 There is **no** built-in “Calyx downloads” metric. For a lightweight public signal, watch **Traffic** periodically or use the **GitHub API** (`/repos/{owner}/{repo}/traffic/clones`) with a token that has repo access—still **approximate** and **private** to the repo.
 
-### Interest snapshot (default package)
+### Interest snapshot
 
-When someone asks about **interest** or **traffic** for **calyx-core**, treat that as this **bundle** (not stars alone):
+Signals for **calyx-core** as a bundle (not stars alone):
 
 1. **Stars + forks (+ open issues)** — public REST, no auth:
    ```bash

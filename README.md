@@ -2,9 +2,9 @@
 
 **Calyx** is a **Git-native bundle and convention** for teams that use **Git + Cursor + bash**: constitution, specialist prompts, taxonomy, templates, **capture** (Git + Cursor hooks), **weekly governance**, a **knowledge feedback loop** (classify changes → require reasoning/ADR evidence in `learn` / `guided` / `guardrail` modes), **agent role** indexing and **org lift** prompts (cpl → col), and **scaffold defaults** (formatting, optional CI checks). This repo is **not an installable product**; it is the **calyx core layer (ccl)** you submodule at **`.calyx/core/`**. If you fork it and strip the hooks and scripts, you no longer have the maintained baseline—see [CHANGELOG.md](CHANGELOG.md) for what each **manifest** version added.
 
-**Latest tag:** **`v1.1.0`** (pin this in `.calyx/core`; bundle index **`1.7.1`** in [`manifest.yaml`](manifest.yaml)) · [CHANGELOG.md](CHANGELOG.md) · [Releases](https://github.com/cfolsensfs/calyx-core/releases) · [MIT License](LICENSE) · **GitHub “About” copy:** [docs/philosophy.md](docs/philosophy.md#for-github-repository-header) · **Repo setup:** [docs/github-repository-setup.md](docs/github-repository-setup.md)
+**Latest tag:** **`v1.1.0`** (pin in `.calyx/core`; bundle index **`1.7.2`** in [`manifest.yaml`](manifest.yaml)) · [CHANGELOG.md](CHANGELOG.md) · [Releases](https://github.com/cfolsensfs/calyx-core/releases) · [MIT License](LICENSE) · [Philosophy (one sentence)](docs/philosophy.md#in-one-sentence) · [Hosting on GitHub](docs/github-repository-setup.md)
 
-**Read next:** [Philosophy — stewardship, not extraction](docs/philosophy.md) · [Why Calyx matters now](docs/why-calyx-now.md) · [Experiments & ideas we have not shipped as tooling](docs/experiments-and-future.md)
+**Read next:** [Philosophy](docs/philosophy.md) · [Why Calyx matters now](docs/why-calyx-now.md) · [Experiments and future directions](docs/experiments-and-future.md)
 
 ## Why Calyx
 
@@ -42,13 +42,13 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Code quality defaults (new repos)** | Scaffold **`templates/app-scaffold/`** — **`.editorconfig`**, **`.prettierrc.json`**, **`.prettierignore`**; norms in **`AGENTS.md`** / **`docs-GIT.md`** |
 | **Machine index** | `manifest.yaml` |
 | **Cutting releases** | **`docs/releasing.md`** — maintainers, tags (**`v1.1.0`** current), pre-flight checklist |
-| **GitHub (public + About + topics)** | **`docs/github-repository-setup.md`** |
+| **GitHub** | **`docs/github-repository-setup.md`** — visibility, description, releases, traffic |
 | **Changelog** | **`CHANGELOG.md`** |
 | **License** | **`LICENSE`** (MIT) |
-| **Philosophy + GitHub header copy** | **`docs/philosophy.md`** — epistemic framing; stewardship vs extraction; suggested “About” text |
+| **Philosophy** | **`docs/philosophy.md`** — stewardship vs extraction; epistemic framing |
 | **Why Calyx now (one page)** | **`docs/why-calyx-now.md`** — org intelligence vs solo speed; capture; boundaries |
-| **Experiments & future directions** | **`docs/experiments-and-future.md`** — design notes and processes you can adopt without a bundled runner; start here for “we thought about X but did not implement it yet” |
-| **Impact telemetry (reference)** | **`docs/impact-telemetry.md`** — optional metrics, release-boundary audits, ROI estimates; **not** a shipped `tooling/` product |
+| **Experiments and future directions** | **`docs/experiments-and-future.md`** — design notes and optional processes not bundled as `tooling/` |
+| **Impact telemetry (reference)** | **`docs/impact-telemetry.md`** — optional metrics, release-boundary audits, ROI estimates; no dedicated runner in this repo |
 
 **Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.
 

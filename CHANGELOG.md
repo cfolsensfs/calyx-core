@@ -2,12 +2,17 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` → `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.7.2 (manifest) — documentation tone (fewer meta / setup prompts)
+
+- **`docs/philosophy.md`** — **In one sentence** replaces GitHub-specific header labeling; topics list removed from philosophy (see hosting doc for `gh` topics example)
+- **`docs/github-repository-setup.md`**, **`README.md`**, **`docs/experiments-and-future.md`**, **`docs/impact-telemetry.md`**, **`docs/workflow.md`**, **`docs/why-calyx-now.md`**, **`docs/new-project.md`** — less instructional framing in public descriptors; related-link blurbs shortened
+
 ## 1.7.1 (manifest) — experiments index + impact telemetry reference doc
 
 - **`docs/experiments-and-future.md`** — index of design directions **not** shipped as first-class tooling; fork-friendly “thanks for cloning; here is what we thought about”
 - **`docs/impact-telemetry.md`** — detailed **process + schema sketch** for ROI-style metrics; **release-boundary audits** as the recommended default; links to feedback-loop outputs
 - **`README.md`**, **`docs/philosophy.md`**, **`docs/why-calyx-now.md`**, **`docs/github-repository-setup.md`** — explanatory copy refreshed for **EOW governance**, **feedback loop**, **org lift / taxonomy**, **scaffold quality defaults**, and **experiments** (not only **CHANGELOG**)
-- **`docs/philosophy.md`** — restored explicit **For GitHub repository header** section for stable anchor
+- **`docs/philosophy.md`** — **In one sentence** summary block; epistemic sections unchanged in intent
 - **`.gitignore`** — ignore **`__pycache__/`** and **`*.py[cod]`**
 
 ## 1.7.0 (manifest) — knowledge feedback loop (capture -> distill -> apply -> enforce)
@@ -55,4 +60,4 @@ All notable changes to this bundle are documented here. The **Git tag** (e.g. **
 
 ## v1.0.0 — 2026-04-30
 
-First **public** release of **calyx-core** as an open bundle: constitution, prompts, taxonomy, templates, capture tooling (Git + Cursor), and documentation—including [docs/philosophy.md](docs/philosophy.md) (stewardship of reasoning, suggested GitHub “About” copy). Licensed under the [MIT License](LICENSE).
+First **public** release of **calyx-core** as an open bundle: constitution, prompts, taxonomy, templates, capture tooling (Git + Cursor), and documentation—including [docs/philosophy.md](docs/philosophy.md) (stewardship of reasoning). Licensed under the [MIT License](LICENSE).

@@ -1,13 +1,11 @@
 
-This is the **cultural and epistemic** story behind the repo. For **what to install and why today**, see [why-calyx-now.md](why-calyx-now.md). For **mechanics**, see [README.md](../README.md) and [first-run.md](first-run.md).
+Calyx is a **cultural and epistemic** frame: why organizational reasoning belongs in the repo, and what stewardship means as distinct from extraction or transcript hoarding. [why-calyx-now.md](why-calyx-now.md) is the companion on urgency and boundaries; [README.md](../README.md) and [first-run.md](first-run.md) cover installation and day-one mechanics.
 
 ---
 
-## For GitHub repository header
+## In one sentence
 
 > Calyx core — Git-native bundle for **organizational reasoning**: constitution, prompts, taxonomy, **capture hooks** (Git + Cursor), **weekly governance**, **change-to-evidence feedback loop**, and **agent workflows** (org lift, taxonomy). **Stewardship of thinking**, not transcript mining or data extraction. A **convention + bundle** for teams who work **with AI** and want reasoning to **compound** inside the repo.
-
-**Suggested topics:** `knowledge-management` `documentation` `developer-tools` `ai` `cursor` `git` `adr` `reasoning` `organizational-learning`
 
 ---
 
@@ -49,6 +47,6 @@ The goal is to **reduce how much good thinking dissipates**, not to maximize how
 
 ## Related
 
-- [why-calyx-now.md](why-calyx-now.md) — urgency, capture, boundaries (companion one-pager)
-- [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 principles (load-bearing capture + layout)
-- [README.md](../README.md) — what ships and how to consume
+- [why-calyx-now.md](why-calyx-now.md)
+- [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md)
+- [README.md](../README.md)

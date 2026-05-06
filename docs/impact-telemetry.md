@@ -1,8 +1,6 @@
 # Calyx impact telemetry (process + design)
 
-**Status:** This document is a **detailed reference** for teams who want **proof-style metrics** (“did reasoning travel with the work?”) and rough **ROI narratives**. It is **not** a bundled, supported runner in `calyx-core` today. Implement it however fits your org: spreadsheets, internal scripts, BI tools, or future Calyx tooling.
-
-For the index of similar “thought through, not shipped” topics, see [experiments-and-future.md](experiments-and-future.md).
+Reference material for **proof-style metrics** (“did reasoning travel with the work?”) and rough **ROI narratives**. There is **no** dedicated telemetry runner in `calyx-core`; teams implement storage and rollups as they prefer (spreadsheet, scripts, BI, or future tooling). See also [experiments-and-future.md](experiments-and-future.md).
 
 ---
 

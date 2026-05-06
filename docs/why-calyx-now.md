@@ -51,9 +51,9 @@ Calyx does not promise magic. It promises **honesty**: if you won’t capture, y
 
 ## Related
 
-- [philosophy.md](philosophy.md) — stewardship, not extraction; epistemic framing; GitHub header copy
-- [README.md](../README.md) — bundle overview and consumption
-- [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 principles (capture + structure)
-- [first-run.md](first-run.md) — install and onboarding
-- [glossary.md](glossary.md) — **ccl** / **col** / **cpl**
+- [philosophy.md](philosophy.md)
+- [README.md](../README.md)
+- [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md)
+- [first-run.md](first-run.md)
+- [glossary.md](glossary.md)
 
