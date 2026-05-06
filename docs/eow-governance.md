@@ -81,3 +81,7 @@ If no condition matches, the runner records explicit **no-trigger** rationale.
 - Report-first by default; strict mode is optional.
 - Classification is heuristic and explainable; human ratification still decides major governance outcomes.
 - This workflow does **not** auto-merge or rewrite historical artifacts.
+
+## Deferred (continuous metrics)
+
+Bundled **EOW** and **feedback-loop** outputs can feed **manual** or **org-local** metrics; a **continuous impact/scoring pipeline** in `tooling/` is **out of scope for now**. Traceability: [ADR-0001](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md) (**2026-05-07**), [experiments-and-future.md](experiments-and-future.md), [impact-telemetry.md](impact-telemetry.md).

@@ -75,5 +75,6 @@ Tune thresholds, requirements, mode, and override rules per repo.
 
 ## Related
 
-- **Optional metrics / release audits:** [impact-telemetry.md](impact-telemetry.md) (reference process; not a separate bundled runner)
-- **Ideas not shipped as tooling:** [experiments-and-future.md](experiments-and-future.md)
+- [ADR-0001 — Governance + feedback; deferred continuous metrics](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md)
+- [experiments-and-future.md](experiments-and-future.md) (status legend, scope recap)
+- [impact-telemetry.md](impact-telemetry.md) (reference: release-boundary audits, optional mirroring of feedback outputs)

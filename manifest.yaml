@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "1.7.2"
+version: "1.7.3"
 
 bundle:
   constitution:
@@ -92,6 +92,7 @@ optional:
     - docs/feedback-loop.md
     - docs/experiments-and-future.md
     - docs/impact-telemetry.md
+    - docs/decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md
     - CHANGELOG.md
   examples:
     - examples/sample-reasoning-log.md

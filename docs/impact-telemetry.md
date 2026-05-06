@@ -1,6 +1,6 @@
 # Calyx impact telemetry (process + design)
 
-Reference material for **proof-style metrics** (“did reasoning travel with the work?”) and rough **ROI narratives**. There is **no** dedicated telemetry runner in `calyx-core`; teams implement storage and rollups as they prefer (spreadsheet, scripts, BI, or future tooling). See also [experiments-and-future.md](experiments-and-future.md).
+Reference material for **proof-style metrics** (“did reasoning travel with the work?”) and rough **ROI narratives**. There is **no** dedicated telemetry runner in `calyx-core`; teams implement storage and rollups as they prefer (spreadsheet, scripts, BI, or future tooling). **Scope / deferred:** [ADR-0001](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md) · [experiments-and-future.md](experiments-and-future.md).
 
 ---
 
@@ -144,6 +144,7 @@ Label outputs as **estimates**, not accounting.
 
 ## Related
 
+- [ADR-0001](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md)
 - [feedback-loop.md](feedback-loop.md)
 - [eow-governance.md](eow-governance.md)
 - [experiments-and-future.md](experiments-and-future.md)

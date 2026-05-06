@@ -149,8 +149,9 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
 | [eow-governance.md](eow-governance.md) | Thin weekly governance runner (manifest + conflicts + trigger + report) |
 | [feedback-loop.md](feedback-loop.md) | Capture -> distill -> apply -> enforce loop (mode-aware) |
-| [experiments-and-future.md](experiments-and-future.md) | Design directions outside the manifest until promoted |
+| [experiments-and-future.md](experiments-and-future.md) | Design directions outside the manifest until promoted; legend + scope recap |
 | [impact-telemetry.md](impact-telemetry.md) | Reference: release-boundary audits, optional metrics, ROI estimates |
+| [decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md) | Shipped governance/feedback vs deferred continuous metrics (**2026-05-07**) |
 | [cursor-local-chat-log.md](cursor-local-chat-log.md) | Cursor hooks → `local/chat-log/` (v1 baseline; feed distill) |
 | [../prompts/README.md](../prompts/README.md) | Specialist + org lift + taxonomy prompts |
 | [releasing.md](releasing.md) | **`v1.x.y`** tags and pre-flight checklist |

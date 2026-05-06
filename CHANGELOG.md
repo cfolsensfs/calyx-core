@@ -2,6 +2,12 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` → `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.7.3 (manifest) — ADR for governance scope; experiments legend + recap
+
+- **`docs/decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md`** — ratifies **shipped** EOW + feedback loop vs **deferred** continuous impact/scoring pipeline; points at experiments + impact-telemetry (**2026-05-07**)
+- **`docs/experiments-and-future.md`** — **status legend** (not started / parked / won’t do), **scope recap** table, index rows with one-line reasons
+- **`docs/eow-governance.md`**, **`docs/feedback-loop.md`**, **`docs/impact-telemetry.md`** — cross-links to ADR and deferred metrics traceability
+
 ## 1.7.2 (manifest) — documentation tone (fewer meta / setup prompts)
 
 - **`docs/philosophy.md`** — **In one sentence** replaces GitHub-specific header labeling; topics list removed from philosophy (see hosting doc for `gh` topics example)
