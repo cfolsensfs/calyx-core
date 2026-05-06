@@ -18,6 +18,9 @@ Document both in the GitHub **Release notes** when you publish.
    cd /path/to/calyx-core
    for f in tooling/*.sh; do bash -n "$f" || exit 1; done
    ```
+   ```bash
+   python3 -m unittest discover -s tooling/tests -p "test_*.py"
+   ```
 2. **Docs** — [first-run.md](first-run.md) renders cleanly; links to [automation.md](automation.md), [cursor-local-chat-log.md](cursor-local-chat-log.md), [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) resolve.
 3. **Smoke path** — from a **throwaway** scaffold or test repo: `git submodule update --init --recursive` → `calyx-setup-capture.sh` → restart Cursor → `calyx-verify-capture.sh` (no `FAIL`) → trivial commit → inbox or tune `CALYX_DIARY_MIN_LINES`; chat → `local/chat-log/` grows.
 4. **CI template** — `templates/app-scaffold/github-workflows-calyx-verify.yml` references **`bash .calyx/core/tooling/calyx-verify-capture.sh --ci`** and **`submodules: recursive`**.
@@ -43,7 +46,7 @@ git push origin v1.1.0
 
 - **Consumer repos:** `cd .calyx/core && git fetch && git checkout v1.1.0` (or newer **v1.x.y**), then `calyx-setup-capture.sh` on each machine as needed.
 - **GitHub:** create a **Release** from the tag; paste from [CHANGELOG.md](../CHANGELOG.md).
-- **Release notes:** mention **`calyx-setup-capture.sh`**, **`calyx-verify-capture.sh`**, **`calyx-install-agent-roles.sh`**, **`SETUP_CALYX.md`**, **`docs/first-run.md`**, **`docs/philosophy.md`**, **`LICENSE`**, and optional **`.github/workflows/calyx-verify.yml`**.
+- **Release notes:** mention **`calyx-setup-capture.sh`**, **`calyx-verify-capture.sh`**, **`calyx-install-agent-roles.sh`**, **`calyx-eow-governance.sh`**, **`SETUP_CALYX.md`**, **`docs/first-run.md`**, **`docs/eow-governance.md`**, **`docs/philosophy.md`**, **`LICENSE`**, and optional **`.github/workflows/calyx-verify.yml`**.
 
 ## Related
 

@@ -2,6 +2,13 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` → `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.6.0 (manifest) — thin EOW governance workflow
+
+- New runner: **`tooling/calyx-eow-governance.sh`** (entrypoint) + **`tooling/calyx-eow-governance.py`**
+- New templates: **`templates/eow-config.json`**, **`templates/eow-weekly-report.md`**
+- New docs: **`docs/eow-governance.md`** plus workflow/automation/release integration
+- New tests: **`tooling/tests/test_calyx_eow_governance.py`** (trigger/no-trigger, idempotence, overrides)
+
 ## 1.5.1 (manifest) — org lift cadence
 
 - **`prompts/org-lift-cadence.txt`** — preferred name **org lift** for cpl → col; suggested cadence; assistant **nudge** rules at checkpoint (non-blocking)

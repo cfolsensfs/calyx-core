@@ -1,0 +1,17 @@
+{
+  "window_days": 7,
+  "open_question_days": 21,
+  "critical_confidence_threshold": 0.6,
+  "severity_weights": {
+    "low": 1,
+    "medium": 2,
+    "high": 4
+  },
+  "trigger_rules": {
+    "high_severity_conflict": true,
+    "security_privacy_regulatory_conflict": true,
+    "major_architecture_divergence_without_supersede": true,
+    "repeated_rework_unresolved_assumptions": true,
+    "critical_confidence_below_threshold": true
+  }
+}

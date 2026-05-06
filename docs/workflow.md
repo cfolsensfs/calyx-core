@@ -87,6 +87,18 @@ When **superseding**, keep the old ADR file and record **Supersedes** / **Supers
 
 Install **`tooling/install-calyx-git-hooks.sh`** so **post-commit** writes **`.calyx/reasoning/inbox/auto-*.md`** for substantive commits; distill with **`prompts/distill-inbox-stub-onepager.txt`**. Full detail: [automation.md](automation.md).
 
+## Thin EOW governance (weekly)
+
+Use **`bash .calyx/core/tooling/calyx-eow-governance.sh`** from the project root for a report-first weekly sweep:
+
+- intake manifest,
+- distillation status ledger updates,
+- hygiene/consistency findings,
+- 10th Man trigger decision,
+- single markdown report + JSON artifacts.
+
+Docs and config template: [eow-governance.md](eow-governance.md).
+
 ## Org lift (**cpl** → **col**) and taxonomy
 
 **Org lift** is the preferred name for moving **sanitized, reusable** **cpl** knowledge into **col** (AI-guided; human merges). It is **not** auto-merged by Git hooks.
@@ -124,6 +136,7 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [glossary.md](glossary.md) | **ccl** / **col** / **cpl** layer abbreviations |
 | [org-and-projects.md](org-and-projects.md) | Agency/org vs project repos |
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
+| [eow-governance.md](eow-governance.md) | Thin weekly governance runner (manifest + conflicts + trigger + report) |
 | [cursor-local-chat-log.md](cursor-local-chat-log.md) | Cursor hooks → `local/chat-log/` (v1 baseline; feed distill) |
 | [../prompts/README.md](../prompts/README.md) | Specialist + org lift + taxonomy prompts |
 | [releasing.md](releasing.md) | Maintainers: **`v1.x.y`** tags and pre-flight checklist |

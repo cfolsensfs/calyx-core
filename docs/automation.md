@@ -24,6 +24,7 @@ That installs the hook below **and** syncs Cursor hook scripts. Forks may strip 
 | **Layout / hook sanity** | **Script** | `calyx-verify-capture.sh` — onboarding and optional CI (`--ci`). |
 | **Agent role index (cpl)** | **Script** | `calyx-install-agent-roles.sh` — writes **`.calyx/AGENT_ROLES.md`** from core; invoked by **`calyx-setup-capture.sh`**; **`--force`** overwrites. |
 | **Org lift (cpl → col) / taxonomy** | **Agent + prompts** | `org-lift-cadence.txt` (cadence + nudges), `promote-cpl-to-col.txt`, `librarian-taxonomy-sync.txt` — human merges; see [workflow.md](workflow.md). |
+| **Thin EOW governance** | **Script + JSON reports** | `calyx-eow-governance.sh` runs weekly intake/distill/hygiene/conflicts/trigger report; see [eow-governance.md](eow-governance.md). |
 
 Nothing here **auto-merges** to `main` or **auto-deletes** stubs—you stay in control of what gets lifted into durable **cpl** or **col**. **Org lift** is **not** automated beyond AI-guided drafts + human PR.
 
@@ -65,6 +66,7 @@ export CALYX_DIARY_ON_MERGE=1
 1. **Commit as usual** → stubs appear for non-trivial diffs; Cursor appends turns to **`local/chat-log/`** if hooks are enabled.
 2. **On a steady beat** (end of day or end of task): run **distill** on stubs that matter; skim **recent chat-log**; promote into **`.calyx/reasoning/`** or **delete** noise.
 3. **Delete** processed stubs so `inbox/` stays small (or keep for audit—team choice).
+4. **Weekly (or chosen cadence):** run **`calyx-eow-governance.sh`** for thin governance, conflict scoring, and 10th Man trigger/no-trigger rationale.
 
 ## CI (future)
 
@@ -74,5 +76,6 @@ You can add a **non-blocking** GitHub Action that comments “new inbox stubs”
 
 - [cursor-local-chat-log.md](cursor-local-chat-log.md) — Cursor hooks → `local/chat-log/`
 - [workflow.md](workflow.md) — rhythm
+- [eow-governance.md](eow-governance.md) — weekly governance command and outputs
 - [new-project.md](new-project.md) — scaffolding
 - [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md) — v1 capture principle
