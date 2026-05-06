@@ -12,13 +12,13 @@ Use this when publishing or refreshing **calyx-core** on GitHub. **Description a
 
 ## About (description + topics + homepage)
 
-The canonical copy lives under **[philosophy.md — For GitHub](philosophy.md#for-github-repository-header)**.
+The canonical copy lives under **[philosophy.md — For GitHub repository header](philosophy.md#for-github-repository-header)**.
 
 **CLI example** (after `gh auth login`):
 
 ```bash
 gh repo edit cfolsensfs/calyx-core \
-  --description "Calyx core — Git-native bundle for organizational reasoning: constitution, prompts, taxonomy, and capture hooks (Git + Cursor). Stewardship of thinking, not transcript mining. Convention + bundle for teams using AI." \
+  --description "Calyx core — Git-native bundle for organizational reasoning: constitution, prompts, taxonomy, capture (Git+Cursor), weekly governance, change-to-evidence feedback loop, org lift & taxonomy prompts. Stewardship of thinking, not transcript mining." \
   --homepage "https://scalefreestrategy.com" \
   --add-topic knowledge-management --add-topic documentation --add-topic developer-tools \
   --add-topic ai --add-topic cursor --add-topic git --add-topic adr \

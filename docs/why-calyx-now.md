@@ -18,7 +18,7 @@ Calyx’s bet is simple: **treat capture as load-bearing**, then **distill** int
 
 ## What Calyx is (and is not)
 
-**Calyx is:** a **bundle and constitution** (prompts, templates, taxonomy), **automation** (git post-commit inbox stubs, Cursor hooks to a **local, gitignored** chat trail), and **verify** scripts so “did we actually install this?” is not a personality test.
+**Calyx is:** a **bundle and constitution** (prompts, templates, taxonomy), **automation** (git post-commit inbox stubs, Cursor hooks to a **local, gitignored** chat trail), **verify** scripts so “did we actually install this?” is not a personality test, plus **optional rhythm tools**—a **weekly governance** runner, a **feedback loop** that maps change impact to reasoning/ADR expectations, and **scaffold** defaults (formatting, CI templates) so new repos start consistent.
 
 **Calyx is not:** installable “Calyx software,” a vacuum for private chats, or a mandate to paste every transcript into Git. Wider sharing, when it happens, stays **opt-in and sanitized**—patterns and arguments, not raw exports.
 

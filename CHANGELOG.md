@@ -2,6 +2,14 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` → `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.7.1 (manifest) — experiments index + impact telemetry reference doc
+
+- **`docs/experiments-and-future.md`** — index of design directions **not** shipped as first-class tooling; fork-friendly “thanks for cloning; here is what we thought about”
+- **`docs/impact-telemetry.md`** — detailed **process + schema sketch** for ROI-style metrics; **release-boundary audits** as the recommended default; links to feedback-loop outputs
+- **`README.md`**, **`docs/philosophy.md`**, **`docs/why-calyx-now.md`**, **`docs/github-repository-setup.md`** — explanatory copy refreshed for **EOW governance**, **feedback loop**, **org lift / taxonomy**, **scaffold quality defaults**, and **experiments** (not only **CHANGELOG**)
+- **`docs/philosophy.md`** — restored explicit **For GitHub repository header** section for stable anchor
+- **`.gitignore`** — ignore **`__pycache__/`** and **`*.py[cod]`**
+
 ## 1.7.0 (manifest) — knowledge feedback loop (capture -> distill -> apply -> enforce)
 
 - New runner: **`tooling/calyx-feedback-loop.sh`** + **`tooling/calyx-feedback-loop.py`**

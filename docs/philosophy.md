@@ -3,7 +3,9 @@ This is the **cultural and epistemic** story behind the repo. For **what to inst
 
 ---
 
-> Calyx core — Git-native bundle for **organizational reasoning**: constitution, prompts, taxonomy, and **capture hooks** (Git + Cursor). **Stewardship of thinking**, not transcript mining or data extraction. A **convention + bundle** for teams who work **with AI** and want reasoning to **compound** inside the repo.
+## For GitHub repository header
+
+> Calyx core — Git-native bundle for **organizational reasoning**: constitution, prompts, taxonomy, **capture hooks** (Git + Cursor), **weekly governance**, **change-to-evidence feedback loop**, and **agent workflows** (org lift, taxonomy). **Stewardship of thinking**, not transcript mining or data extraction. A **convention + bundle** for teams who work **with AI** and want reasoning to **compound** inside the repo.
 
 **Suggested topics:** `knowledge-management` `documentation` `developer-tools` `ai` `cursor` `git` `adr` `reasoning` `organizational-learning`
 
@@ -33,6 +35,9 @@ Concretely, this repo ships **templates, prompts, taxonomy, and small scripts** 
 
 - Keep **reasoning logs** and **ADRs** next to code, under **`.calyx/`**, with clear **ccl / col / cpl** layers.
 - Use **automated raw signal** (inbox stubs, short-lived local chat logs) as **input** to human or Librarian-style **distill**—not as the system of record by themselves.
+- Run a **thin weekly governance** pass (intake, hygiene, consistency hints, optional 10th Man trigger) when you want the “brain” to stay legible without a heavy process.
+- Apply a **knowledge feedback loop** so higher-impact code changes **meet** (or **warn toward**) Calyx evidence in **`learn` / `guided` / `guardrail`** modes—still your policy, not a cloud service.
+- Use **agent prompts and indexes** for **org lift** (reusable patterns from **cpl** to **col**) and **taxonomy** hygiene, when you choose to invest in cross-project alignment.
 
 The goal is to **reduce how much good thinking dissipates**, not to maximize how much text you store.
 

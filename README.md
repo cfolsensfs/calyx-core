@@ -1,16 +1,18 @@
 # calyx-core
 
-**Calyx v1.0** — constitution, prompts, templates, and **capture tooling** for projects that use **Git + Cursor + bash**. This repo is **not an installable product**; it is a **bundle and convention**. If you fork it and delete the hooks, that is on you—you no longer have the v1 baseline.
+**Calyx** is a **Git-native bundle and convention** for teams that use **Git + Cursor + bash**: constitution, specialist prompts, taxonomy, templates, **capture** (Git + Cursor hooks), **weekly governance**, a **knowledge feedback loop** (classify changes → require reasoning/ADR evidence in `learn` / `guided` / `guardrail` modes), **agent role** indexing and **org lift** prompts (cpl → col), and **scaffold defaults** (formatting, optional CI checks). This repo is **not an installable product**; it is the **calyx core layer (ccl)** you submodule at **`.calyx/core/`**. If you fork it and strip the hooks and scripts, you no longer have the maintained baseline—see [CHANGELOG.md](CHANGELOG.md) for what each **manifest** version added.
 
-**Latest tag:** **`v1.1.0`** (pin this in `.calyx/core`) · [CHANGELOG.md](CHANGELOG.md) · [Releases](https://github.com/cfolsensfs/calyx-core/releases) · [MIT License](LICENSE) · **GitHub “About” copy:** [docs/philosophy.md](docs/philosophy.md#for-github-repository-header) · **Repo setup:** [docs/github-repository-setup.md](docs/github-repository-setup.md)
+**Latest tag:** **`v1.1.0`** (pin this in `.calyx/core`; bundle index **`1.7.1`** in [`manifest.yaml`](manifest.yaml)) · [CHANGELOG.md](CHANGELOG.md) · [Releases](https://github.com/cfolsensfs/calyx-core/releases) · [MIT License](LICENSE) · **GitHub “About” copy:** [docs/philosophy.md](docs/philosophy.md#for-github-repository-header) · **Repo setup:** [docs/github-repository-setup.md](docs/github-repository-setup.md)
 
-**Read next:** [Philosophy — stewardship, not extraction](docs/philosophy.md) · [Why Calyx matters now](docs/why-calyx-now.md)
+**Read next:** [Philosophy — stewardship, not extraction](docs/philosophy.md) · [Why Calyx matters now](docs/why-calyx-now.md) · [Experiments & ideas we have not shipped as tooling](docs/experiments-and-future.md)
 
 ## Why Calyx
 
 For most of history, a huge share of careful thinking never became durable—debates, synthesis, and “why we didn’t do X” lived in conversations that left little trace. AI-assisted work increases how much of that thinking happens in **human–agent threads**, which makes the **loss** worse if you only keep **commit messages**—and makes **faithful capture** mandatory if anything is to compound.
 
-**Calyx v1 expects automated raw signal:** a **git post-commit** path to **`.calyx/reasoning/inbox/`** and **Cursor hooks** to **`local/chat-log/`** (see **`tooling/calyx-setup-capture.sh`**). Judgment still happens when you **distill** into reasoning logs and ADRs; without capture, there is nothing to distill.
+**Capture is still the spine:** a **git post-commit** path to **`.calyx/reasoning/inbox/`** and **Cursor hooks** to **`local/chat-log/`** (see **`tooling/calyx-setup-capture.sh`**). Judgment still happens when you **distill** into reasoning logs and ADRs; without capture, there is nothing to distill.
+
+**On top of capture**, this bundle adds **lightweight operations** you can adopt progressively: a **single weekly** governance pass ([`docs/eow-governance.md`](docs/eow-governance.md)), a **feedback loop** that ties change impact to Calyx evidence ([`docs/feedback-loop.md`](docs/feedback-loop.md)), **agent-facing** indexes and prompts for **org lift** and **taxonomy** (see deliverables table), and **reference** material for **impact-style metrics** without mandatory telemetry ([`docs/impact-telemetry.md`](docs/impact-telemetry.md)).
 
 **Calyx is not about vacuuming chats or harvesting private sessions.** It is **stewardship of reasoning**: lightweight, versioned artifacts (reasoning logs, ADRs, shared vocabulary) so the thinking your organization already pays for **compounds inside the project and org**—where confidentiality and obligation belong. Wider contribution to shared knowledge, when it happens at all, is **opt-in and sanitized**—patterns and arguments, not raw transcripts.
 
@@ -35,8 +37,9 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Org vs projects** | **`docs/org-and-projects.md`** — studio/agency → many repos; Calyx shape independent of disk |
 | **Capture (v1 baseline)** | **`tooling/calyx-setup-capture.sh`** — git post-commit + Cursor hooks; **`docs/automation.md`**, **`docs/cursor-local-chat-log.md`** |
 | **Thin EOW governance** | **`tooling/calyx-eow-governance.sh`** (single weekly command), **`templates/eow-config.json`**, **`templates/eow-weekly-report.md`**, **`docs/eow-governance.md`** |
-| **Knowledge feedback loop** | **`tooling/calyx-feedback-loop.sh`** (classify -> policy -> remediation), **`templates/feedback-config.json`**, **`docs/feedback-loop.md`** |
+| **Knowledge feedback loop** | **`tooling/calyx-feedback-loop.sh`** (classify -> policy -> remediation), **`templates/feedback-config.json`**, **`docs/feedback-loop.md`**; scaffold adds optional **`.github/workflows/calyx-feedback.yml`**, PR/issue Calyx templates |
 | **Agent roles / org lift / taxonomy prompts** | **`tooling/calyx-install-agent-roles.sh`** → **`.calyx/AGENT_ROLES.md`**; **`prompts/org-lift-cadence.txt`**, **`prompts/promote-cpl-to-col.txt`**, **`prompts/librarian-taxonomy-sync.txt`**; **`prompts/README.md`** |
+| **Code quality defaults (new repos)** | Scaffold **`templates/app-scaffold/`** — **`.editorconfig`**, **`.prettierrc.json`**, **`.prettierignore`**; norms in **`AGENTS.md`** / **`docs-GIT.md`** |
 | **Machine index** | `manifest.yaml` |
 | **Cutting releases** | **`docs/releasing.md`** — maintainers, tags (**`v1.1.0`** current), pre-flight checklist |
 | **GitHub (public + About + topics)** | **`docs/github-repository-setup.md`** |
@@ -44,6 +47,8 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **License** | **`LICENSE`** (MIT) |
 | **Philosophy + GitHub header copy** | **`docs/philosophy.md`** — epistemic framing; stewardship vs extraction; suggested “About” text |
 | **Why Calyx now (one page)** | **`docs/why-calyx-now.md`** — org intelligence vs solo speed; capture; boundaries |
+| **Experiments & future directions** | **`docs/experiments-and-future.md`** — design notes and processes you can adopt without a bundled runner; start here for “we thought about X but did not implement it yet” |
+| **Impact telemetry (reference)** | **`docs/impact-telemetry.md`** — optional metrics, release-boundary audits, ROI estimates; **not** a shipped `tooling/` product |
 
 **Start here for a new repo:** [docs/new-project.md](docs/new-project.md), then use the commands in **New app repo** below.
 
@@ -57,7 +62,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
 | `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout, **EOW governance** (`calyx-eow-governance.sh`), **feedback loop** (`calyx-feedback-loop.sh`) |
-| `docs/` | **`philosophy.md`**, **`why-calyx-now.md`**, **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`**, **`eow-governance.md`**, **`feedback-loop.md`** |
+| `docs/` | **`philosophy.md`**, **`why-calyx-now.md`**, **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`**, **`eow-governance.md`**, **`feedback-loop.md`**, **`experiments-and-future.md`**, **`impact-telemetry.md`** |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 

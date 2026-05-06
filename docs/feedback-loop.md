@@ -72,3 +72,8 @@ Tune thresholds, requirements, mode, and override rules per repo.
 1. `learn` for 1-2 weeks
 2. `guided` for 2-4 weeks
 3. `guardrail` once false positives are acceptable
+
+## Related
+
+- **Optional metrics / release audits:** [impact-telemetry.md](impact-telemetry.md) (reference process; not a separate bundled runner)
+- **Ideas not shipped as tooling:** [experiments-and-future.md](experiments-and-future.md)
