@@ -1,6 +1,6 @@
 # Why Calyx matters now
 
-**One page.** Calyx is an **organizational intelligence** layer for teams that already work **with AI**. It is not a replacement for your editor, your Git host, or a “second brain” app—it is a **small, strict convention** on top of **Git + Cursor (or similar) + capture hooks**, so the reasoning you already pay for **compounds** instead of disappearing when the chat tab closes.
+Calyx is an **organizational intelligence** layer for teams that already work **with AI**. It is not a replacement for your editor, your Git host, or a “second brain” app—it is a **small, strict convention** on top of **Git + Cursor (or similar) + capture hooks**, so the reasoning you already pay for **compounds** instead of disappearing when the chat tab closes.
 
 For the **cultural / epistemic** framing (stewardship vs extraction, the “great library” in the Calyx sense), see **[philosophy.md](philosophy.md)**.
 
