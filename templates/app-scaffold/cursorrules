@@ -32,6 +32,9 @@ Core prompts: **`.calyx/core/prompts/`**. Master tags: **`.calyx/core/taxonomy/m
 - Say what to record in `.calyx/` when proposing non-trivial changes.
 - Prefer small code diffs; **supersede** stale ADRs instead of rewriting history for tidiness.
 - **Secrets and local-only files** — keep out of git (see `.gitignore`, `local/`). Never commit credentials or production connection strings.
+- **Working software first** — prefer changes that can be run/verified, not speculative refactors without validation.
+- **Clear notes in code** — add brief comments where logic or tradeoffs are not obvious; prefer intent over narration.
+- **Formatting compliance** — run formatter/lint before commit. If Prettier is present, use it as baseline (`.prettierrc.json` + `.prettierignore`).
 
 ## Local LLMs (optional)
 

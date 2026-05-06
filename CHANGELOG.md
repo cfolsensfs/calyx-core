@@ -2,6 +2,15 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` → `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.6.1 (manifest) — code quality + formatting baseline in scaffolds
+
+- Scaffold now includes **`.editorconfig`**, **`.prettierrc.json`**, and **`.prettierignore`**
+- `templates/app-scaffold/cursorrules` explicitly enforces:
+  - working software validation,
+  - clear intent-focused code notes,
+  - formatter/lint compliance before commit
+- `templates/app-scaffold/AGENTS.md` and `docs-GIT.md` now include a concrete quality gate and Prettier usage guidance
+
 ## 1.6.0 (manifest) — thin EOW governance workflow
 
 - New runner: **`tooling/calyx-eow-governance.sh`** (entrypoint) + **`tooling/calyx-eow-governance.py`**

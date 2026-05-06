@@ -18,6 +18,9 @@ git submodule update --init --recursive
 ```bash
 git checkout -b <branch-name>   # optional feature branch
 # … edit …
+# format/lint before commit (examples):
+# npm run format && npm run lint
+# or: npx prettier . --check
 git status
 git add -A
 git commit -m "Clear, complete sentence describing the change."

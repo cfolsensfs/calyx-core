@@ -34,3 +34,15 @@ Release / scaffold version for this repo is in **`VERSION`** (semantic-ish `0.1`
 ## Secrets and client material
 
 Do not commit secrets, credentials, or material that belongs in **`local/`** (gitignored). If something sensitive was ever committed, say so and stop — remediation is a separate step.
+
+## Code quality gate (always)
+
+Before finalizing any code change:
+
+1. Ensure the change **works** (run the relevant command/test/smoke path).
+2. Ensure non-obvious logic has **clear code notes** (short intent-focused comments).
+3. Ensure formatting/lint passes:
+   - Use repo scripts when available (`npm run format`, `npm run lint`, etc.).
+   - Otherwise use Prettier baseline in repo root:
+     - `npx prettier . --check`
+     - `npx prettier . --write` (when applying fixes)

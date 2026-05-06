@@ -103,6 +103,9 @@ replace_workspace_badge() {
 # --- Root files ---
 write_file "${TARGET}/.cursorrules" "${TEMPLATE_DIR}/cursorrules"
 write_file "${TARGET}/.gitignore" "${TEMPLATE_DIR}/gitignore"
+write_file "${TARGET}/.prettierrc.json" "${TEMPLATE_DIR}/prettierrc.json"
+write_file "${TARGET}/.prettierignore" "${TEMPLATE_DIR}/prettierignore"
+write_file "${TARGET}/.editorconfig" "${TEMPLATE_DIR}/editorconfig"
 
 # --- Cursor hooks: local chat log (gitignored under local/chat-log/) ---
 [[ -d "${CURSOR_HOOKS_DIR}" ]] || die "missing cursor-hooks templates: ${CURSOR_HOOKS_DIR}"
