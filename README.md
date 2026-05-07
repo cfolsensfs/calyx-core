@@ -2,7 +2,7 @@
 
 **Calyx** is a **Git-native bundle and convention** for teams that use **Git + Cursor + bash**: constitution, specialist prompts, taxonomy, templates, **capture** (Git + Cursor hooks), **weekly governance**, a **knowledge feedback loop** (classify changes → require reasoning/ADR evidence in `learn` / `guided` / `guardrail` modes), **agent role** indexing and **org lift** prompts (calyx project level → calyx org level), and **scaffold defaults** (formatting, optional CI checks). This repo is **not an installable product**; it is the **calyx core layer (ccl)** you submodule at **`.calyx/core/`**. If you fork it and strip the hooks and scripts, you no longer have the maintained baseline—see [CHANGELOG.md](CHANGELOG.md) for what each **manifest** version added.
 
-**Latest tag:** **`v1.1.0`** (pin in `.calyx/core`; bundle index **`1.7.3`** in [`manifest.yaml`](manifest.yaml)) · [CHANGELOG.md](CHANGELOG.md) · [Releases](https://github.com/cfolsensfs/calyx-core/releases) · [MIT License](LICENSE) · [Philosophy (one sentence)](docs/philosophy.md#in-one-sentence) · [Hosting on GitHub](docs/github-repository-setup.md)
+**Latest tag:** **`v1.1.0`** (pin in `.calyx/core`; bundle index **`1.7.4`** in [`manifest.yaml`](manifest.yaml)) · [CHANGELOG.md](CHANGELOG.md) · [Releases](https://github.com/cfolsensfs/calyx-core/releases) · [MIT License](LICENSE) · [Philosophy (one sentence)](docs/philosophy.md#in-one-sentence) · [Hosting on GitHub](docs/github-repository-setup.md)
 
 **Read next:** [Philosophy](docs/philosophy.md) · [Why Calyx matters now](docs/why-calyx-now.md) · [Experiments and future directions](docs/experiments-and-future.md)
 
@@ -38,6 +38,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | **Capture (v1 baseline)** | **`tooling/calyx-setup-capture.sh`** — git post-commit + Cursor hooks; **`docs/automation.md`**, **`docs/cursor-local-chat-log.md`** |
 | **Thin EOW governance** | **`tooling/calyx-eow-governance.sh`** (single weekly command), **`templates/eow-config.json`**, **`templates/eow-weekly-report.md`**, **`docs/eow-governance.md`** |
 | **Knowledge feedback loop** | **`tooling/calyx-feedback-loop.sh`** (classify -> policy -> remediation), **`templates/feedback-config.json`**, **`docs/feedback-loop.md`**; scaffold adds optional **`.github/workflows/calyx-feedback.yml`**, PR/issue Calyx templates |
+| **ADR adoption checklist** | **`docs/adr-adoption-checklist.md`** — how ADRs backflow into planning, review, CI policy, and weekly governance |
 | **Agent roles / org lift / taxonomy prompts** | **`tooling/calyx-install-agent-roles.sh`** → **`.calyx/AGENT_ROLES.md`**; **`prompts/org-lift-cadence.txt`**, **`prompts/promote-cpl-to-col.txt`**, **`prompts/librarian-taxonomy-sync.txt`**; **`prompts/README.md`** |
 | **Code quality defaults (new repos)** | Scaffold **`templates/app-scaffold/`** — **`.editorconfig`**, **`.prettierrc.json`**, **`.prettierignore`**; norms in **`AGENTS.md`** / **`docs-GIT.md`** |
 | **Machine index** | `manifest.yaml` |
@@ -63,7 +64,7 @@ The lasting power is local first: teams keep their “why,” reuse it, and impr
 | `templates/` | **Canonical** reasoning log and ADR shapes; **import runbook** (`distill-external-to-calyx.md`) for Slack/email → Calyx |
 | `examples/` | Illustrative artifacts (not production data) |
 | `tooling/` | Lean scripts: **project creation** (`scaffold-cursor-app.sh`, `create-sfs-workspace.sh`), Ollama, closeout, **EOW governance** (`calyx-eow-governance.sh`), **feedback loop** (`calyx-feedback-loop.sh`) |
-| `docs/` | **`philosophy.md`**, **`why-calyx-now.md`**, **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`**, **`eow-governance.md`**, **`feedback-loop.md`**, **`experiments-and-future.md`**, **`impact-telemetry.md`**, **`decisions/`** (e.g. **ADR-0001**) |
+| `docs/` | **`philosophy.md`**, **`why-calyx-now.md`**, **`first-run.md`**, **`releasing.md`**, **`new-project.md`**, **`ux-flow.md`**, **`workflow.md`**, **`glossary.md`**, **`org-and-projects.md`**, **`automation.md`**, **`eow-governance.md`**, **`feedback-loop.md`**, **`adr-adoption-checklist.md`**, **`experiments-and-future.md`**, **`impact-telemetry.md`**, **`decisions/`** (e.g. **ADR-0001**) |
 | `manifest.yaml` | Machine-readable index for sync automation |
 | `templates/app-scaffold/` | Files used by **`tooling/scaffold-cursor-app.sh`** (Calyx + default app layout) |
 

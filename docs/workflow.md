@@ -108,7 +108,7 @@ Use **`bash .calyx/core/tooling/calyx-feedback-loop.sh`** for mode-aware complia
 - emit deterministic remediation output (JSON + markdown),
 - support `learn` -> `guided` -> `guardrail` rollout.
 
-Docs and policy template: [feedback-loop.md](feedback-loop.md).
+Docs and policy template: [feedback-loop.md](feedback-loop.md). Adoption/playbook: [adr-adoption-checklist.md](adr-adoption-checklist.md).
 
 ## Org lift (**cpl** → **col**) and taxonomy
 
@@ -149,6 +149,7 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
 | [eow-governance.md](eow-governance.md) | Thin weekly governance runner (manifest + conflicts + trigger + report) |
 | [feedback-loop.md](feedback-loop.md) | Capture -> distill -> apply -> enforce loop (mode-aware) |
+| [adr-adoption-checklist.md](adr-adoption-checklist.md) | ADR backflow checklist for planning, review, CI, and weekly governance |
 | [experiments-and-future.md](experiments-and-future.md) | Design directions outside the manifest until promoted; legend + scope recap |
 | [impact-telemetry.md](impact-telemetry.md) | Reference: release-boundary audits, optional metrics, ROI estimates |
 | [decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md) | Shipped governance/feedback vs deferred continuous metrics (**2026-05-07**) |

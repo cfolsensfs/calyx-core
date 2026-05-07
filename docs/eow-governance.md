@@ -84,4 +84,4 @@ If no condition matches, the runner records explicit **no-trigger** rationale.
 
 ## Deferred (continuous metrics)
 
-Bundled **EOW** and **feedback-loop** outputs can feed **manual** or **org-local** metrics; a **continuous impact/scoring pipeline** in `tooling/` is **out of scope for now**. Traceability: [ADR-0001](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md) (**2026-05-07**), [experiments-and-future.md](experiments-and-future.md), [impact-telemetry.md](impact-telemetry.md).
+Bundled **EOW** and **feedback-loop** outputs can feed **manual** or **org-local** metrics; a **continuous impact/scoring pipeline** in `tooling/` is **out of scope for now**. Traceability: [ADR-0001](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md) (**2026-05-07**), [experiments-and-future.md](experiments-and-future.md), [impact-telemetry.md](impact-telemetry.md), [adr-adoption-checklist.md](adr-adoption-checklist.md).

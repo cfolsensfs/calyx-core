@@ -76,5 +76,6 @@ Tune thresholds, requirements, mode, and override rules per repo.
 ## Related
 
 - [ADR-0001 — Governance + feedback; deferred continuous metrics](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md)
+- [adr-adoption-checklist.md](adr-adoption-checklist.md)
 - [experiments-and-future.md](experiments-and-future.md) (status legend, scope recap)
 - [impact-telemetry.md](impact-telemetry.md) (reference: release-boundary audits, optional mirroring of feedback outputs)

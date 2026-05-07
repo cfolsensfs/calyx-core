@@ -1,6 +1,12 @@
 # Changelog
 
-All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` → `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
+All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` -> `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
+
+## 1.7.4 (manifest) — ADR adoption checklist and wiring
+
+- New doc: **`docs/adr-adoption-checklist.md`** (planning, review, CI policy, and weekly governance checks to ensure ADR backflow into daily work)
+- **`README.md`**, **`docs/workflow.md`**, **`docs/feedback-loop.md`**, **`docs/eow-governance.md`** now link to the checklist as the operational playbook
+- **`manifest.yaml`** optional docs include **`docs/adr-adoption-checklist.md`**
 
 ## 1.7.3 (manifest) — ADR for governance scope; experiments legend + recap
 
