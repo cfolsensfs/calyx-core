@@ -15,6 +15,14 @@ It is **not** a warehouse of other people’s **private** sessions. It is **not*
 
 ---
 
+## Status surfaces and metrics
+
+Calyx may emit **repo- and artifact-level** signals (for example the [status report](calyx-status-report.md): hooks wired, inbox depth, distilled logs/ADRs, latest EOW/feedback outputs, org lift readiness). Those surfaces answer “is the discipline working?” and “is there memory we can lean on?”—tied to **paths and commits**, not résumés.
+
+**Calyx does not score, rank, or compare individuals.** Short-term log counts cannot fairly represent foundational work or long-horizon impact; comparative “productivity” or “Calyx value” dashboards for people are **out of scope** by design. Anything that looks like a metric should be **explainable from Git artifacts** and safe to show on a projector without embarrassing anyone.
+
+---
+
 ## The shift (why this exists)
 
 For most of history, a large share of **careful thinking** lived in **conversations that left no durable trace**—office debates, hallway synthesis, the “why we didn’t do X” that never became a memo. That thinking **dissipated as heat**.
@@ -50,3 +58,4 @@ The goal is to **reduce how much good thinking dissipates**, not to maximize how
 - [why-calyx-now.md](why-calyx-now.md)
 - [constitution/CONSTITUTION.md](../constitution/CONSTITUTION.md)
 - [README.md](../README.md)
+- [calyx-status-report.md](calyx-status-report.md) — concrete artifact-level status surface (v1)

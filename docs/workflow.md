@@ -147,9 +147,11 @@ Raw exports are **mostly chaff**. Use an agent (or a human) to **classify, summa
 | [glossary.md](glossary.md) | **ccl** / **col** / **cpl** layer abbreviations |
 | [org-and-projects.md](org-and-projects.md) | Agency/org vs project repos |
 | [automation.md](automation.md) | Post-commit inbox stubs, skip flags, distill |
+| [calyx-status-report.md](calyx-status-report.md) | v1 status report — hooks, capture, decision memory, EOW/feedback, org lift |
 | [eow-governance.md](eow-governance.md) | Thin weekly governance runner (manifest + conflicts + trigger + report) |
 | [feedback-loop.md](feedback-loop.md) | Capture -> distill -> apply -> enforce loop (mode-aware) |
 | [adr-adoption-checklist.md](adr-adoption-checklist.md) | ADR backflow checklist for planning, review, CI, and weekly governance |
+| [cursor-first-showcase.md](cursor-first-showcase.md) | Cursor-native architecture brief and demo path |
 | [experiments-and-future.md](experiments-and-future.md) | Design directions outside the manifest until promoted; legend + scope recap |
 | [impact-telemetry.md](impact-telemetry.md) | Reference: release-boundary audits, optional metrics, ROI estimates |
 | [decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md](decisions/ADR-0001-governance-feedback-and-deferred-telemetry.md) | Shipped governance/feedback vs deferred continuous metrics (**2026-05-07**) |

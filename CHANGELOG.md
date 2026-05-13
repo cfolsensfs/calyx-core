@@ -2,6 +2,18 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` -> `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.7.6 (manifest) — Calyx Status report (v1) + philosophy guardrail
+
+- New runner: **`tooling/calyx-status-report.sh`** + **`tooling/calyx-status-report.py`** — writes **`.calyx/reasoning/reports/status/latest-status.md`** and **`latest-status.json`** (hooks, capture pulse, decision-memory counts, latest EOW/feedback pointers, org lift readiness; **no individual scoring**)
+- New doc: **`docs/calyx-status-report.md`**
+- **`docs/philosophy.md`** — **Status surfaces and metrics** subsection (artifact-level signals only; explicitly **not** comparative people metrics)
+- Tests: **`tooling/tests/test_calyx_status_report.py`**
+
+## 1.7.5 (manifest) — Cursor-first showcase brief
+
+- New partner/demo brief: **`docs/cursor-first-showcase.md`** (Cursor-first architecture, integration touchpoints, 15-minute demo path)
+- **`README.md`** and **`docs/workflow.md`** now link the showcase for outreach and operator onboarding
+- **`manifest.yaml`** optional docs include the showcase doc
 ## 1.7.4 (manifest) — ADR adoption checklist and wiring
 
 - New doc: **`docs/adr-adoption-checklist.md`** (planning, review, CI policy, and weekly governance checks to ensure ADR backflow into daily work)
