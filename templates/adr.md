@@ -5,6 +5,12 @@
 - **Tags:**
 - **Supersedes:** (optional)
 
+## Agent context (optional)
+
+- **Model:** (literal Cursor name, if relevant)
+- **Tier:** (capability tier from `agents/MODEL-ROUTING.md`)
+- **Escalation:** (if judgment was escalated before ratification)
+
 ## Context
 
 ## Decision

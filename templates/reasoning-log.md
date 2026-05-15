@@ -5,6 +5,14 @@
 - **Date started:**
 - **Tags:** (core `master-tags.yaml` + project `local-tags.yaml`)
 
+## Agent context (optional)
+
+Record which model/tier produced or reviewed this log when it matters for replay (not a quality score).
+
+- **Model:** (e.g. Sonnet 4.6 — literal Cursor name)
+- **Tier:** (e.g. client prose — see `agents/MODEL-ROUTING.md` capability tiers)
+- **Escalation:** (e.g. none, or Composer → Codex after failed fix)
+
 ## Context
 
 What problem are we solving? Who is affected?

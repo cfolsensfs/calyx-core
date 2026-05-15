@@ -42,6 +42,7 @@ bash tooling/scaffold-cursor-app.sh /path/to/new-project --name "My App"
 | Flag             | Meaning                                                                  |
 | ---------------- | ------------------------------------------------------------------------ |
 | `--minimal`      | Calyx + git files only (no `apps/web`, `apps/api`, …).                   |
+| `--no-model-routing` | Do not copy `agents/MODEL-ROUTING.md` or `.cursor/rules/model-routing.mdc`. |
 | `--no-git`       | Do not run `git init`.                                                   |
 | `--no-submodule` | Do not add `.calyx/core` (offline); add later per project `docs/GIT.md`. |
 | `--force`        | Overwrite scaffold files if they already exist.                          |

@@ -2,6 +2,12 @@
 
 **cpl** helpers live in this file; **specialist prompts** live under **`.calyx/core/prompts/`** (submodule). Run prompts with your LLM front end (e.g. Cursor): paste the prompt file body as the system or leading instruction, then attach task-specific files.
 
+## Model routing (every thread — not a separate LLM prompt file)
+
+| When | Artifact | Notes |
+|------|----------|-------|
+| Start of session / before substantive work | **`agents/MODEL-ROUTING.md`** + **`.cursor/rules/model-routing.mdc`** | Classify task → pick model; state `Model: … because …` if helpful; preserve in **Agent context** when distilling |
+
 ## Capture → durable **cpl** (default loop)
 
 | When | Prompt / artifact | Attach / context |

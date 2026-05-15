@@ -14,6 +14,7 @@ RULES
 - Link **files and commit SHA** from the stub.
 - Keep **redaction**: no secrets from diffs; if stub contains sensitive paths, generalize.
 - If multiple topics appear, prefer **one** reasoning log with sections or ask the human to split.
+- If the thread stated **model**, **tier**, or **escalation** (see `agents/MODEL-ROUTING.md`), copy them into the optional **Agent context** section of the reasoning log or ADR — do not strip them.
 
 OUTPUT
 1. Verdict: delete stub | merge into reasoning | ADR stub needed

@@ -38,6 +38,19 @@ Calyx fits best where high-value reasoning is created: **inside AI-assisted deve
    - `.calyx/core/prompts/librarian.txt`  
    - `.calyx/core/prompts/broker.txt`
 
+6. **Model routing (scaffold default)**  
+   - `agents/MODEL-ROUTING.md` + `.cursor/rules/model-routing.mdc` (`alwaysApply`)  
+   - Task-first model choice; optional **Agent context** on reasoning logs / ADRs when distilling
+
+## Model routing (demo beat)
+
+Same task, wrong vs right model:
+
+- **Wrong:** fastest model drafts client-facing compliance copy → tone/claim risk, rework.
+- **Right:** classify → prose-tier model → optional Opus if stakes are high → distill with **Agent context** into `.calyx/reasoning/`.
+
+Calyx does not switch models programmatically; routing is discipline + recording, not enforcement.
+
 ## Three workflow examples
 
 ### 1) Architecture change with guardrails

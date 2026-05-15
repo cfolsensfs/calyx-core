@@ -36,5 +36,6 @@ RULES
 - Never copy secrets/credentials into outputs.
 - If authority is unclear, say so—do not guess BINDING tier without evidence.
 - Prefer pointers to source over pasting entire messages.
+- If the source or session stated **model**, **tier**, or **escalation**, preserve them in **Agent context** on the reasoning log or ADR (optional template section); do not invent model names.
 
 RELATED (human): full runbook templates/distill-external-to-calyx.md in calyx-core.

@@ -7,6 +7,12 @@
 - **Date started:**
 - **Tags:** (from `.calyx/taxonomy/local-tags.yaml` + core)
 
+## Agent context (optional)
+
+- **Model:** (literal Cursor name)
+- **Tier:** (capability tier — `agents/MODEL-ROUTING.md`)
+- **Escalation:** (if any)
+
 ## Context
 
 What problem are we solving? Who is affected?

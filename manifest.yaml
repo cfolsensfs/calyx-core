@@ -1,7 +1,7 @@
 # Calyx core bundle — intended for copy/sync into project .calyx/core/
 # Bump version when moving or renaming paths so downstream sync can detect drift.
 
-version: "1.7.6"
+version: "1.7.7"
 
 bundle:
   constitution:
@@ -28,6 +28,10 @@ bundle:
     - templates/eow-weekly-report.md
     - templates/eow-config.json
     - templates/feedback-config.json
+  cursor_model_routing_templates:
+    - templates/cursor-model-routing/MODEL-ROUTING.md
+    - templates/cursor-model-routing/model-routing.mdc
+    - templates/cursor-model-routing/README.md
   tooling:
     - tooling/ollama-run.sh
     - tooling/calyx-closeout.sh
@@ -64,6 +68,8 @@ app_scaffold_templates:
   - templates/app-scaffold/github-workflows-calyx-verify.yml
   - templates/app-scaffold/github-workflows-calyx-feedback.yml
   - templates/app-scaffold/pr-template-calyx-compliance.md
+  - templates/cursor-model-routing/MODEL-ROUTING.md
+  - templates/cursor-model-routing/model-routing.mdc
   - templates/app-scaffold/issue-template-calyx-context.md
   - templates/app-scaffold/apps-web-README.md
   - templates/app-scaffold/apps-api-README.md

@@ -31,6 +31,8 @@ One-line reason stays in the **Reason** column below.
 |-------|--------|--------|
 | **Impact telemetry & ROI-style metrics** (bundled runner, rollups, dashboards) | **Parked** | Process and schema sketched in [impact-telemetry.md](impact-telemetry.md); ship as scripts/BI per org until a future ADR promotes tooling. |
 | **Continuous “why latency”** (paired open/answer events as a headline metric) | **Won’t do (default)** | High ceremony and easy to misread as surveillance; partner- or org-specific instrumentation only if explicitly chosen. Details: [impact-telemetry.md](impact-telemetry.md) (optional metrics). |
+| **Model context from Cursor hooks** (auto-capture active model into `local/chat-log/` or stubs) | **Parked** | Depends on stable hook payload per Cursor version; v1 uses optional **Agent context** in templates + distill prompts (self-reported). |
+| **Model routing telemetry** (`model_escalated`, `wrong_model_retry`, per-person usage) | **Parked** | Event shapes sketched in [impact-telemetry.md](impact-telemetry.md); no runner; artifact-level optional fields only until an ADR promotes instrumentation. |
 
 [CHANGELOG.md](../CHANGELOG.md) and **`manifest.yaml`** record versioned releases. Items listed here are **not** part of the pin contract until they are added to the manifest.
 

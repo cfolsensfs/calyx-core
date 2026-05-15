@@ -5,10 +5,11 @@ __WORKSPACE_BADGE__
 ## Read first
 
 1. **`SETUP_CALYX.md`** — if the user is **new to this repo** or **onboarding Calyx**, walk **`.calyx/core/docs/first-run.md`** with them (verify steps, restart Cursor after hooks). After setup, run **`bash .calyx/core/tooling/calyx-verify-capture.sh`** and fix failures.
-2. **`.cursorrules`** — Calyx norms for this implementation repo.
-3. **`docs/GIT.md`** — clone, submodules, pushing.
-4. **`.calyx/README.md`** — where reasoning, ADRs, and taxonomy live.
-5. **`.calyx/feedback-config.json`** + **`.calyx/core/docs/feedback-loop.md`** — class policy and enforcement mode (`learn`/`guided`/`guardrail`).
+2. **`agents/MODEL-ROUTING.md`** — classify the task and pick a Cursor model **before** acting; **`.cursor/rules/model-routing.mdc`** applies in every thread.
+3. **`.cursorrules`** — Calyx norms for this implementation repo.
+4. **`docs/GIT.md`** — clone, submodules, pushing.
+5. **`.calyx/README.md`** — where reasoning, ADRs, and taxonomy live.
+6. **`.calyx/feedback-config.json`** + **`.calyx/core/docs/feedback-loop.md`** — class policy and enforcement mode (`learn`/`guided`/`guardrail`).
 
 ## `.calyx/` layout is fixed
 
@@ -29,6 +30,13 @@ After a substantive session, **summarize**: context, options, what you chose, ri
 **Agent role index:** read **`.calyx/AGENT_ROLES.md`** for when to use each prompt (inbox distill, **Librarian**, **org lift** to **col**, **taxonomy sync**). Specialist prompts live under **`.calyx/core/prompts/`**: **10th Man**, **Librarian**, **Broker**, plus **`org-lift-cadence.txt`** (when to lift + checkpoint nudges), **`promote-cpl-to-col.txt`** (run the lift), **`librarian-taxonomy-sync.txt`**, **`distill-inbox-stub-onepager.txt`**, **`import-distill-onepager.txt`**. At **Calyx checkpoint**, skim **`org-lift-cadence.txt`** if **`.calyx/org/`** exists.
 
 **Apply/enforce loop:** use **`bash .calyx/core/tooling/calyx-feedback-loop.sh --mode guided`** before merge (or in CI). Start with `learn`, tune thresholds, then move to `guardrail`.
+
+## Model routing (every thread)
+
+- **Guide:** `agents/MODEL-ROUTING.md` — task-first model choice (fit over speed).
+- **Rule:** `.cursor/rules/model-routing.mdc` — `alwaysApply: true`; compact table in every thread.
+- **Calyx:** when distilling to reasoning logs or ADRs, optional **Agent context** fields record model / tier / escalation (self-reported; not a performance score).
+- Enable the listed models in **Cursor Settings** for your team; edit the table if your org uses a different stack.
 
 ## Version
 

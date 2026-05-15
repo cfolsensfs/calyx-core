@@ -36,6 +36,7 @@ Skipping capture is opting out of the model: **no raw signal → nothing reliabl
 | **Bash** | Yes | Setup and hook driver scripts | `bash --version` |
 | **Python 3** | Yes | `log_chat_turn.py` for Cursor hooks | `python3 --version` |
 | **Cursor** | Yes for the default chat-log path | Hook events → `local/chat-log/` | **Settings → Hooks** after install |
+| **Cursor models** | Yes if using scaffold model routing | Task-first routing table in `agents/MODEL-ROUTING.md` | **Settings → Models** — enable the models your team lists in the routing table |
 | **GitHub CLI (`gh`)** | No | Only for `create-sfs-workspace.sh`-style repo create/push | `gh --version` |
 
 **Multi-root workspaces:** chat logging uses the **first** workspace root Cursor sends in the hook payload. Put the **primary repo first**, or adjust the script (see [cursor-local-chat-log.md](cursor-local-chat-log.md)).

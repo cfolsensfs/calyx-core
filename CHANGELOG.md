@@ -2,6 +2,15 @@
 
 All notable changes to this bundle are documented here. The **Git tag** (e.g. **`v1.1.0`**) is what consumer repos should pin in `.calyx/core`. The **`manifest.yaml` -> `version`** field is a monotonic bundle index for drift tooling and may differ from the tag.
 
+## 1.7.7 (manifest) — Cursor model routing + Agent context in artifacts
+
+- New templates: **`templates/cursor-model-routing/`** (`MODEL-ROUTING.md`, `model-routing.mdc`, `README.md`) — task-first model choice; useful with or without Calyx
+- **`scaffold-cursor-app.sh`** — copies routing kit to `agents/` + `.cursor/rules/` by default; **`--no-model-routing`** to skip
+- **`templates/app-scaffold/AGENTS.md`**, **`templates/project-agent-roles.md`** — model routing in Read first / agent index
+- **Agent context (optional)** on **`templates/reasoning-log.md`**, **`adr.md`**, app-scaffold templates — model / tier / escalation (convention, not scoring)
+- **`distill-inbox-stub-onepager.txt`**, **`import-distill-onepager.txt`** — preserve model metadata when distilling
+- **`docs/cursor-first-showcase.md`**, **`docs/first-run.md`**, **`docs/experiments-and-future.md`** — demo beat; prerequisites; parked hook/telemetry capture (tiers C/D)
+
 ## 1.7.6 (manifest) — Calyx Status report (v1) + philosophy guardrail
 
 - New runner: **`tooling/calyx-status-report.sh`** + **`tooling/calyx-status-report.py`** — writes **`.calyx/reasoning/reports/status/latest-status.md`** and **`latest-status.json`** (hooks, capture pulse, decision-memory counts, latest EOW/feedback pointers, org lift readiness; **no individual scoring**)

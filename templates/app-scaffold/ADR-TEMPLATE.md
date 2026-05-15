@@ -7,6 +7,12 @@
 - **Tags:**
 - **Supersedes:** (optional)
 
+## Agent context (optional)
+
+- **Model:** (literal Cursor name)
+- **Tier:** (capability tier — `agents/MODEL-ROUTING.md`)
+- **Escalation:** (if any)
+
 ## Context
 
 ## Decision

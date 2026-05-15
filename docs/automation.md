@@ -24,6 +24,7 @@ That installs the hook below **and** syncs Cursor hook scripts. Forks may strip 
 | **Layout / hook sanity** | **Script** | `calyx-verify-capture.sh` — onboarding and optional CI (`--ci`). |
 | **Agent role index (cpl)** | **Script** | `calyx-install-agent-roles.sh` — writes **`.calyx/AGENT_ROLES.md`** from core; invoked by **`calyx-setup-capture.sh`**; **`--force`** overwrites. |
 | **Org lift (cpl → col) / taxonomy** | **Agent + prompts** | `org-lift-cadence.txt` (cadence + nudges), `promote-cpl-to-col.txt`, `librarian-taxonomy-sync.txt` — human merges; see [workflow.md](workflow.md). |
+| **Cursor model routing** | **Scaffold + rules** | `templates/cursor-model-routing/` → `agents/MODEL-ROUTING.md` + `.cursor/rules/model-routing.mdc`; see [first-run.md](first-run.md). |
 | **Thin EOW governance** | **Script + JSON reports** | `calyx-eow-governance.sh` runs weekly intake/distill/hygiene/conflicts/trigger report; see [eow-governance.md](eow-governance.md). |
 | **Calyx Status report (v1)** | **Script + MD/JSON** | `calyx-status-report.sh` — artifact-level summary (hooks, inbox, decision memory, latest EOW/feedback, col mount); see [calyx-status-report.md](calyx-status-report.md). |
 | **Knowledge feedback loop** | **Script + policy modes** | `calyx-feedback-loop.sh` classifies changes and enforces evidence by mode (`learn/guided/guardrail`); see [feedback-loop.md](feedback-loop.md). |

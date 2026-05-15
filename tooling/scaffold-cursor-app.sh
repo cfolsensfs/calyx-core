@@ -11,6 +11,7 @@
 #   --no-git          Do not run git init
 #   --no-submodule    Do not add .calyx/core submodule (offline or core not on remote yet)
 #   --minimal         Only Calyx + git files; no apps/web, apps/api, etc.
+#   --no-model-routing  Do not copy agents/MODEL-ROUTING.md or .cursor/rules/model-routing.mdc
 #   --force           Overwrite existing scaffold files if present
 #
 # Env:
@@ -22,6 +23,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TEMPLATE_DIR="$(cd "${SCRIPT_DIR}/../templates/app-scaffold" && pwd)"
 CURSOR_HOOKS_DIR="$(cd "${SCRIPT_DIR}/../templates/cursor-hooks" && pwd)"
+MODEL_ROUTING_DIR="$(cd "${SCRIPT_DIR}/../templates/cursor-model-routing" && pwd)"
 CALYX_CORE_URL="${CALYX_CORE_URL:-https://github.com/cfolsensfs/calyx-core.git}"
 
 TARGET=""
@@ -29,6 +31,7 @@ PROJECT_NAME=""
 DO_GIT=1
 DO_SUBMODULE=1
 MINIMAL=0
+MODEL_ROUTING=1
 FORCE=0
 
 die() { echo "scaffold-cursor-app: $*" >&2; exit 1; }
@@ -39,6 +42,7 @@ while [[ $# -gt 0 ]]; do
     --no-git) DO_GIT=0; shift ;;
     --no-submodule) DO_SUBMODULE=0; shift ;;
     --minimal) MINIMAL=1; shift ;;
+    --no-model-routing) MODEL_ROUTING=0; shift ;;
     --force) FORCE=1; shift ;;
     -h|--help)
       grep '^#' "$0" | head -40 | sed 's/^# \{0,1\}//'
@@ -114,6 +118,15 @@ write_file "${TARGET}/.cursor/hooks/log_chat_turn.py" "${CURSOR_HOOKS_DIR}/log_c
 write_file "${TARGET}/.cursor/hooks/log-chat-turn.sh" "${CURSOR_HOOKS_DIR}/log-chat-turn.sh"
 chmod +x "${TARGET}/.cursor/hooks/log-chat-turn.sh" "${TARGET}/.cursor/hooks/log_chat_turn.py"
 write_file "${TARGET}/.cursor/hooks.json" "${CURSOR_HOOKS_DIR}/hooks.example.json"
+
+if [[ "${MODEL_ROUTING}" -eq 1 ]]; then
+  [[ -d "${MODEL_ROUTING_DIR}" ]] || die "missing model-routing templates: ${MODEL_ROUTING_DIR}"
+  mkdir -p "${TARGET}/agents" "${TARGET}/.cursor/rules"
+  write_file "${TARGET}/agents/MODEL-ROUTING.md" "${MODEL_ROUTING_DIR}/MODEL-ROUTING.md"
+  write_file "${TARGET}/.cursor/rules/model-routing.mdc" "${MODEL_ROUTING_DIR}/model-routing.mdc"
+else
+  echo "skip model routing (--no-model-routing)"
+fi
 
 write_file "${TARGET}/README.md" "${TEMPLATE_DIR}/README.md"
 replace_project_name "${TARGET}/README.md"

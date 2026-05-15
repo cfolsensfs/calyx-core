@@ -1,0 +1,36 @@
+---
+description: Choose the best Cursor model for the task before acting (read agents/MODEL-ROUTING.md for detail)
+alwaysApply: true
+---
+
+# Model routing (required first step)
+
+Before implementing or drafting client material: **classify the task** and **pick a model**. Full guide: `agents/MODEL-ROUTING.md`.
+
+## Models
+
+| Model | Use when |
+| ----- | -------- |
+| **Composer 2** | Fast repo work: edits, scripts, git, clear-scope implementation |
+| **GPT-5.5** | Balanced mixed work: research, PM updates, code + light prose |
+| **GPT-5.3 Codex** | Deep code: app stack, tooling, refactors, debug after one failed fix |
+| **Sonnet 4.6** | Client copy, narratives, long docs, Google Docs/MCP, style guides |
+| **Opus 4.7** | Hard judgment: scope ambiguity, strategy, stuck twice, high-stakes compliance |
+
+Optimize for **task fit**, not default speed.
+
+## Quick route
+
+| Task | Model |
+| ---- | ----- |
+| Code / CI | Composer 2 → Codex 5.3 if stuck |
+| Client-facing copy | Sonnet 4.6 → Opus 4.7 if high stakes |
+| Google Docs / doc MCP | Sonnet 4.6 |
+| PM / scope | GPT-5.5 → Opus 4.7 if ambiguous |
+| Trivial fix | Composer 2 |
+
+Escalate once if client-readable claims matter or the same fix failed twice.
+
+Do not use the fastest model for every task. If the user pinned a model, follow it unless they ask for a recommendation.
+
+When saving Calyx reasoning or ADRs, copy **model** / **tier** / **escalation** into the optional **Agent context** section if you stated them in the thread.
